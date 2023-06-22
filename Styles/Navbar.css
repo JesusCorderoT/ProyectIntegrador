@@ -1,28 +1,25 @@
-.navbarOjo
-{
-background-color: #66347f;
-position: sticky;
+.navbarOjo {
+    background-color: #66347f;
+    position: sticky;
 }
 
-.imgLogo
-{
-height: 6%;
-width: 6%;
+.imgLogo {
+    height: 6%;
+    width: 6%;
 }
 
 
 /* .navbar
 {
     position: fixed;
-     z-index: 1;
-      top: 0%;
+    z-index: 1;
+    top: 0%;
 } */
 
 
 
-.containerBread
-{
-position: absolute;
-right: 5%;
+.containerBread {
+    position: absolute;
+    right: 5%;
+}
 
-} 
