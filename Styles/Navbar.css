@@ -1,6 +1,7 @@
 .navbarOjo
 {
 background-color: #66347f;
+position: sticky;
 }
 
 .imgLogo
@@ -9,18 +10,15 @@ height: 6%;
 width: 6%;
 }
 
-/* .containerImg
+
+/* .navbar
 {
-    position: absolute;
-    left: 2%;
+    position: fixed;
+     z-index: 1;
+      top: 0%;
 } */
 
-/* .containerName
-{
-    position: absolute;
-    left: 10%;
 
-} */
 
 .containerBread
 {
