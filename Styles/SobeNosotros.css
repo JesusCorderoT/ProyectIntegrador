@@ -12,5 +12,10 @@ body{
     border: 4px solid #000000;
     background:  rgba(229, 150, 239, 0.30);
     margin: 10px;
+    
 }
 
+#codeLogo{
+    width: 400px;
+    padding-left: 10px;
+}
