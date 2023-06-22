@@ -13,3 +13,6 @@
     background:  rgba(229, 150, 239, 0.30);
     margin: 10px;
 }
+img>.integrantes{
+    border-radius: 50%;
+}
