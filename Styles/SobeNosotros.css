@@ -1,4 +1,4 @@
-.body{
+body{
     background: rgba(250, 232, 245, 0.50);
 
 }
@@ -13,6 +13,4 @@
     background:  rgba(229, 150, 239, 0.30);
     margin: 10px;
 }
-img>.integrantes{
-    border-radius: 50%;
-}
+
