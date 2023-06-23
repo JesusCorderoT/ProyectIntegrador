@@ -1,7 +1,7 @@
-#navbarContainer {
-    position: sticky;
-}
-
 body {
     background-color:black;
+}
+
+#carrusel {
+    margin-top: 100px; /* Ajusta el valor según el tamaño de tu navbar */
 }
