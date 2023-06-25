@@ -1,0 +1,55 @@
+
+<div class="container shippingCard">
+    <div class="container-fluid">
+        <table class="container tabla">
+            <thead class="encabezados">
+                <tr>
+                    <th class="col-11">Numero</th>
+                    <th class="col-1"> <button class="dropdown" type="button" data-bs-toggle="collapse" data-bs-target=".informacion" aria-expanded="false">Detalles</button></th>
+                </tr>
+            </thead>
+            <div class="dropdown-menu contenido">
+                <tbody class="dropdown-item-text informacion col-12">
+                    <tr>
+                        <td>Usuario: </td><td class="usuario"></td> 
+                    </tr>
+                    <tr>
+                        <td>Dirección: </td><td class="direccion"></td> 
+                    </tr>
+                    <tr>
+                        <td>Total: </td><td class="costo"></td> 
+                    </tr>
+                    <tr>
+                        <td>Estatus: </td><td class="estatus"></td>
+                    </tr>
+                </tbody>
+            </div>
+        </table>
+    </div>   
+</div>
+
+<style>
+    body{
+    background-color: #e596efb2;
+}
+#navbarContainer{
+    margin-bottom: 20px;
+}
+.shippingCard{
+    margin: 20px;
+}
+.tabla{
+    border-width: 2px;
+    border-color: #000000;
+    border-style: solid;
+}
+.contenido{
+    background-color:  #e596efb2;
+}
+.encabezados{
+    background-color: #b596efaf;
+}
+.informacion{
+    background-color: #e596efb2;
+}
+</style>

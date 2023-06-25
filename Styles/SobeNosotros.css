@@ -1,21 +1,55 @@
+#navbarContainer{
+    margin-bottom: 60px;
+}
 body{
-    background: rgba(250, 232, 245, 0.50);
+    background: rgb(250, 232, 245);
 
 }
 #codeRanchers-container{
-    background: rgba(229, 150, 239, 0.30);
+    height: fit-content;
+    background: #b596ef80;
+    position: sticky;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 .integrantes{
-    height: 250px;
+    height: 280px;
     border-radius: 30px;
     border: 4px solid #000000;
     background:  rgba(229, 150, 239, 0.30);
     margin: 10px;
+    display: flex;
+    align-items: center;
     
 }
 
 #codeLogo{
-    width: 400px;
-    padding-left: 10px;
+    width: 200px;
+}
+.resume>p{
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.contacto{
+    background: #b596ef;
+    width: 300px;
+    height: 30px;
+    border-color: #000000;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.picture>img{
+    border-radius: 50%;
+}
+.picture{
+    display: flex;
+    align-items: center;
 }

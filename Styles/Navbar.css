@@ -1,6 +1,8 @@
 .navbarOjo {
     background-color: #66347f;
     position: sticky;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    color: white;
 }
 
 .imgLogo {
