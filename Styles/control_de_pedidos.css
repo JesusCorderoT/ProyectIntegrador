@@ -1,0 +1,24 @@
+body{
+    background-color: #e596efb2;
+}
+#navbarContainer{
+    margin-bottom: 20px;
+}
+.shippingCard{
+    margin: 20px;
+}
+.tabla{
+    border-width: 2px;
+    border-color: #000000;
+    border-style: solid;
+}
+.contenido{
+    background-color:  #e596efb2;
+}
+.encabezados{
+    background-color: #b596efaf;
+}
+.informacion{
+    background-color: #e596efb2;
+}
+
