@@ -21,7 +21,7 @@ body {
 }
 
 .imgLogoFooter {
-    height: 55%;
-    width: 45%;
+    height: 50%;
+    width: 25%;
     filter: invert(100%);
 }
