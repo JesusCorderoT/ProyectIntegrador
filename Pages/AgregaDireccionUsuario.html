@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <link rel="stylesheet" href="/Styles/CuentaUsuario.css">
-  <link rel="stylesheet" href="/Styles/Navbar.css">
   <link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -15,94 +12,105 @@
 
 <body class="body">
 
-  <!--=======================INICIO NAVBAR=======================-->
-  <nav class="navbar navbar-expand-lg navbarOjo">
-    <div class="container">
-
-      <div class="containerImg">
-        <a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-          <img class="imgLogo " src="/assets/imgs/logoOjo.png" /> </a>
-      </div>
-
-      <div class="containerName">
-        <a class="navbar-brand " href="#">Ojos de gato</a>
-      </div>
-
-    </div>
-
-    <div class="containerBread">
-      <button class="navbar-toggler btnBread" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
-        aria-expanded="false">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarsExample07">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Productos</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Servicios</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Cuenta</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">desplegable</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">pagina 1</a></li>
-            <li><a class="dropdown-item" href="#">pagina 2</a></li>
-            <li><a class="dropdown-item" href="#">pagina 3</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </nav>
-
-  <!--=======================FIN NAVBAR=======================-->
+<!--=======================INICIO NAVBAR=======================-->
+    <header id="header" class=" header fixed-top d-flex align-items-center container-wrap">
+      <div id="navbarContainer"></div>
+  </header>
+<!--=======================FIN NAVBAR=======================-->
 
 
-  <!--=======================INICIO offcanvas=======================-->
 
-  <div style="background-color: #e5beec;" class="side offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Bienvenido</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
+  <!--=======================INICIO FORMULARIO=======================-->
 
 
-      <div>
-        Hola: Usuario
-        Accede a las diferentes opciones para administrar 
-      </div>
 
-      <div class="">
-      <ul  class=" list-group">
-        <li class="opciones list-group-item"><a href="CuentaUsuario.html">Datos</a></li>
-        <li class="opciones list-group-item"><a href="EstatusEnvio.html">Pedidos</a></li>
-        <li class="opciones list-group-item"><a href="ListaTarjetasUsuario.html">Tarjetas</a></li>
-        <li class="opciones list-group-item"><a href="DireccionesUsuario.html">Direcciones</a></li>      
-      </ul>
-    </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Agrega una nueva direccion de envio</h5>
+      <!-- <p class="card-text">Agrega.</p> -->
+
+
+      <form>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Nombres y apellidos</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Codigo Postal</label>
+          <input type="number" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Estado</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Municipio</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Colonia</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Calle</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Numero interior</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Numero exterior</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Calle 1</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Calle 2</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Telefono de contacto</label>
+          <input type="number" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Indicaciones adicionales</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <button type="submit" class="btn btn-dark">Guardar</button>
+        <button type="submit" class="btn btn-danger">Cancelar</button>
+
+      </form>
     </div>
   </div>
-    <!--=======================FIN offcanvas=======================-->
+
+
+  <!--=======================FIN FORMULARIO=======================-->
 
 
 
@@ -112,15 +120,29 @@
 
 
 
+  <!--=======================INICIO FOOTER=======================-->
+
+  <footer id="footer" class="footer">
+    <div id="footerContainer"></div>   
+</footer>
+  <!--=======================FIN FOOTER=======================-->
 
 
 
 
+<style>
+.card {
+
+background-color: #e5beec;
+}
+
+</style>
 
 
     
 
-
+  <script src="../src/Navbar.js"></script>
+  <script src="../src/Footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"crossorigin="anonymous"></script>
 </body>
 
