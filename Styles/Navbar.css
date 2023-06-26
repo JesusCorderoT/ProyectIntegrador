@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded&display=swap');
+
+.navbarOjo .navbar-brand{
+/* En revisión 
+.navbarOjo .nav-item a{ */
+    color: white;
+}
+
 .navbarOjo {
     background-color: #66347f;
     position: sticky;
@@ -9,15 +17,18 @@
 }
 
 
-.navbar{
+.navbar {
     z-index: 9999;
     top: 0%;
 }
 
-
+#contenedorNavbar .containerName {
+    position: absolute;
+    left: 5%;
+    font-family: 'Tsukimi Rounded', sans-serif;
+}
 
 .containerBread {
     position: absolute;
     right: 5%;
 }
-

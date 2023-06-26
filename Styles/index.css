@@ -1,7 +1,123 @@
-body {
-    background-color:black;
+@import url('https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded&display=swap');
+#principal {
+    background-color: #FAE8F5;
+    
 }
 
 #carrusel {
-    margin-top: 100px; /* Ajusta el valor según el tamaño de tu navbar */
+    margin-top: 100px;
+    /* Ajusta el valor según el tamaño de tu navbar */
+}
+
+.custom-rectangle {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* Centra verticalmente los elementos */
+}
+
+#rectangulos {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#imagenBoton {
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#marco {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#primer {
+    background-color: rgba(102, 52, 127, 0.5);
+}
+
+#segundo {
+    background-color: rgba(229, 190, 236, 0.5);
+}
+
+#tercero {
+    background-color: rgba(181, 150, 239, 0.5);
+}
+
+#cuarto {
+    background-color: rgba(229, 150, 239, 0.5);
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+    /* Permite que el contenedor de texto se expanda verticalmente */
+    /* Ajusta el espaciado del texto */
+    font-family: 'Lustria', serif;
+    font-size: 80px;
+    color:white;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.text-column {
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#descripcion {
+    background-color: #B596EF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 80px;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    color: white;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    height: 100%;
+    font-family: 'Lustria', serif;
+    font-size: 40px;
 }
