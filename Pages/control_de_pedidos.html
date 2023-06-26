@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/ControldePedidos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Pedidos</title>
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <h3>Pedidos</h3>
+    <div class="container shippingCard">
+        <div class="container-fluid">
+            <table class="container tabla">
+                <thead class="encabezados">
+                    <tr>
+                        <th class="col-11">Numero</th>
+                        <th class="col-1"> <button class="dropdown" type="button" data-bs-toggle="collapse" data-bs-target=".informacion" aria-expanded="false">Detalles</button></th>
+                    </tr>
+                </thead>
+                <div class="dropdown-menu contenido">
+                    <tbody class="dropdown-item-text informacion col-12">
+                        <tr>
+                            <td>Usuario: </td><td class="usuario"></td> 
+                        </tr>
+                        <tr>
+                            <td>Dirección: </td><td class="direccion"></td> 
+                        </tr>
+                        <tr>
+                            <td>Total: </td><td class="costo"></td> 
+                        </tr>
+                        <tr>
+                            <td>Estatus: </td><td class="estatus"></td>
+                        </tr>
+                    </tbody>
+                </div>
+            </table>
+        </div>   
+    </div>
+    
+    <div id="footerContainer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="/src/Navbar.js"></script>
+    <script src="/src/Footer.js"></script>
+    
+</body>
+</html>
