@@ -11,12 +11,10 @@
 }
 
 
-/* .navbar
-{
-    position: fixed;
-    z-index: 1;
+.navbar{
+    z-index: 9999;
     top: 0%;
-} */
+}
 
 
 

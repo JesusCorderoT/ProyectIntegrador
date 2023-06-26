@@ -1,0 +1,72 @@
+.body
+{
+background-color: #FAE8F5;
+}
+
+.col-md-6{
+
+background-color: #e5beec ;
+
+}
+
+.Titulo {
+  background-color: #B596EF;
+}
+.container1{
+  background-color: #FAE8F5;
+}
+
+/* **********************************************************
+/*                    About Team
+/* ********************************************************* */
+.about-team {
+  background: #e5beec;
+}
+
+.about-team-block {
+  background: #f2f3f8;
+  margin: 0 0 25px;
+  transition: 0.25s;
+}
+
+.about-team-block img {
+  width: 85%;
+}
+
+.about-team-block:hover {
+  transform: translateY(-8px);
+  color:#e5beec
+  -webkit-box-shadow: 0px 21px 42px -22px #919394;
+  -moz-box-shadow: 0px 21px 42px -22px #919394;
+  box-shadow: 0px 21px 42px -22px #919394;
+  cursor: pointer;
+}
+
+.about-team-title {
+  padding: 20px 20px;
+  min-height: 94px;
+  overflow: hidden;
+}
+
+.about-team-title h5 {
+  text-align: center;
+}
+
+.about-team-title p {
+  text-align: center;
+  margin: 0;
+}
+
+/*Productos */
+
+.container-py-3 {
+  background-color: #e5beec;
+}
+
+ .container-marketing{
+  background-color:#FAE8F5
+ }
+.card-body{
+  background-color: #B596EF;
+
+}
