@@ -1,17 +1,21 @@
+
 .seccion {
     font-family: Arial, sans-serif;
     background-color: #FAE8F5;
+
 }
 
 /* #principal{
     margin: auto;
     background-color: #FAE8F5;
 } */
+
 .container {
     max-width: 600px;
     margin: 250px;
     padding: 20px;
-    background-color: #fff;
+    background:  rgba(229, 150, 239, 0.30);
+    /*background-color: #fff;*/
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
