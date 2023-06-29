@@ -1,10 +1,18 @@
 body{
     background-color:rgba(250, 232, 245, 0.50)!important;
     font-family: 'Lustria', serif;  
+    height: 100%;
 }  
 
 #navbarContainer{
     margin-bottom: 100px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Tsukimi Rounded', sans-serif;
 }
 
 .imageCard,.descriptionCard{
@@ -15,26 +23,12 @@ body{
     font-family: 'Lustria', serif;  
 
 }
-#logo{
-    display: flex;
-    justify-content: center;
-}
+/* #footer{
 
-#logoimagen{
-    width: 400px;
-    height: auto;
-}
-#imagenesEmpresa{
-    width: 330px;
-    height: auto;
-}
+    position: fixed;
+    bottom: 0;
+}   */
 
-.descriptionCard{
-    text-align: justify;
-}
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Tsukimi Rounded', sans-serif;
+#container-fluid{
+    font-family: 'Lustria', serif;  
 }
