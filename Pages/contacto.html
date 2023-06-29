@@ -14,26 +14,101 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
         <div id="navbarContainer"></div>
     </header>
-    <div class="container-fluid" id="principal">
-        <div class="container">
-            <h2>Contactanos</h2>
-            <form action="/" method="POST">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+
+        <section class="seccion">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h2 class="heading-section">¡Contacta con Nosotros!</h2>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-md-12">
+                        <div class="wrapper">
+                            <div class="row no-gutters">
+                                <div class="col-md-7 d-flex align-items-stretch">
+                                    <div class="contact-wrap w-100 p-md-5 p-4">
+                                        <h3 class="mb-4">Mantente en contacto</h3>
+                                        <div id="form-message-warning" class="mb-4"></div>
+                                        <!-- <div id="form-message-success" class="mb-4">alerta</div> -->
+                                        <form method="POST" id="contactForm" name="contactForm" novalidate="novalidate">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="name" id="name"
+                                                            placeholder="Nombre">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" name="email" id="email"
+                                                            placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="subject"
+                                                            id="subject" placeholder="Asunto">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <textarea name="message" class="form-control" id="message"
+                                                            cols="30" rows="7" placeholder="Mensaje"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="submit" value="Send Message"
+                                                            class="btn btn-outline-secondary">
+                                                        <div class="submitting"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 d-flex align-items-stretch">
+                                    <div class="info-wrap w-100 p-lg-5 p-4 nosotros">
+                                        <h3 class="mb-4 mt-md-4">Nosotros</h3>
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-map-marker"></span>
+                                            </div>
+                                            <div class="text pl-3">
+                                                <p><span>Ubicación: </span> Naucalpan, Estado de México</p>
+                                            </div>
+                                        </div>
+                                        <div class="dbox w-100 d-flex align-items-center">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-phone"></span>
+                                            </div>
+                                            <div class="text pl-3">
+                                                <p><span>Telefono: </span>+ 52 35 2355 2398</p>
+                                            </div>
+                                        </div>
+                                        <div class="dbox w-100 d-flex align-items-center">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <span class="fa fa-paper-plane"></span>
+                                            </div>
+                                            <div class="text pl-3">
+                                                <p><span>Email:</span> <a
+                                                        href="ojosdegatolashes@gmail.com">ojosdegatolashes@gmail.com</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
-                </div>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-        </div>
-    </div>
+            </div>
+        </section>
+
+
+    </body>
+
     <footer id="footer" class="footer">
         <div id="footerContainer"></div>
     </footer>
