@@ -1,123 +1,157 @@
+/* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded&display=swap');
-#principal {
-    background-color: #FAE8F5;
-    
+
+.lead, .display-5{
+  font-family: 'Lustria', serif;
 }
 
-#carrusel {
-    margin-top: 100px;
-    /* Ajusta el valor según el tamaño de tu navbar */
+.display-4, .banner2{
+  font-family: 'Tsukimi Rounded', sans-serif;
+}
+/* Zona 1 */
+/* .container {
+  max-width: 960px;
+} */
+
+.banner{
+  /* background: rgb(250,232,245);
+  background: radial-gradient(circle, rgba(250,232,245,1) 0%, rgba(229,150,239,1) 100%); */
+  background-color: rgb(250, 232, 245);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-family: 'Lustria', serif;
 }
 
-.custom-rectangle {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /* Centra verticalmente los elementos */
+.product-device {
+  position: absolute;
+  right: 2%;
+  bottom: 0%;
+  z-index: 0;
+  /* width: 300px;
+  height: 540px; */
+  border-radius: 21px;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
 
-#rectangulos {
-    margin-top: 40px;
-    margin-bottom: 40px;
+#logotipo{
+  width: 300px;
+  height: 300px;
+  border-radius: 21px;
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+/* Zona 2 */
+
+.banner2{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+.servicios{
+  background: rgba(102, 52, 127,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* background: rgba(102, 52, 127,0.5); */
 }
 
-#imagenBoton {
-    border-radius: 100%;
-    position: relative;
-    z-index: 2;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
+.productos{
+  background: rgba(229, 190, 236,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* background: rgba(229, 190, 236, 0.5); */
 }
 
-#marco {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+.galeria{
+  background: rgb(250, 232, 245);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* background: rgba(250, 232, 245,0.5); */
 }
 
-#primer {
-    background-color: rgba(102, 52, 127, 0.5);
+.citas{
+  background: rgb(181, 150, 239);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* background: rgba(181, 150, 239, 0.5); */
 }
 
-#segundo {
-    background-color: rgba(229, 190, 236, 0.5);
+.imagenRectangulo{
+  width: 350px;
+  height: 300px;
+  border-radius: 300px;
 }
 
-#tercero {
-    background-color: rgba(181, 150, 239, 0.5);
+.imagenRectangulo2{
+  width: 350px;
+  height: 300px;
 }
 
-#cuarto {
-    background-color: rgba(229, 150, 239, 0.5);
+.servicios:hover, .productos:hover, .galeria:hover, .citas:hover {
+  background: linear-gradient(rgb(240, 240, 240), rgb(220, 220, 220));
+  color: black;
 }
 
-.text-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    flex-grow: 1;
-    /* Permite que el contenedor de texto se expanda verticalmente */
-    /* Ajusta el espaciado del texto */
-    font-family: 'Lustria', serif;
-    font-size: 80px;
-    color:white;
-    -webkit-text-stroke: 1.5px black;
+.link{
+  text-decoration: none;
+  color: black;
 }
 
-.text-column {
-    width: 100%;
-    text-align: right;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+/* Zona 3 */
+
+.tendencias{
+  background: rgba(0,0,0,0.8);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-#descripcion {
-    background-color: #B596EF;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    border: 1px solid #ccc;
-    padding: 20px;
+.tendencia {
+  max-width: 60%;
+  margin: 0 auto; 
 }
 
-.title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 80px;
-    font-family: 'Tsukimi Rounded', sans-serif;
-    color: white;
-    -webkit-text-stroke: 1.5px black;
+footer {
+  background-color: black;
+  color: white;
 }
 
-.image {
-    max-width: 100%;
-    height: auto;
+/* #textoBienvenida{
+  z-index: 1;
+} */
+
+
+/* .product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+} */
+
+
+
+
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.flex-equal > * {
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
 }
 
-.text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-    height: 100%;
-    font-family: 'Lustria', serif;
-    font-size: 40px;
+.overflow-hidden { overflow: hidden; }
+
+#tendencias{
+  color:white;
+}
+
+#textoBienvenida{
+  z-index: 1;
 }

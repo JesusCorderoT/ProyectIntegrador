@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
+
+.TITULO {
+        margin: 6%;
+        font-family: 'Tsukimi Rounded', sans-serif;
+        background-color: blueviolet;
+}
+
+#tituloFondo{
+    
+}
+
+#subtitulo{
+    
+}
+
+.container{
+    font-family: 'Lustria', serif;
+}

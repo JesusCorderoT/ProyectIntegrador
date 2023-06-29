@@ -4,134 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Ojos de Gato</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="./assets/imgs/logoOjo.png">
-    <link rel="stylesheet" href="./Styles/index.css">
-    <title>Ojos de gato</title>
+
+    <!-- Custom styles for this template -->
+    <link href="./styles/index.css" rel="stylesheet">
+
+
 </head>
 
 <body>
-    <!-- Zona de la navbar -->
+
     <header id="header" class="header fixed-top d-flex align-items-center">
         <div id="navbarContainer"></div>
     </header>
-
-    <div class="container-fluid" id="principal">
-        <!-- Zona de carrusel -->
-        <div id="carrusel" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://placehold.co/1920x600" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://placehold.co/1920x600" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://placehold.co/1920x600" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <!-- Zona de banner -->
+    <div class="position-relative p-3 p-md-5 m-md-3 text-center banner">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 font-weight-normal" id="titulo">Ojos de Gato</h1>
+            <p class="lead font-weight-normal" id="textoBienvenida">Encontrarás todo lo que necesitas para realzar la
+                belleza de tus
+                pestañas y lograr una mirada impactante. Somos expertos en el cuidado y embellecimiento de las
+                pestañas, y nos apasiona ayudarte a lucir radiante.</p>
+            <a class="btn btn-outline-secondary" href="./pages/cita.html">Haz tu cita</a>
         </div>
+        <div class="product-device d-none d-md-block logotipo"><img src="./assets/imgs/logoOjo.png" alt="logo"
+                id="logotipo" /></div>
+    </div>
 
+    <!-- Zona 2 -->
 
-        <!-- Zona de rectangulos -->
-
-        <div class="container-fluid" id="rectangulos">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="custom-rectangle" id="primer">
-                        <div class="image-container">
-                            <img src="https://placehold.co/350x350" alt="Imagen" id="imagenBoton">
-                            <img class="frame" src="./assets/imgs/marco.png" id="marco" alt="Marco">
-                        </div>
-                        <div class="text-container">
-                            <div class="text-column">
-                                <p>Lorem Ipsum</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="custom-rectangle" id="segundo">
-                        <div class="image-container">
-                            <img src="https://placehold.co/350x350" alt="Imagen" id="imagenBoton">
-                            <img class="frame" src="./assets/imgs/marco.png" id="marco" alt="Marco">
-                        </div>
-                        <div class="text-container">
-                            <div class="text-column">
-                                <p>Lorem Ipsum</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="custom-rectangle" id="tercero">
-                        <div class="image-container">
-                            <img src="https://placehold.co/350x350" alt="Imagen" id="imagenBoton">
-                            <img class="frame" src="./assets/imgs/marco.png" id="marco" alt="Marco">
-                        </div>
-                        <div class="text-container">
-                            <div class="text-column">
-                                <p>Lorem Ipsum</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="custom-rectangle" id="cuarto">
-                        <div class="image-container">
-                            <img src="https://placehold.co/350x350" alt="Imagen" id="imagenBoton">
-                            <img class="frame" src="./assets/imgs/marco.png" id="marco" alt="Marco">
-                        </div>
-                        <div class="text-container">
-                            <div class="text-column">
-                                <p>Lorem Ipsum</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="bg-dark text-white mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden banner2">
+            <div class="my-3 p-3">
+                <h2 class="display-6">Un nuevo mundo a una nueva mirada</h2>
             </div>
         </div>
+    </div>
 
-        <!-- Zona de rectangulo grande -->
-        <div class="container-fluid" id="descripcion">
-            <h1 class="title">Título de la sección</h1>
-            <div class="row">
-                <div class="col-md-5">
-                    <img class="image" src="https://placehold.co/1000x800" alt="Imagen">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 fondo">
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden servicios"><a class="link"
+                href="./pages/servicios.html">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Servicios</h2>
+                    <p class="lead">Resalta tu Mirada con Expertos en Belleza</p>
                 </div>
-                <div class="col-md-7">
-                    <div class="text">
-                        <p>
-                            Aquí va el texto largo que se alineará a la derecha de la imagen sin ir hacia abajo.
-                            Este texto puede ser tan largo como sea necesario y seguirá en el mismo nivel que la
-                            imagen.
-                        </p>
+                <div><img class="imagenRectangulo" src="./assets/serviciosImg/ejemplo-hombre-removebg-preview.png"
+                        id="servicios"></div>
+            </a></div>
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden productos"><a class="link"
+                href="./pages/productos.html">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Productos</h2>
+                    <p class="lead">Eleva tu Estilo con Calidad y Elegancia</p>
+                </div>
+                <div><img class="imagenRectangulo2" src="./assets/imgs/loreal png.png" id="productos"></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden galeria"><a class="link"
+                href="./pages/galeria.html">
+                <div class="my-3 p-3">
+                    <h2 class="display-5">Galeria</h2>
+                    <p class="lead">Explora Nuestra Galería: Inspiración para una Mirada Deslumbrante</p>
+                </div>
+                <div><img class="imagenRectangulo" src="./assets/serviciosImg/pestañas.jpg" id="galeria"></div>
+            </a>
+        </div>
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden citas">
+            <div class="my-3 py-3"><a class="link" href="./pages/contacto.html">
+                    <h2 class="display-5">Contacto</h2>
+                    <p class="lead">Contáctanos y Reserva una Cita: Tu Primer Paso hacia una Mirada Impresionante</p>
+            </div>
+            <div><img class="imagenRectangulo" src="./assets/serviciosImg/ejemplo-clienta.jpg" id="productos"></div></a>
+        </div>
+    </div>
+
+    <!-- Zona 3 -->
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden tendencias">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Tendencias</h2>
+                <p class="lead">Descubre las Últimas Tendencias en Pestañas: Estilo Innovador para una Mirada
+                    Deslumbrante</p>
+            </div>
+
+            <div class="customCarousel">
+                <div id="carouselWithCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/serviciosImg/trends.jpg" class="d-block w-100 tendencia" alt="Slide 1">
+                            <div class="carousel-caption d-none d-sm-block">
+                                <h5>Squirrel Lashes</h5>
+                                <p>Lo nuevo en pestañas</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/serviciosImg/trends.jpg" class="d-block w-100 tendencia" alt="Slide 2">
+                            <div class="carousel-caption d-none d-sm-block">
+                                <h5>Stiletto Lashes</h5>
+                                <p>Lo nuevo en pestañas</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/serviciosImg/trends.jpg" class="d-block w-100 tendencia" alt="Slide 3">
+                            <div class="carousel-caption d-none d-sm-block">
+                                <h5>Fantasy Lashes</h5>
+                                <p>Lo nuevo en pestañas</p>
+                            </div>
+                        </div>
                     </div>
+                    <a class="carousel-control-prev" href="#carouselWithCaptions" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselWithCaptions" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <!-- Zona del footer -->
-    <footer id="footer" class="footer">
+    <footer class="container-fluid py-5">
         <div id="footerContainer"></div>
     </footer>
 
-    <script src="/src/loading.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <!-- Zona de Scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
     <script src="./src/navbar.js"></script>
     <script src="../src/footer.js"></script>
+
 
 </body>
 
