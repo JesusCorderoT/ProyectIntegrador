@@ -2,132 +2,191 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/Styles/CuentaUsuario.css">
-    <link rel="stylesheet" href="/Styles/Navbar.css">
-    <link rel="stylesheet" href="../Styles/EstatusEnvio.css">
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" href="../Styles/estatusEnvio.css">
     <meta charset="UTF-8">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>estatus de envio</title>
-    <!--Favicon-->
-    <link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
+    <title>Estatus Envio</title>
 
 </head>
 
-<body>
+<body class="body">
 
-    <!--Navbar-->
+    <!--=======================INICIO NAVBAR=======================-->
     <header id="header" class=" header fixed-top d-flex align-items-center container-wrap">
         <div id="navbarContainer"></div>
     </header>
-    <!--Navbar-->
+    <!--=======================FIN NAVBAR=======================-->
 
 
-
-    <!--Titulo HERO-->
-    <section class="hero align-items-stretch">
-        <div class="hero-principal d-flex justify-content-center align-items-center">
-            <h1>SEGUIMIENTO DE ENVIOS</h1>
-            <p>Aquí puedes realizar el seguimiento de tus pedidos en cualquier momento, para que tengas la certeza de
-                que lleguen seguros y a tiempo. Siempre estamos al pendiente de tí.</p>
-                <img class="heroImagen" src="../assets/imgs/logoOjo.png" alt="logoOjos">
-            </div>
-    </section>
-    <!--Titulo HERO-->
-
-
-
-    <!-- ============== Input ===================-->
-    <section>
-    <div class="contenedorGeneral">
-    <div class="input">   
-        <div class="mb-3 d-flex; align-items-center">
-            <input type="text" class="form-control" id="formGroupExampleInput"
-                placeholder="Ingresa tu numero de rastreo">
+    <!--======================= TITULO =========================-->
+    <div class="head p-4 p-md-4 mb-4 rounded">
+        <div class="col-lg-12 px-0">
+            <h1 class="display-4 fst-italic">SEGUIMIENTO DE ENVÍO</h1>
+            <p class="lead my-3">Aquí puedes realizar el seguimiento de tus pedidos en cualquier momento, para que tengas la certeza de que lleguen seguros y a tiempo. Siempre estamos al pendiente de tí.</p>
         </div>
     </div>
-    
-    <!-- ============== Input ===================-->
+    <!--======================= TITULO =========================-->
+
+
+
+
+    <!--===================== INPUT ============================
+    <div class="card text-center">
+        <div class="card-header">
+            En esta seccion puedes ingresar tus datos
+        </div>
+        <div class="card-body">
+
+            <form action="">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Número de pedido">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--===================== INPUT ============================-->
 
 
 
 
 
-<!--=============== Imgagen pedido y figuras ===============-->
 
-    
-        <!--===================Tarjeta producto================-->
-    <div class="container">   
-        <div class="row">
-        <div class="col-lg-3">
-            <div class="card" style="width: 150px; border-radius: 10%; border: solid #66347F; display: flex; justify-content: center;">
-                <img src="../assets/imgs/loreal png.png" class="card-img-top img-fluid" alt="Imagen del producto">
-                <div class="card-body">
-                <p class="card-text">Descripcion detallada del producto.</p>
+
+    <!--================= CARD / CICULSO ENVIO ================-->
+    <div class="containerCards text-center">
+
+        <div class="card text-center">
+            <div class="card-header">
+                En esta seccion puedes ingresar tus datos
             </div>
+            <div class="card-body">
+    
+                <form action="">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Número de pedido">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <!--===================Tarjeta producto================-->
 
+        <div class="row">
 
+            
 
-        <!--===================Circulos avance envio===========-->
-        
-            <div class="col-lg-2">
-                <svg class="bd-placeholder-img rounded-circle" width="50" height="50" xmlns="http://www.w3.org/2000/svg"
+            <div class="cardDos col-md-4">
+                <div class=" col-lg-3 card" style="width: 20rem;">
+                    <img src="/assets/imgs/loreal png.png" class="card-img-top" alt="imagen del producto">
+                    <div class="card-body">
+                        <h4>Producto</h4>
+                        <p class="card-text">Descripción detallada del producto</p>
+                    </div>
+                </div>
+            </div>
+            <div class="circulos col-md-2">
+
+                <svg class="bd-placeholder-img rounded-circle" width="40" height="40" xmlns="http://www.w3.org/2000/svg"
                     role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                    <rect width="100%" height="100%"  />
                 </svg>
-                <h2 class="fw-normal">Pedido confirmado</h2>
-            </div>
+                <h2 class="fw-normal" style="font-size: 20px;">Confirmado</h2>
 
-            <div class="col-lg-2">
-                <svg class="bd-placeholder-img rounded-circle" width="50" height="50" xmlns="http://www.w3.org/2000/svg"
+            </div>
+            <div class="circulos col-md-2">
+
+                <svg class="bd-placeholder-img rounded-circle" width="40" height="40" xmlns="http://www.w3.org/2000/svg"
                     role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                    <rect width="100%" height="100%"  />
                 </svg>
-                <h2 class="fw-normal">Enviado</h2>
-            </div>
+                <h2 class="fw-normal" style="font-size: 20px;">Enviado</h2>
 
-            <div class="col-lg-2">
-                <svg class="bd-placeholder-img rounded-circle" width="50" height="50" xmlns="http://www.w3.org/2000/svg"
+            </div>
+            <div class="circulos col-md-2">
+                <svg class="bd-placeholder-img rounded-circle" width="40" height="40" xmlns="http://www.w3.org/2000/svg"
                     role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                    <rect width="100%" height="100%"  />
                 </svg>
-                <h2 class="fw-normal">En camino</h2>
-            </div>
+                <h2 class="fw-normal" style="font-size: 20px;">Viajando</h2>
 
-            <div class="col-lg-2">
-                <svg class="bd-placeholder-img rounded-circle" width="50" height="50" xmlns="http://www.w3.org/2000/svg"
+            </div>
+            <div class="circulos col-md-2">
+                <svg class="bd-placeholder-img rounded-circle" width="40" height="40" xmlns="http://www.w3.org/2000/svg"
                     role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                    <rect width="100%" height="100%"   />
                 </svg>
-                <h2 class="fw-normal">Entregado</h2>
+                <h2 class="fw-normal" style="font-size: 20px;">Entregado</h2>
             </div>
-        </div><!-- /.row -->
-        </div><!-- /.container -->
-    </div><!--contenedorGeneral-->
-</section>
-<!--===================Circulos avance envio===========-->
+        </div>
+    </div>
+    <!--================= CARD / CICULSO ENVIO ================-->
 
 
+
+    <!--=======================INICIO FOOTER=======================-->
     <footer id="footer" class="footer">
         <div id="footerContainer"></div>
     </footer>
+    <!--=======================FIN FOOTER=======================-->
 
-    <script src="../src/Footer.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    
+    <style>
+        .body{
+    background-color: #FAE8F5;
+    }
+
+        .head {
+    margin: 6%;
+    background: #66347F;
+    color: #FAE8F5;
+
+    }
+
+        .card {
+    background-color: #66347F;
+    margin-top: 0%;
+    color: #FAE8F5;
+    }
+
+        .containerCards{
+    margin: auto;
+    border-radius: 10px;
+    border-color: #66347F;
+    border:solid ;
+    padding: 5%;
+    
+    }
+
+    .circulos {
+    margin: auto;
+    color: black;
+    padding: 40px;
+            
+        }
+
+
+    .cardDos 
+    {   
+    border-color:  #66347F;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+        }
+    </style>
+    
+
     <script src="../src/Navbar.js"></script>
+    <script src="../src/Footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>
