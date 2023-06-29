@@ -1,0 +1,22 @@
+body{
+    background-color:  #FAE8F5;
+    /*font-family: 'Lustria', serif;*/
+}
+
+#navbarContainer{
+    margin-bottom: 80px;
+}
+.garantias{
+    font-family: 'Lustria', serif;
+}
+.titulos{
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-weight: bold;
+}
+#ojo{
+    width: 300px;
+    border-radius: 50%;
+}
+.inicio{
+    align-items: end;
+}
