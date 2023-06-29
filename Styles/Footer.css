@@ -20,8 +20,6 @@ body {
     padding: 20px;
 }
 
-.imgLogoFooter {
-    height: 50%;
-    width: 25%;
-    filter: invert(100%);
+.LogoFooter {
+    width: 150px;
 }
