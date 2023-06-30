@@ -60,7 +60,7 @@ background-color: #e5beec ;
   margin: 0;
 }
 
-/*Productos 
+/*Productos */
 
 .container-py-3 {
   background-color: #e5beec;
@@ -76,7 +76,7 @@ background-color: #e5beec ;
 .titulo{
   background-color: #FAE8F5;
 }
-*/
+
 /*con ayuda de la documentación de bootstrap se hace un flex en columna para que abarque todo el espacio el footer*/
 body {
     display: flex;
