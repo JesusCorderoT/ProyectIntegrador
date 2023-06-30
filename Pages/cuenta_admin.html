@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/Styles/CuentaUsuario.css">  
+  <link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuenta de administrador</title>
+</head>
+
+<body class="body">
+
+<!--=======================INICIO NAVBAR=======================-->
+    <header id="header" class=" header fixed-top d-flex align-items-center container-wrap">
+      <div id="navbarContainer"></div>
+  </header>
+<!--=======================FIN NAVBAR=======================-->
+
+
+<!--=======================INICIO LISTA=======================-->
+
+<div class="card">
+  <div class="card-body">
+
+      <div class="card-body">
+        <ol class="list-group">          
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div>
+              <i class="bi bi-person"></i>
+            </div>            
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Jesus Cordero Torres</div>
+              Administra todo lo de tu negocio desde aqui ;)
+            </div>            
+          </li>    
+        </ol>
+      </div>
+   
+    <ol class="list-group list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div>
+            <i class="bi bi-graph-up"></i>
+        </div> 
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Dashboard</div>
+          Una vista general de tu negocio
+        </div>
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/dashboard.html">></a>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div>
+            <i class="bi bi-plus-circle"></i>
+        </div> 
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Agregar</div>
+          Agrega mas articulos, marcas o categorias
+        </div>
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/registros_pmc.html">></a>      
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div>
+            <i class="bi bi-clock-history"></i>
+                </div> 
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Historial de ventas</div>
+          Checa tus ventas
+        </div>
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/">></a>      
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div>
+            <i class="bi bi-box-seam"></i>
+        </div> 
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Envios</div>
+          Gestiona tus envios
+        </div>
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/control_de_pedidos.html">></a>      
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div>
+            <i class="bi bi-person-gear"></i>
+        </div> 
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Clientes</div>
+          Gestiona a tus clientes
+        </div>
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/">></a>      
+      </li>
+      
+    </ol>
+
+<br>
+
+  </div>
+</div>
+
+<!--=======================FIN LISTA=======================-->
+
+
+
+
+
+
+
+
+
+
+
+  <!--=======================INICIO FOOTER=======================-->
+  <footer id="footer" class="footer">
+    <div id="footerContainer"></div>   
+</footer>
+  <!--=======================FIN FOOTER=======================-->
+
+
+
+  <!-- Pruebas de estilos -->
+
+
+  <style>
+    .card {
+
+      background-color: #e5beec;
+    }
+
+    
+
+/*ojo */
+
+.eye {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #55636e;
+  overflow: hidden;
+}
+
+.eyelid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: #82929c;
+  box-shadow: inset 0px 10px 10px rgba(250, 249, 249, 0.2);
+  animation: blink 4s ease-in-out infinite;
+}
+
+
+    .eyeball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: rgb(114, 103, 103);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease-out;
+}
+
+ .eyebrow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #000000b7;
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+} 
+  </style>
+
+
+  <script>
+
+const pupil = document.querySelector('.pupil');
+
+document.addEventListener('mousemove', (event) => {
+  // Obtener la posición del mouse dentro de la página
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  // Calcular la posición de la pupila en función de la posición del mouse
+  const pupilX = (mouseX / window.innerWidth) * 40 - 20;
+  const pupilY = (mouseY / window.innerHeight) * 40 - 20;
+
+  // Aplicar la transformación a la pupila
+  pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+});
+
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+    <script src="../src/Navbar.js"></script>
+    <script src="../src/Footer.js"></script>
+
+</body>
+
+</html>

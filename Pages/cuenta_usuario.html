@@ -40,6 +40,14 @@
               <div class="fw-bold">Jesus Cordero Torres</div>
               Realiza modificaciones en tus datos si es necesario.
             </div>
+
+            <!-- <div class="eye">
+              <div class="eyelid"></div>
+              <div class="eyeball">
+                <div class="pupil"></div>
+              </div>
+              <div class="eyebrow"></div>
+            </div> -->
             <!-- <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/DatosUsuario.html">></a> -->
           </li>    
         </ol>
@@ -54,7 +62,7 @@
           <div class="fw-bold">Mis Datos</div>
           Valida tus datos
         </div>
-        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/DatosUsuario.html">></a>
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/datos_usuario.html">></a>
       </li>
 
       <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -65,7 +73,7 @@
           <div class="fw-bold">Pedidos</div>
           Historial de pedidos
         </div>
-        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/ListaPedidosUsuario.html">></a>      
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/lista_pedidos_usuario.html">></a>      
       </li>
 
       <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -76,7 +84,7 @@
           <div class="fw-bold">Rastrear</div>
           Rastrea tus pedidos
         </div>
-        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/EstatusEnvio.html">></a>      
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/estatus_envio.html">></a>      
       </li>
 
       <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -87,7 +95,7 @@
           <div class="fw-bold">Tarjetas</div>
           Administra tus metodos de pago
         </div>
-        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/ListaTarjetasUsuario.html">></a>      
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/lista_tarjetas_usuario.html">></a>      
       </li>
 
       <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -98,7 +106,7 @@
           <div class="fw-bold">Direcciones</div>
           Administra tus direcciones de entrega
         </div>
-        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/ListaDireccionesUsuario.html">></a>      
+        <a class="badge bg-dark rounded-pill text-decoration-none" href="/Pages/lista_direcciones_usuario.html">></a>      
       </li>
       
     </ol>
@@ -136,10 +144,90 @@
 
       background-color: #e5beec;
     }
+
+    
+
+/*ojo */
+
+.eye {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #55636e;
+  overflow: hidden;
+}
+
+.eyelid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: #82929c;
+  box-shadow: inset 0px 10px 10px rgba(250, 249, 249, 0.2);
+  animation: blink 4s ease-in-out infinite;
+}
+
+
+    .eyeball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: rgb(114, 103, 103);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease-out;
+}
+
+ .eyebrow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #000000b7;
+  box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.2);
+} 
   </style>
 
 
   <script>
+
+const pupil = document.querySelector('.pupil');
+
+document.addEventListener('mousemove', (event) => {
+  // Obtener la posición del mouse dentro de la página
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  // Calcular la posición de la pupila en función de la posición del mouse
+  const pupilX = (mouseX / window.innerWidth) * 40 - 20;
+  const pupilY = (mouseY / window.innerHeight) * 40 - 20;
+
+  // Aplicar la transformación a la pupila
+  pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+});
+
 
   </script>
 

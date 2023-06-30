@@ -10,10 +10,13 @@ background-color: #e5beec ;
 }
 
 .Titulo {
-  background-color: #B596EF;
+  background-color: #e5beec;
 }
 .container1{
   background-color: #FAE8F5;
+}
+.Titulo {
+  background-color: #e5beec;
 }
 
 /* **********************************************************
@@ -36,7 +39,7 @@ background-color: #e5beec ;
 .about-team-block:hover {
   transform: translateY(-8px);
   color:#e5beec
-  -webkit-box-shadow: 0px 21px 42px -22px #919394;
+  -webkit-box-shadow 0px 21px 42px -22px #919394;
   -moz-box-shadow: 0px 21px 42px -22px #919394;
   box-shadow: 0px 21px 42px -22px #919394;
   cursor: pointer;
@@ -57,7 +60,7 @@ background-color: #e5beec ;
   margin: 0;
 }
 
-/*Productos */
+/*Productos 
 
 .container-py-3 {
   background-color: #e5beec;
@@ -67,6 +70,28 @@ background-color: #e5beec ;
   background-color:#FAE8F5
  }
 .card-body{
-  background-color: #B596EF;
+  background-color: #e5beec;
 
+}
+.titulo{
+  background-color: #FAE8F5;
+}
+*/
+/*con ayuda de la documentación de bootstrap se hace un flex en columna para que abarque todo el espacio el footer*/
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#main--container {
+    flex: 1;
+}
+#footer {
+  background-color: black;
+  color: #66347f;
+  padding: 20px;
+}
+
+.LogoFooter {
+  width: 150px;
 }
