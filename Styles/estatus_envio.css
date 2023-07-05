@@ -1,0 +1,43 @@
+:root {
+    --color1: #FAE8F5;
+    --color2: #E596EF;
+    --color3: #B596EF;
+    --color4: #66347F;
+    --color5: #000000;
+}
+
+
+
+.TITULO {
+    margin: 6%;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    background-color: #FAE8F5;
+    text-align: center;
+}
+
+#subtitulo{
+    font-family: 'Lustria', serif;
+}
+
+.card3{
+    background-color: white;
+    margin: 10px;
+    color: #000000;
+    border-radius: 10px;
+    border:solid;
+    border-color: #000000;
+    padding: 20px;
+    }
+
+/* Estilos para la sección de estatus de envío de productos */
+section.container {
+    background-color: var(--color1);
+    padding: 20px;
+    border-radius: 10px;
+    border-color: #000000;
+    border: solid;
+    border-width: 2px;
+    font-family: 'Lustria', serif;
+}
+
+
