@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
+	<link href="https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap"
+		rel="stylesheet">s
+	<link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Agenda cita</title>
+</head>
+
+<body>
+
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+		<title>Formulario de agendar citas</title>
+
+	</head>
+
+	<body class="body">
+
+		<!--=======================INICIO NAVBAR=======================-->
+		<header id="header" class=" header fixed-top d-flex align-items-center container-wrap">
+			<div id="navbarContainer"></div>
+		</header>
+		<!--=======================FIN NAVBAR=======================-->
+
+		<!--=======================INICIO FORMULARIO=======================-->
+
+
+		<div class="container2">
+			<div class="card">
+				<div class="card-body">
+					<h1 class="card-title">Agenda tu cita para...</h1>
+					<br>
+
+
+					<div class="row">
+
+						<div class="col-6">
+							<div class="form-group col-md-12">
+								<label for="formGroupExampleInput" class="form-label">Nombres y apellidos</label>
+								<input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+							</div>
+						</div>
+
+						<div class="col-6">
+							<div class="form-group col-md-12">
+								<label for="exampleInputEmail1" class="form-label">Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1"
+									aria-describedby="emailHelp">
+							</div>
+						</div>
+
+					</div>
+
+<br>
+					
+					<div class="row">
+
+						<div class="col-6">
+								<div class="form-group col-md-12">
+										<label for="select-time" class="form-label">Hora:</label>
+										<select class="form-select" id="floatingSelect"
+											aria-label="Floating label select example">
+											<option selected>Selecciona un horario:</option>
+											<option value="10:00">10:00</option>
+											<option value="11:00">11:00</option>
+											<option value="12:00">12:00</option>
+											<option value="13:00">13:00</option>
+											<option value="14:00">14:00</option>
+											<option value="15:00">15:00</option>
+											<option value="16:00">16:00</option>
+											<option value="17:00">17:00</option>
+											<option value="18:00">18:00</option>
+											<option value="19:00">19:00</option>
+										</select>
+								</div>
+						</div>
+
+						<div class="col-6">
+							<div class="form-group col-md-12">
+								<label for="fecha" class="form-label">Fecha</label>
+								<input type="date" class="form-control" id="" required>
+							</div>	
+						</div>
+
+					</div>
+
+
+					</form>
+					<br>
+					<button id="guardar-btn" type="button" class="btn btn-dark">Guardar</button>
+
+					<button type="submit" class="btn btn-danger">Cancelar</button>
+
+				</div>
+			</div>
+		</div>
+
+		<!--=======================FIN FORMULARIO=======================-->
+
+
+
+
+		<!--=======================INICIO FOOTER=======================-->
+		<footer id="footer" class="footer">
+			<div id="footerContainer"></div>
+		</footer>
+		<!--=======================FIN FOOTER=======================-->
+
+	</body>
+
+	</html>
+	<style>
+	
+
+		.card {
+			background-color: #e5beec;
+			font-family: 'Lustria', serif;
+	
+		}
+
+		.container2 {
+			place-items: center;
+		}
+
+	</style>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+
+	<script src="../src/Navbar.js"></script>
+	<script src="../src/Footer.js"></script>
+
+</body>
+
+</html>
