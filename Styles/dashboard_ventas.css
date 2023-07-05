@@ -1,0 +1,169 @@
+/* VENTAS*/
+.tarjeta-venta {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.tarjeta-venta:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-venta h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.tarjeta-venta p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.tarjeta-venta .precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+/*CITAS*/
+
+/* Estilos generales de las tarjetas */
+.tarjeta-evento {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los encabezados de las tarjetas */
+.tarjeta-evento h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Estilos para los diferentes campos de la tarjeta */
+.tarjeta-evento p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilos específicos para cada campo */
+.tarjeta-evento .nombre {
+    font-weight: bold;
+}
+
+.tarjeta-evento .fecha {
+    color: #888;
+}
+
+.tarjeta-evento .cliente {
+    font-style: italic;
+}
+
+.tarjeta-evento .hora {
+    font-weight: bold;
+}
+
+.tarjeta-evento .servicio {
+    color: #008000;
+}
+
+/*USUARIOS*/
+
+/* Estilos para la tabla de usuarios */
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.tabla-usuarios th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.tabla-usuarios tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-usuarios tr:hover {
+    background-color: #e6e6e6;
+}
+
+.tabla-usuarios td {
+    text-align: left;
+}
+
+/*ADMINISTRADOR*/
+
+/* Estilos para la tarjeta del administrador */
+.tarjeta-administrador {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.tarjeta-administrador h3 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tarjeta-administrador p {
+    margin: 5px 0;
+}
+
+.tarjeta-administrador p:first-child {
+    font-weight: bold;
+}
+
+.tarjeta-administrador .informacion-adicional {
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.tarjeta-administrador .informacion-adicional h4 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tarjeta-administrador .informacion-adicional p {
+    margin: 5px 0;
+}
+
+.tarjeta-administrador .boton-accion {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta-administrador .boton-accion:hover {
+    background-color: #0056b3;
+}
