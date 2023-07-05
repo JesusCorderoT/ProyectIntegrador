@@ -87,8 +87,8 @@
 
 .servicios:hover,
 .productos:hover,
-.galeria:hover,
-.citas:hover {
+.garantias:hover,
+.nosotros:hover {
   background: linear-gradient(rgb(240, 240, 240), rgb(220, 220, 220));
   color: black;
 }
