@@ -1,19 +1,22 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded&display=swap');
 
-.lead, .display-5{
+.lead,
+.display-5 {
   font-family: 'Lustria', serif;
 }
 
-.display-4, .banner2{
+.display-4,
+.banner2 {
   font-family: 'Tsukimi Rounded', sans-serif;
 }
+
 /* Zona 1 */
 /* .container {
   max-width: 960px;
 } */
 
-.banner{
+.banner {
   /* background: rgb(250,232,245);
   background: radial-gradient(circle, rgba(250,232,245,1) 0%, rgba(229,150,239,1) 100%); */
   background-color: rgb(250, 232, 245);
@@ -29,78 +32,83 @@
   z-index: 0;
   /* width: 300px;
   height: 540px; */
-  border-radius: 21px;
+  /* border-radius: 21px; */
   -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
 
-#logotipo{
+#logotipo {
   width: 300px;
   height: 300px;
-  border-radius: 21px;
+  /* border-radius: 21px; */
 }
 
 /* Zona 2 */
 
-.banner2{
+.banner2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  background-image: url(../assets/imgs/estrellado.jpg);
 }
-.servicios{
-  background: rgba(102, 52, 127,0.5);
+
+.servicios {
+  background: rgba(102, 52, 127, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   /* background: rgba(102, 52, 127,0.5); */
 }
 
-.productos{
-  background: rgba(229, 190, 236,0.5);
+.productos {
+  background: rgba(229, 190, 236, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   /* background: rgba(229, 190, 236, 0.5); */
 }
 
-.galeria{
+.garantias {
   background: rgb(250, 232, 245);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   /* background: rgba(250, 232, 245,0.5); */
 }
 
-.citas{
+.nosotros {
   background: rgb(181, 150, 239);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   /* background: rgba(181, 150, 239, 0.5); */
 }
 
-.imagenRectangulo{
+.imagenRectangulo {
   width: 350px;
   height: 300px;
   border-radius: 300px;
 }
 
-.imagenRectangulo2{
+.imagenRectangulo2 {
   width: 350px;
   height: 300px;
 }
 
-.servicios:hover, .productos:hover, .galeria:hover, .citas:hover {
+.servicios:hover,
+.productos:hover,
+.galeria:hover,
+.citas:hover {
   background: linear-gradient(rgb(240, 240, 240), rgb(220, 220, 220));
   color: black;
 }
 
-.link{
+.link {
   text-decoration: none;
   color: black;
 }
 
 /* Zona 3 */
 
-.tendencias{
-  background: rgba(0,0,0,0.8);
+.tendencias {
+  background: rgba(0, 0, 0, 0.8);
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .tendencia {
-  max-width: 60%;
-  margin: 0 auto; 
+  max-width: 30%;
+  margin: 0 auto;
 }
 
 footer {
@@ -128,30 +136,46 @@ footer {
 
 
 
-.border-top { border-top: 1px solid #e5e5e5; }
-.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
 
-.flex-equal > * {
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.flex-equal>* {
   -ms-flex: 1;
   -webkit-box-flex: 1;
   flex: 1;
 }
+
 @media (min-width: 768px) {
-  .flex-md-equal > * {
+  .flex-md-equal>* {
     -ms-flex: 1;
     -webkit-box-flex: 1;
     flex: 1;
   }
 }
 
-.overflow-hidden { overflow: hidden; }
-
-#tendencias{
-  color:white;
+.overflow-hidden {
+  overflow: hidden;
 }
 
-#textoBienvenida{
+#tendencias {
+  color: white;
+}
+
+#textoBienvenida {
   z-index: 1;
+}
+
+.contacto {
+  background: rgba(181, 150, 239, 0.3);
+  background-image: repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
