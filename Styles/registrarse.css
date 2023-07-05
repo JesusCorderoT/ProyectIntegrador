@@ -1,0 +1,20 @@
+#body{
+    background-color: #fae8f5e5;
+}
+#registro{
+    background-color: #b596efc9;
+}
+.card-title{
+    background-color: black;
+    text-align: center;
+}
+.card-title>p{
+    color:#FAE8F5;
+}
+label{
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-weight:500;
+}
+input{
+    font-family: 'Lustria', serif;
+}
