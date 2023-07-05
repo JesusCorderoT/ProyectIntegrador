@@ -10,36 +10,31 @@
 <body>
     <div id="navbarContainer"></div>
     <h3>Pedidos</h3>
-    <div class="container shippingCard">
+    <div class="container card">
         <div class="container">
-            <table class="container tabla">
-                <thead class="encabezados">
-                    <tr>
-                        <th class="col-11">Numero</th>
-                        <th class="col-1"> <button class="dropdown" type="button" data-bs-toggle="collapse" data-bs-target=".informacion" aria-expanded="false">Detalles</button></th>
-                    </tr>
-                </thead>
-                <div class="dropdown-menu contenido">
-                    <tbody class="dropdown-item-text informacion col-12">
-                        <tr>
-                            <td>Usuario: </td><td class="usuario"></td> 
-                        </tr>
-                        <tr>
-                            <td>Dirección: </td><td class="direccion"></td> 
-                        </tr>
-                        <tr>
-                            <td>Total: </td><td class="costo"></td> 
-                        </tr>
-                        <tr>
-                            <td>Estatus: </td><td class="estatus"></td>
-                        </tr>
-                    </tbody>
+            <div class="card-header">
+                        <p class="col-11">Lista de pedidos</p>
                 </div>
-            </table>
+                <div class=" card-body dropdown-menu contenido">
+                    <div class=" dropdown-item-text informacion col-12">
+                            <p>Usuario: </p>
+                            <p class="usuario"></p> 
+
+                            <p>Dirección: </p><p class="direccion"></p> 
+
+                            <p>Total: </p><p class="costo"></p> 
+
+                            <p>Estatus: </p><p class="estatus"></p>
+
+                    </div>
+                </div>
+            </div>
         </div>   
     </div>
     
-    <div id="footerContainer"></div>
+    <footer id="footer" class="footer">
+        <div id="footerContainer"></div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
