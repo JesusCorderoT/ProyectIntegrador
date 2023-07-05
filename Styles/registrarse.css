@@ -7,6 +7,8 @@
 .card-title{
     background-color: black;
     text-align: center;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-size: medium;
 }
 .card-title>p{
     color:#FAE8F5;
