@@ -1,5 +1,5 @@
 body{
-    background-color:rgba(250, 232, 245, 0.50)!important;
+    background-color: #FAE8F5 !important;
     font-family: 'Lustria', serif;  
 }  
 
@@ -7,10 +7,10 @@ body{
     margin-bottom: 100px;
 }
 
-.imageCard,.descriptionCard{
+.descriptionCard{
     background-color:  rgba(229, 150, 239, 0.30);
     margin: 15px;
-    border-radius: 25px;
+    border-radius: 25px; 
     border: 4px solid #000000;
     font-family: 'Lustria', serif;  
 
@@ -27,6 +27,8 @@ body{
 #imagenesEmpresa{
     width: 330px;
     height: auto;
+    text-align: center;
+    font-family: 'Lustria', serif; 
 }
 
 .descriptionCard{
