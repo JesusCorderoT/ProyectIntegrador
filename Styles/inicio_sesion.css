@@ -1,19 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
 
+:root {
+    --color1: #FAE8F5;
+    --color2: #E596EF;
+    --color3: #B596EF;
+    --color4: #66347F;
+    --color5: #000000;
+}
+
 .TITULO {
-        margin: 6%;
+        margin: 4%;
         font-family: 'Tsukimi Rounded', sans-serif;
-        background-color: blueviolet;
+        background-color: var(--color1);
+        border: solid;
+        text-align: center;
+        border-width: 3.5px;
+        border-radius: 0%;
 }
 
-#tituloFondo{
-    
-}
 
-#subtitulo{
-    
-}
-
-.container{
+#inicioSesion{
     font-family: 'Lustria', serif;
+    background-color: var(--color1);
+    color: var(--color5);
+    border:none;
+    border-width: 2px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+#email{
+    background-color: #3e2753;
+    color: var(--color1);
+
+}
+
+#inputCorreo{
+    color: var(--color5);
+}
+
+#inputContrasena{
+    color: var(--color5);
+}
+
+#terminos{
+    color: var(--color1);
+}
+
+.small{
+    color: var(--color1);
 }
