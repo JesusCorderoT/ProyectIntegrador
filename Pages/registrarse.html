@@ -19,7 +19,7 @@
              <!--Contenedor del cuerpo de la tarjeta-->
             <div class="card-body">
                 <!--inicio de formulario-->
-                <form method="post">
+                <form id= "registro" action="/index.html">
                     <!--Contenedor de etiqueta e input de nombre-->
                     <div class="container">
                         <label class="form-label" for="nombre">Nombre</label>
@@ -38,21 +38,21 @@
                     <!--Contenedor de etiqueta e input de telefono-->
                     <div class="container">
                         <label class="form-label" for="telefono" >Telefono</label>
-                        <input class="form-control" maxlength="10" id="telefono" type="tel" pattern="d{10}" required>
+                        <input class="form-control" maxlength="10" id="telefono" type="tel" pattern="\d{10}" required>
                     </div>
-                    <!--Contenedor de etiqueta e input de usuario-->
+                    <!--Contenedor de etiqueta e input de nombre de usuario-->
                     <div class="container">    
                         <label class="form-label" for="usuario">Nombre de usuario</label>
                         <input class="form-control" id="usuario" type="text" pattern="^[a-zA-z\s]{2,}$" required>
                     </div>
-                    <!--Contenedor de etiqueta e input de nombre-->
+                    <!--Contenedor de etiqueta e input de contraeña-->
                     <div class="container">    
                         <label class="form-label" for="contraseña">Contraseña</label>
-                        <input class="form-control" id="contraseña" type="text" required>
+                        <input class="form-control" id="contraseña" type="text" placeholder="Al menos 6 caracteres, debe incluir letras y numeros" required>
                     </div>
-                    <!--Contenedor de etiqueta e input de nombre-->
                     <br>
-                    <input id="submit-btn" type="submit" value="Crear cuenta" class="btn btn btn-outline-dark">
+                    <!--Contenedor de botón submit-->
+                    <input id="submit-btn" type="submit"  value="Crear cuenta" class="btn btn btn-outline-dark">
                 </form>
             </div>
         </div>

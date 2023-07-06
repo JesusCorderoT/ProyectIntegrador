@@ -1,24 +1,12 @@
-body{
-    background-color: #e596efb2;
+#card{
+    background-color: #b596efc9;
 }
 #navbarContainer{
     margin-bottom: 20px;
 }
-.shippingCard{
-    margin: 20px;
+#contenido{
+    background-color: white;
 }
-.tabla{
-    border-width: 2px;
-    border-color: #000000;
-    border-style: solid;
+li{
+    margin: 5px;
 }
-.contenido{
-    background-color:  #e596efb2;
-}
-.encabezados{
-    background-color: #b596efaf;
-}
-.informacion{
-    background-color: #e596efb2;
-}
-
