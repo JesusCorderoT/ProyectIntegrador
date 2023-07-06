@@ -1,90 +1,90 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded&display=swap');
 
+/* Fuente para parrafos y textos */
 .lead,
 .display-5 {
   font-family: 'Lustria', serif;
 }
 
+/* Fuente para Titulos */
 .display-4,
 .banner2 {
   font-family: 'Tsukimi Rounded', sans-serif;
 }
 
-/* Zona 1 */
-/* .container {
-  max-width: 960px;
-} */
-
+/* Banner de inicio de página */
 .banner {
-  /* background: rgb(250,232,245);
-  background: radial-gradient(circle, rgba(250,232,245,1) 0%, rgba(229,150,239,1) 100%); */
   background-color: rgb(250, 232, 245);
   background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   font-family: 'Lustria', serif;
 }
 
+/* Logotipo en Banner */
 .product-device {
   position: absolute;
   right: 2%;
   bottom: 0%;
   z-index: 0;
-  /* width: 300px;
-  height: 540px; */
-  /* border-radius: 21px; */
   -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
 
+/* Logotipo en Banner*/
 #logotipo {
   width: 300px;
   height: 300px;
-  /* border-radius: 21px; */
 }
 
-/* Zona 2 */
-
+/* Banner 2 */
 .banner2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
   background-image: url(../assets/imgs/estrellado.jpg);
 }
 
+/* Cuadricula Servicios */
 .servicios {
   background: rgba(102, 52, 127, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   /* background: rgba(102, 52, 127,0.5); */
 }
 
+/* Cuadricula Productos */
 .productos {
   background: rgba(229, 190, 236, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   /* background: rgba(229, 190, 236, 0.5); */
 }
 
+/* Cuadricula Garantías */
 .garantias {
   background: rgb(250, 232, 245);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   /* background: rgba(250, 232, 245,0.5); */
 }
 
+/* Cuadricula Nosotros */
 .nosotros {
   background: rgb(181, 150, 239);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   /* background: rgba(181, 150, 239, 0.5); */
 }
 
+/* Imagenes para cuadricula de opciones */
 .imagenRectangulo {
   width: 350px;
   height: 300px;
   border-radius: 300px;
 }
 
+/* Exclusivo para imagen en cuadricula Productos */
 .imagenRectangulo2 {
   width: 350px;
   height: 300px;
 }
 
+/* Efecto de sombreado para cuadricula opciones */
 .servicios:hover,
 .productos:hover,
 .garantias:hover,
@@ -93,49 +93,32 @@
   color: black;
 }
 
+/* Enlaces */
 .link {
   text-decoration: none;
   color: black;
 }
 
-/* Zona 3 */
-
+/* Tendencias */
 .tendencias {
   background: rgba(0, 0, 0, 0.8);
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Imagenes del Carrusel */
 .tendencia {
   max-width: 30%;
   margin: 0 auto;
 }
 
+/* Footer */
 footer {
   background-color: black;
   color: white;
 }
 
-/* #textoBienvenida{
-  z-index: 1;
-} */
-
-
-/* .product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: 5px;
-} */
-
-
-
-
-
+/* Propiedades para bordes */
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
@@ -144,16 +127,19 @@ footer {
   border-bottom: 1px solid #e5e5e5;
 }
 
+/* Efecto de shadow box para contenedores */
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
+/* Propiedades flex */
 .flex-equal>* {
   -ms-flex: 1;
   -webkit-box-flex: 1;
   flex: 1;
 }
 
+/* Propiedad de tamaño de ventana */
 @media (min-width: 768px) {
   .flex-md-equal>* {
     -ms-flex: 1;
@@ -162,18 +148,22 @@ footer {
   }
 }
 
+/* Propiedad para evitar el desborde */
 .overflow-hidden {
   overflow: hidden;
 }
 
+/* Propiedad para texto en tendencias */
 #tendencias {
   color: white;
 }
 
+/* Mandar enfrente el texto de bienvenida */
 #textoBienvenida {
   z-index: 1;
 }
 
+/* Zona de contáctanos */
 .contacto {
   background: rgba(181, 150, 239, 0.3);
   background-image: repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 20px);
