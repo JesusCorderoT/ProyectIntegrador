@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
+
+:root {
+    --color1: #FAE8F5;
+    --color2: #E596EF;
+    --color3: #B596EF;
+    --color4: #66347F;
+    --color5: #000000;
+}
+
+body{
+    background-color: var(--color4);
+}
+
+.TITULO {
+        position: relative;
+        margin: px;
+        font-family: 'Tsukimi Rounded', sans-serif;
+        background-color: var(--color1);
+        text-align: center;
+        border-width: 3.5px;
+        border-radius: 5%;
+        box-shadow: 0 0 5px var(--color1);
+}
+
+#logoTitulo{
+    
+}
+
+
+#inicioSesion{
+    font-family: 'Lustria', serif;
+    background-color: var(--color1);
+    color: var(--color5);
+    border:none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--color1);
+}
+
+#email{
+    background-color: #3e2753;
+    color: var(--color1);
+
+}
+
+#inputCorreo{
+    color: var(--color5);
+}
+
+#inputContrasena{
+    color: var(--color5);
+}
+
+#terminos{
+    color: var(--color1);
+}
+
+.small{
+    color: var(--color1);
+}
+
+#enlaceGarantias{
+    text-decoration: none;
+    color: var(--color1);
+}
+
+#botonInicio{
+    border-color: var(--color1);
+}
+
+#botonRegistrate{
+    border-color: var(--color1);
+}
+
+#enlaceRegistro{
+    text-decoration: none;
+    color: var(--color1);
+}

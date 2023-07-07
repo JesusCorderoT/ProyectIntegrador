@@ -2,11 +2,14 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="/Styles/CuentaUsuario.css">
-  <link rel="stylesheet" href="/Styles/Navbar.css">
-  <link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="/Styles/cuentaUsuario.css">
+  <link rel="stylesheet" href="/Styles/navbar.css">
+  <link rel="icon" href="/assets/imgs/logos/logoOjo.png" sizes="32x32" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@500&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +18,13 @@
 
 <body class="body">
 
-  <!--=======================INICIO NAVBAR=======================-->
-  <nav style="position: fixed; z-index: 1; top: 0%;" class="navbar navbar-expand-lg navbarOjo">
-    <div class="container">
+  <!--======================= INICIO NAVBAR =======================-->
+  <nav style="position: fixed; z-index: 1; top: 0%;" class="navbar navbar-expand-lg navbarOjo container-fluid" id="contenedorNavbar">
+    <div class="nav container-fluid">
 
       <div class="containerImg">
         <a class="" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-          <img class="imgLogo " src="/assets/imgs/logoOjo.png" /> </a>
+          <img class="imgLogo " src="/assets/imgs/logos/OjoBlanco.png" /> </a>
       </div>
 
       <div class="containerName">
@@ -31,43 +34,34 @@
     </div>
 
     <div class="containerBread">
-      <button class="navbar-toggler btnBread" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+      <button class="navbar-toggler btnBread" type="button" data-bs-toggle="collapse" data-bs-target="#navbarOpciones"
         aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbarsExample07">
+    <div class="collapse navbar-collapse" id="navbarOpciones">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="/index.html">Inicio</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Productos</a>
+          <a class="nav-link active" aria-current="page" href="/Pages/productos.html">Productos</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+          <a class="nav-link active" aria-current="page" href="/Pages/servicios.html">Servicios</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
+          <a class="nav-link active" aria-current="page" href="/Pages/información_empresa.html">Nosotros</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Cuenta</a>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">desplegable</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">pagina 1</a></li>
-            <li><a class="dropdown-item" href="#">pagina 2</a></li>
-            <li><a class="dropdown-item" href="#">pagina 3</a></li>
-          </ul>
-        </li>
+          <a class="nav-link active" aria-current="page" href="/pages/cuenta_usuario.html">Cuenta</a>
+        </li> 
       </ul>
     </div>
     </div>
@@ -94,10 +88,11 @@
 
       <div class="">
       <ul  class=" list-group">
-        <li class="opciones list-group-item"><a href="CuentaUsuario.html">Datos</a></li>
-        <li class="opciones list-group-item"><a href="EstatusEnvio.html">Pedidos</a></li>
-        <li class="opciones list-group-item"><a href="ListaTarjetasUsuario.html">Tarjetas</a></li>
-        <li class="opciones list-group-item"><a href="DireccionesUsuario.html">Direcciones</a></li>      
+        <li class="opciones list-group-item"><a href="/Pages/datos_usuario.html">Datos</a></li>
+        <li class="opciones list-group-item"><a href="/Pages/lista_pedidos_usuario.html">Pedidos</a></li>
+        <li class="opciones list-group-item"><a href="/Pages/estatus_envio.html">Rastrear</a></li>
+        <li class="opciones list-group-item"><a href="/Pages/lista_tarjetas_usuario.html">Tarjetas</a></li>
+        <li class="opciones list-group-item"><a href="/Pages/lista_direcciones_usuario.html">Direcciones</a></li>      
       </ul>
     </div>
     </div>

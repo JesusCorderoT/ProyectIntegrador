@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Styles/registrarse.css">
+    <title>Registrate</title>
+</head>
+<body id="body">
+    <!--Contenedor de la navbar-->
+    <div id="navbarContainer"></div>
+    <!--Contenedor de la tarjeta de registro-->
+        <div class="card" id="registro">
+            <!--Contenedor del título de la tarjeta-->
+            <div class="card-title mb-0">
+                <p>Regístrate para comprar o agendar</p>
+            </div>
+             <!--Contenedor del cuerpo de la tarjeta-->
+            <div class="card-body">
+                <!--inicio de formulario-->
+                <form id= "registro" action="/index.html">
+                    <!--Contenedor de etiqueta e input de nombre-->
+                    <div class="container">
+                        <label class="form-label" for="nombre">Nombre</label>
+                        <input class="form-control" id="nombre" type="text"   required> <!--pattern="^[a-zA-z\s]{2,}$"-->
+                    </div>
+                    <!--Contenedor de etiqueta e input de apellido-->
+                    <div class="container">
+                        <label class="form-label" for="apellido">Apellidos</label>
+                        <input class="form-control" id="apellidos" type="text" pattern="^[a-zA-z\s]{2,}$" required>
+                    </div>
+                    <!--Contenedor de etiqueta e input de email-->
+                    <div class="container">
+                        <label class="form-label" for="email">E-mail</label>
+                        <input class="form-control" id="email" type="email" pattern="^([\w\.\_])*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{3,})$" required>
+                    </div>
+                    <!--Contenedor de etiqueta e input de telefono-->
+                    <div class="container">
+                        <label class="form-label" for="telefono" >Telefono</label>
+                        <input class="form-control" maxlength="10" id="telefono" type="tel" pattern="\d{10}" required>
+                    </div>
+                    <!--Contenedor de etiqueta e input de nombre de usuario-->
+                    <div class="container">    
+                        <label class="form-label" for="usuario">Nombre de usuario</label>
+                        <input class="form-control" id="usuario" type="text" pattern="^[a-zA-z\s]{2,}$" required>
+                    </div>
+                    <!--Contenedor de etiqueta e input de contraeña-->
+                    <div class="container">    
+                        <label class="form-label" for="contraseña">Contraseña</label>
+                        <input class="form-control" id="contraseña" type="text" placeholder="Al menos 6 caracteres, debe incluir letras y numeros" required>
+                    </div>
+                    <br>
+                    <!--Contenedor de botón submit-->
+                    <input id="submit-btn" type="submit"  value="Crear cuenta" class="btn btn btn-outline-dark">
+                </form>
+            </div>
+        </div>
+
+
+        <footer id="footer" class="footer">
+            <div id="footerContainer"></div>
+        </footer>
+
+        <script src="/src/registrarse.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="../src/navbar.js"></script>
+    <script src="../src/footer.js"></script>
+</body>
+</html>

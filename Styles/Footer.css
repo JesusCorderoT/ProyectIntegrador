@@ -1,0 +1,25 @@
+/* Ya que el html será llamado utilizará el 100% de la página */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*con ayuda de la documentación de bootstrap se hace un flex en columna para que abarque todo el espacio el footer*/
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#main--container {
+    flex: 1;
+}
+
+#footer {
+    background-color: black;
+    color: #FAE8F5;
+    padding: 20px;
+}
+
+.LogoFooter {
+    width: 150px;
+}

@@ -1,28 +1,36 @@
-.navbarOjo
-{
-background-color: #66347f;
-position: sticky;
+@import url('https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded&display=swap');
+
+.navbarOjo .navbar-brand{
+/* En revisión 
+.navbarOjo .nav-item a{ */
+    color: white;
 }
 
-.imgLogo
-{
-height: 6%;
-width: 6%;
+.navbarOjo {
+    background-color: #66347f;
+    position: sticky;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    color: white;
+}
+
+.imgLogo {
+    height: 6%;
+    width: 6%;
 }
 
 
-/* .navbar
-{
-    position: fixed;
-     z-index: 1;
-      top: 0%;
-} */
+.navbar {
+    z-index: 9999;
+    top: 0%;
+}
 
+#contenedorNavbar .containerName {
+    position: absolute;
+    left: 5%;
+    font-family: 'Tsukimi Rounded', sans-serif;
+}
 
-
-.containerBread
-{
-position: absolute;
-right: 5%;
-
-} 
+.containerBread {
+    position: absolute;
+    right: 5%;
+}

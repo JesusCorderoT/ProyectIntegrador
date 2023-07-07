@@ -1,0 +1,97 @@
+.body
+{
+background-color: #FAE8F5;
+}
+
+.col-md-6{
+
+background-color: #e5beec ;
+
+}
+
+.Titulo {
+  background-color: #e5beec;
+}
+.container1{
+  background-color: #FAE8F5;
+}
+.Titulo {
+  background-color: #e5beec;
+}
+
+/* **********************************************************
+/*                    About Team
+/* ********************************************************* */
+.about-team {
+  background: #e5beec;
+}
+
+.about-team-block {
+  background: #f2f3f8;
+  margin: 0 0 25px;
+  transition: 0.25s;
+}
+
+.about-team-block img {
+  width: 85%;
+}
+
+.about-team-block:hover {
+  transform: translateY(-8px);
+  color:#e5beec
+  -webkit-box-shadow 0px 21px 42px -22px #919394;
+  -moz-box-shadow: 0px 21px 42px -22px #919394;
+  box-shadow: 0px 21px 42px -22px #919394;
+  cursor: pointer;
+}
+
+.about-team-title {
+  padding: 20px 20px;
+  min-height: 94px;
+  overflow: hidden;
+}
+
+.about-team-title h5 {
+  text-align: center;
+}
+
+.about-team-title p {
+  text-align: center;
+  margin: 0;
+}
+
+/*Productos */
+
+.container-py-3 {
+  background-color: #e5beec;
+}
+
+ .container-marketing{
+  background-color:#FAE8F5
+ }
+.card-body{
+  background-color: #e5beec;
+
+}
+.titulo{
+  background-color: #FAE8F5;
+}
+
+/*con ayuda de la documentación de bootstrap se hace un flex en columna para que abarque todo el espacio el footer*/
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#main--container {
+    flex: 1;
+}
+#footer {
+  background-color: black;
+  color: #66347f;
+  padding: 20px;
+}
+
+.LogoFooter {
+  width: 150px;
+}

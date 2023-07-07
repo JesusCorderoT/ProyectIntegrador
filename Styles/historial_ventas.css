@@ -1,0 +1,41 @@
+ /*color del fondo general */
+body{
+    background-color: #FAE8F5 !important;
+    font-family: 'Lustria', serif;  
+    height: 100%;
+}  
+
+#navbarContainer{
+    margin-bottom: 100px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Tsukimi Rounded', sans-serif;
+}
+
+.imageCard,.descriptionCard{
+    background-color:  rgba(229, 150, 239, 0.30);
+    margin: 15px;
+    border-radius: 25px;
+    border: 4px solid #000000;
+    font-family: 'Lustria', serif;  
+
+}
+#container-fluid{
+    font-family: 'Lustria', serif;  
+}
+
+/*color de letra en fondos oscuros */    
+#headerTabla th {
+    color: rgb(250, 232, 245);
+  }
+  
+ /*color de fondo de la tabla */
+
+#historialTabla tbody td {
+    background-color: #b596efc9;
+
+  }  

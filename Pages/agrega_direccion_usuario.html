@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" rel="stylesheet">s
+  <link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrega direccion</title>
+</head>
+
+<body class="body">
+
+<!--=======================INICIO NAVBAR=======================-->
+    <header id="header" class=" header fixed-top d-flex align-items-center container-wrap">
+      <div id="navbarContainer"></div>
+  </header>
+<!--=======================FIN NAVBAR=======================-->
+
+
+
+  <!--=======================INICIO FORMULARIO=======================-->
+
+
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Agrega una nueva direccion de envio</h5>
+      <!-- <p class="card-text">Agrega.</p> -->
+
+
+      <form>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Nombres y apellidos</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Codigo Postal</label>
+          <input type="number" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Estado</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Municipio</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Colonia</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Calle</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Numero interior</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Numero exterior</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Calle 1</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Calle 2</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Telefono de contacto</label>
+          <input type="number" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="card-number-input">Número de tarjeta:</label>
+          <input type="text" class="form-control" id="card-number-input" name="card-number-input">
+        </div>
+
+        <div class="form-group col-md-12">
+          <label for="formGroupExampleInput" class="form-label">Indicaciones adicionales</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        
+      </form>
+      <button id="guardar-btn" type="button" class="btn btn-dark">Guardar</button>
+
+      <button type="submit" class="btn btn-danger">Cancelar</button>
+
+    </div>
+  </div>
+
+ 
+  <!--=======================FIN FORMULARIO=======================-->
+
+
+
+
+
+
+
+
+
+  <!--=======================INICIO FOOTER=======================-->
+
+  <footer id="footer" class="footer">
+    <div id="footerContainer"></div>   
+</footer>
+  <!--=======================FIN FOOTER=======================-->
+
+
+
+
+<style>
+.card {
+
+background-color: #e5beec;
+font-family: 'Lustria', serif;
+font-size: 1.5vw;
+/* font-family: 'Tsukimi Rounded', sans-serif; */
+}
+
+</style>
+
+
+    
+
+  <script src="../src/Navbar.js"></script>
+  <script src="../src/Footer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"crossorigin="anonymous"></script>
+
+<script src="/src/agrega_direccion_usuario.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>
