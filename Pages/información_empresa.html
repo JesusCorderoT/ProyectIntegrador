@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Styles/InformaciónEmpresa.css">
+    <link rel="stylesheet" href="/Styles/informacion_empresa.css">
     <link rel="stylesheet" href="/Styles/Navbar.css">
     <link rel="stylesheet" href="/Styles/Footer.css">
     <link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
@@ -16,26 +16,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Belgrano&family=Dancing+Script&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta charset="UTF-8">
+    <!-- Fav icon -->
+    <link rel="icon" type="image/x-icon" href="../assets/imgs/logos/logoOjo.png">
     <title>Información de la empresa</title>
     
 </head>
 <body>
 
     <!-- Navbar -->
+        <div id="navbarContainer"></div>    
+    <!-- Finaliza Navbar -->
 
-        <div id="navbarContainer"></div>
-     <!-- Finaliza Navbar -->
     <!--Contenido-->
 
-    <div class="container-fluid row" id="firstRow"> <!--Primera fila-->
-        
-        <div class="col-8">
-            <h1>Ojos De Gato</h1> 
-    <br>
+    <div class="container-fluid row">
+    <!-- Parte izquierda -->
+        <div class="container-fluid col-8 order-1 p-0">
+        <h1>Ojos De Gato</h1> 
+        <br>
         <!--Logo-->
             <div id="logo">
             <img src="/assets/imgs/logos/logo_ojos_de_gato.png" alt="Ojos de gato logo" class="img-fluid" id="logoimagen">
             </div>
+        <br>
         <!--Descripción-->
             <div class="container-fluid border descriptionCard">
                 <p>       
@@ -48,33 +51,34 @@
                 <p>
                     Aunque existen limitaciones sobre lo que se puede hacer de acuerdo a las características físicas de cada uno de los clientes, la manera de abordar la belleza dentro de la cabina de trabajo tiene el enfoque en la expresión personal. Es decir, lo bello depende de la idea de cada uno sobre esto mismo. Así, ayudamos a los clientes a volver realidad su propia idea de sí mismos y de su estilo. 
                 </p>
-
             </div>
-        </div>
-
-        <!--Barra derecha-->
-        <div class="container col-4 "id="imagenesEmpresa">
-            <!-- Imagen 1 -->
+        </div> 
+    <!-- Barra derecha -->
+        <div class="container col-4 order-2 p-0"id="imagenesEmpresa">
+            <br>
+            <br>
+            <br>
             <div class="container imageCard">
-                <img src="/assets/imgs/lashesfake2.jpg" alt="" class="img-fluid">
+                <img src="/assets/imgs//infoEmpresa/lashesfake2.jpg" alt="Consultorio" class="img-fluid imgClass">
                 <p>
                     Consultorio.
                 </p>
             </div>
-            <!-- Imagen 2 -->
             <div class="container imageCard">
-                <img src="/assets/imgs/lashesfake.jpg" alt="" class="img-fluid">
+                <img src="/assets/imgs/infoEmpresa/lashesfake.jpg" alt="Instalaciones" class="img-fluid imgClass">
                 <p>
                     Instalaciones.
                 </p>
             </div>
-        </div>   
-        </div>   
-
-        <!-- Footer -->
-        <footer id="footer" class="footer">
-            <div id="footerContainer"></div>   
-        </footer>
+        </div> 
+    </div>
+    
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div id="footerContainer"></div>   
+    </footer>
+    
+    <!-- Scripts -->
     <script src="/src/Navbar.js"></script>
     <script src="/src/Footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

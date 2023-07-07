@@ -13,7 +13,7 @@ body{
     border-radius: 25px; 
     border: 4px solid #000000;
     font-family: 'Lustria', serif;  
-
+    text-align: justify;
 }
 #logo{
     display: flex;
@@ -25,18 +25,18 @@ body{
     height: auto;
 }
 #imagenesEmpresa{
-    width: 330px;
-    height: auto;
     text-align: center;
     font-family: 'Lustria', serif; 
 }
 
-.descriptionCard{
-    text-align: justify;
-}
 h1{
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Tsukimi Rounded', sans-serif;
+}
+
+.imgClass{
+    width: 360px;
+    height: auto;
 }

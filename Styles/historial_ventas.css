@@ -1,3 +1,4 @@
+ /*color del fondo general */
 body{
     background-color: #FAE8F5 !important;
     font-family: 'Lustria', serif;  
@@ -23,12 +24,18 @@ h1{
     font-family: 'Lustria', serif;  
 
 }
-/* #footer{
-
-    position: fixed;
-    bottom: 0;
-}   */
-
 #container-fluid{
     font-family: 'Lustria', serif;  
 }
+
+/*color de letra en fondos oscuros */    
+#headerTabla th {
+    color: rgb(250, 232, 245);
+  }
+  
+ /*color de fondo de la tabla */
+
+#historialTabla tbody td {
+    background-color: #b596efc9;
+
+  }  
