@@ -1,0 +1,12 @@
+ /*color del fondo general */
+ body{
+    background-color: #FAE8F5 !important;
+    font-family: 'Lustria', serif;  
+    height: 100%;
+}  
+
+#navbarContainer{
+    margin-bottom: 100px;
+}
+
+
