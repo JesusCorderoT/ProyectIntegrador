@@ -24,32 +24,32 @@
                     <!--Contenedor de etiqueta e input de nombre-->
                     <div class="container">
                         <label class="form-label" for="nombre">Nombre</label>
-                        <input class="form-control" id="nombre" type="text"   required> <!--pattern="^[a-zA-z\s]{2,}$"-->
+                        <input class="form-control" id="nombre" type="text"   required> 
                     </div>
                     <!--Contenedor de etiqueta e input de apellido-->
                     <div class="container">
                         <label class="form-label" for="apellido">Apellidos</label>
-                        <input class="form-control" id="apellidos" type="text" pattern="^[a-zA-z\s]{2,}$" required>
+                        <input class="form-control" id="apellidos" type="text" required>
                     </div>
                     <!--Contenedor de etiqueta e input de email-->
                     <div class="container">
                         <label class="form-label" for="email">E-mail</label>
-                        <input class="form-control" id="email" type="email" pattern="^([\w\.\_])*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{3,})$" required>
+                        <input class="form-control" id="email" type="email"  required>
                     </div>
                     <!--Contenedor de etiqueta e input de telefono-->
                     <div class="container">
                         <label class="form-label" for="telefono" >Telefono</label>
-                        <input class="form-control" maxlength="10" id="telefono" type="tel" pattern="\d{10}" required>
+                        <input class="form-control" maxlength="10" id="telefono" type="tel"  required>
                     </div>
                     <!--Contenedor de etiqueta e input de nombre de usuario-->
                     <div class="container">    
                         <label class="form-label" for="usuario">Nombre de usuario</label>
-                        <input class="form-control" id="usuario" type="text" pattern="^[a-zA-z\s]{2,}$" required>
+                        <input class="form-control" id="usuario" type="text"  placeholder="Solo letras" required>
                     </div>
                     <!--Contenedor de etiqueta e input de contraeña-->
                     <div class="container">    
                         <label class="form-label" for="contraseña">Contraseña</label>
-                        <input class="form-control" id="contraseña" type="password" placeholder="Al menos 6 caracteres, debe incluir letras y numeros" required>
+                        <input class="form-control" id="contraseña" minlength="6" maxlength="16" type="password" placeholder="Al menos 6 caracteres, debe incluir letras y numeros" required>
                     </div>
                     <br>
                     <!--Contenedor de botón submit-->
