@@ -1,4 +1,4 @@
-fetch('../Pages/Navbar.html')
+fetch('../Pages/navbar2.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbarContainer').innerHTML = data;
