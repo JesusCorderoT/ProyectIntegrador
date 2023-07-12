@@ -8,10 +8,12 @@
     --color5: #000000;
 }
 
-body{
+body {
     background-color: var(--color4);
+
 }
 
+/*
 .TITULO {
         position: relative;
         margin: px;
@@ -26,53 +28,147 @@ body{
 #logoTitulo{
     
 }
+*/
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
 
 
-#inicioSesion{
+
+#ojosMaqui {
+    opacity: .85;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    object-position: unset;
+    margin-bottom: 20px;
+    
+}
+
+#inicioSesion {
     font-family: 'Lustria', serif;
     background-color: var(--color1);
     color: var(--color5);
-    border:none;
+    border: none;
     border-radius: 10px;
-    box-shadow: 0 0 5px var(--color1);
+    box-shadow: 0 0 10px var(--color1);
+    margin-bottom: 20px;
 }
 
-#email{
+#email {
     background-color: #3e2753;
     color: var(--color1);
 
 }
 
-#inputCorreo{
+#inputCorreo {
     color: var(--color5);
 }
 
-#inputContrasena{
+#inputContrasena {
     color: var(--color5);
 }
 
-#terminos{
+#terminos {
     color: var(--color1);
 }
 
-.small{
+.small {
     color: var(--color1);
 }
 
-#enlaceGarantias{
+#enlaceGarantias {
     text-decoration: none;
     color: var(--color1);
 }
 
-#botonInicio{
+/* ================= Boton inicar sesion ================ */
+.botones {
+    /* border-color: var(--color1); */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    color: var(--color1);
+    z-index: 0;
+    box-shadow: 0 0 5px var(--color1);
+}
+
+.botones:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
+}
+
+.botones:active {
+    transform: scale(0.97);
+}
+
+.hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hoverEffect div {
+    background: rgb(222, 0, 75);
+    background: linear-gradient(90deg, rgba(222, 0, 75, 1) 0%, rgba(191, 70, 255, 1) 49%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.4;
+}
+
+.botones:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+}
+
+@keyframes effect {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ================= Boton inicar sesion ================ */
+
+
+
+/* ================= Boton Registrate ================ */
+#botonRegistrate {
     border-color: var(--color1);
 }
 
-#botonRegistrate{
-    border-color: var(--color1);
-}
+/* ================= Boton Registrate ================ */
 
-#enlaceRegistro{
+#enlaceRegistro {
     text-decoration: none;
     color: var(--color1);
+}
+
+#tituloh1 {
+    font-family: 'Tsukimi Rounded', sans-serif;
 }

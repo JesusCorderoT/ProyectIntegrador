@@ -102,9 +102,9 @@ cardExpiryYearInput.addEventListener('click', () => {
 //Boton guardar de pagina agrega_direccion_usuario.html
 document.getElementById('guardar-btn').addEventListener('click', function() {
   Swal.fire({
-    position: 'top-end',
+    position: 'center',
     icon: 'success',
-    title: 'Your work has been saved',
+    title: 'Listo.',
     showConfirmButton: false,
     timer: 1500
   })

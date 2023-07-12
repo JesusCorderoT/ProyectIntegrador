@@ -1,27 +1,65 @@
 /* Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+root{
+  --fuente-1: 'League Spartan', sans-serif;
+  --fuente-2: 'Sanchez', serif; 
+}
 
 /* Fuente para parrafos y textos */
 .lead,
 .display-5 {
-  font-family: 'Lustria', serif;
+  font-family: var(--fuente-2);
 }
 
+.titulo{
+  font-family: var(--fuente-1);
+  font-size: 8rem;
+  color:white;
+  font-weight:900;
+  line-height: 0.9;
+  letter-spacing: -7px;
+}
+
+.slogan{
+  margin-top: 1rem;
+  font-family: var(--fuente-2);
+  font-size:1.9rem;
+  color:white;
+  line-height: 2rem;
+}
 /* Fuente para Titulos */
 .display-4,
 .banner2 {
-  font-family: 'Tsukimi Rounded', sans-serif;
+  font-family: var(--fuente-1);
 }
 
 /* Banner de inicio de página */
 .banner {
   background-color: rgb(250, 232, 245);
-  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 20px);
+  /* background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 20px); */
+  background-image: url(/assets/imgs/background.png);
+  background-size:cover;
+  background-position: center;
+  background-repeat:space;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  font-family: 'Lustria', serif;
+  /* font-family: var(--fuente-2); */
 }
 
-/* Logotipo en Banner */
+.boton{
+  margin-top: 1rem;
+  font-family: var(--fuente-2);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #004AAD;
+}
+
+/* Logotipo en Banner
 .product-device {
   position: absolute;
   right: 2%;
@@ -29,7 +67,7 @@
   z-index: 0;
   -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
-}
+} */
 
 /* Logotipo en Banner*/
 #logotipo {
@@ -37,79 +75,156 @@
   height: 300px;
 }
 
-/* Banner 2 */
-.banner2 {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-  background-image: url(../assets/imgs/estrellado.jpg);
-}
-
 /* Cuadricula Servicios */
 .servicios {
-  background: rgba(102, 52, 127, 0.5);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/imgs/serviciosImg/ejemplo-clienta.jpg);
+  background-size:cover;
+  background-repeat:space;
   /* background: rgba(102, 52, 127,0.5); */
+  font-family: var(--fuente-1);
+  text-align: center;
+}
+.servicios h2, .productos h2, .garantias h2, .nosotros h2{
+  font-size: 5vw;
+  -webkit-text-stroke: 1px black;
+}
+.servicios p, .productos p, .garantias p, .nosotros p{
+  font-family: var(--fuente-2);
+  font-size: 1.5vw;
 }
 
 /* Cuadricula Productos */
 .productos {
-  background: rgba(229, 190, 236, 0.5);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* background: rgba(229, 190, 236, 0.5); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/serviciosImg/cepillo.png);
+  background-size:cover;
+  background-repeat: space;
+  background-position: center;
+  /* background: rgba(102, 52, 127,0.5); */
+  font-family: var(--fuente-1);
+  text-align: center;
 }
 
 /* Cuadricula Garantías */
 .garantias {
-  background: rgb(250, 232, 245);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* background: rgba(250, 232, 245,0.5); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/serviciosImg/hibrida.jpg);
+  background-size:cover;
+  background-repeat: space;
+  background-position: center;
+  /* background: rgba(102, 52, 127,0.5); */
+  font-family: var(--fuente-1);
+  text-align: center;
 }
 
 /* Cuadricula Nosotros */
 .nosotros {
-  background: rgb(181, 150, 239);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* background: rgba(181, 150, 239, 0.5); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/serviciosImg/andrea.jpg);
+  background-size:cover;
+  background-repeat: space;
+  background-position: center;
+  /* background: rgba(102, 52, 127,0.5); */
+  font-family: var(--fuente-1);
+  text-align: center;
 }
 
-/* Imagenes para cuadricula de opciones */
-.imagenRectangulo {
-  width: 350px;
-  height: 300px;
-  border-radius: 300px;
-}
-
-/* Exclusivo para imagen en cuadricula Productos */
-.imagenRectangulo2 {
-  width: 350px;
-  height: 300px;
-}
 
 /* Efecto de sombreado para cuadricula opciones */
-.servicios:hover,
+/* .servicios:hover,
 .productos:hover,
 .garantias:hover,
 .nosotros:hover {
   background: linear-gradient(rgb(240, 240, 240), rgb(220, 220, 220));
   color: black;
-}
+} */
 
 /* Enlaces */
 .link {
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+/* Banner 2 */
+.banner2 {
+  background-image: url(/assets/imgs/background2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.titulo2{
+  font-family: var(--fuente-1);
+  font-size: 10vw;
+  color:white;
+  font-weight:900;
+  line-height: 0.8;
+  letter-spacing: -25px;
+}
+
+.slogan2{
+  margin-top: 3rem;
+  font-family: var(--fuente-2);
+  font-size:2vw;
+  color:white;
+  line-height: 4rem;
+}
+
+@media (max-width: 576px) {
+
+  .servicios h2, .productos h2, .garantias h2, .nosotros h2{
+    font-size: 10vw;
+    -webkit-text-stroke: 1px black;
+  }
+
+  .servicios p, .productos p, .garantias p, .nosotros p{
+    font-family: var(--fuente-2);
+    font-size: 4vw;
+  }
+
+  .tendencia{
+    letter-spacing: 15px;
+  }
+
+  .titulo2 {
+    font-size: 20vw;
+    letter-spacing: -1px;
+  }
+  .slogan2{
+    font-size: 5vw;
+    line-height: 1.5rem;
+  }
 }
 
 /* Tendencias */
 .tendencias {
-  background: rgba(0, 0, 0, 0.8);
+  background-color: black;
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: var(--fuente-2);
+  font-size: 1vw;
+}
+.tendencia{
+  font-family: var(--fuente-1);
+  font-size: 4vw;
 }
 
 /* Imagenes del Carrusel */
-.tendencia {
-  max-width: 30%;
-  margin: 0 auto;
+.carousel-item img {
+  height: 30vw; /* Establece la altura deseada */
+  width: auto; /* Ajusta automáticamente el ancho */
+  object-fit:contain; /* Ajusta la imagen para cubrir el contenedor */
 }
 
 /* Footer */
@@ -165,7 +280,42 @@ footer {
 
 /* Zona de contáctanos */
 .contacto {
-  background: rgba(181, 150, 239, 0.3);
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-image: url(/assets/imgs/background4.png);
+  background-size: cover;
+  background-repeat: round;
+  
+}
+
+.contactoTitle{
+  font-family: var(--fuente-1);
+  color: white;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.contactoSub{
+  font-family: var(--fuente-2);
+  color: white;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.form-label{
+  color: white;
+  font-family: var(--fuente-2);
+}
+
+
+.boton2{
+  margin-top: 1rem;
+  font-family: var(--fuente-2);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
 }
