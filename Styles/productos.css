@@ -1,0 +1,46 @@
+/*Productos */
+#encabezado {
+    background-color:  rgba(229, 150, 239, 0.30);
+    margin: 10px;
+    border-radius: 20px; 
+    font-family: 'Lustria', serif;  
+    text-align: justify;
+    
+}
+#Titulo1 {
+    font-family: 'Tsukimi Rounded', sans-serif;
+  }
+  #titulo2 {
+    font-family: 'Lustria', 'serif';
+    margin-top: 1px;
+    margin-bottom: 1px;
+    
+  }
+  
+  
+   .container-marketing{
+    background-color:#FAE8F5
+   }
+  .card-body{
+    background-color: #e5beec;
+  
+  }
+
+  /*con ayuda de la documentación de bootstrap se hace un flex en columna para que abarque todo el espacio el footer*/
+  body {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  #main--container {
+      flex: 1;
+  }
+  #footer {
+    background-color: black;
+    color: #66347f;
+    padding: 20px;
+  }
+  
+  .LogoFooter {
+    width: 150px;
+  }
