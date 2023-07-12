@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/imgs/logos/logoOjo.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="../Styles/carrito.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+</head>
+<body>
+<!--Contenedor de la Navbar----------------------------------------------------------------------------->
+    <div id="navbarContainer"></div>
+<!--Primer producto------------------------------------------------------------------------------------->
+<section><h2>Productos</h2></section>
+<div class="container Productos"> 
+    <hr class="featurette-divider">
+    <div class="row featurette">
+    <div class="col-md-7">
+        <h2>Lash shampoo</h2>
+        <h5>50 ml</h5>
+        <p>Especial para pestañas, extensión de pestañas , pestañas mink, elimina los residuos de maquillaje y suciedad que pueda tener la pestaña.</p>
+        <h5>Precio $100.</h5>
+        <p><a class="btn btn-secondary" onclick="agregar()" id="botonAgregar" role="button">Agregar a carrito</a></p>
+    </div>
+    <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto" data-src="" alt="200x250" style="width: 200px; height: 250px;" src="/assets/serviciosImg/shampoo.png" data-holder-rendered="true">
+    </div>
+    </div>
+</div>
+<!--Termina el primer producto------------------------------------------------------------------------------>
+<!--Carrito-->
+<section><h2>Carrito</h2></section>
+<div class="container-fluid col-md-7">
+    <!--Tabla-->
+    <table class="table table-bordered text-center" id="historialTabla">
+        <!--table header-->
+            <tr class="table-dark " id="headerTabla"> 
+                <th scope="col">Producto</th> 
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+            </tr>
+        <!--table content-->
+            <tbody id="celdasTabla">
+            </tbody>
+    </table> 
+        <!-- Fin de la tabla -->
+</div>
+<!--Footer---------------------------------------------------------------------------------------------->
+<footer id="footer" class="footer">
+    <div id="footerContainer"></div>
+</footer>
+<!--Scripts-->
+    <script src="/src/Navbar.js"></script>
+    <script src="/src/carrito.js"></script>
+    <script src="/src/Footer.js"></script>
+</body>
+</html>
