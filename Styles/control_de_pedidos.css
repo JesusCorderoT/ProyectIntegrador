@@ -2,10 +2,13 @@
     background-color: #b596efc9;
 }
 #navbarContainer{
-    margin-bottom: 20px;
+    margin-bottom: 6rem;
 }
 #contenido{
     background-color: white;
+}
+#footer{
+    margin-top: 2rem;
 }
 li{
     margin: 5px;
