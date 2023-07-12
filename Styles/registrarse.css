@@ -1,22 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+root{
+  --fuente-1: 'League Spartan', sans-serif;
+  --fuente-2: 'Sanchez', serif; 
+}
 #body{
-    background-color: #fae8f5e5;
+   background-image: url(/assets/imgs/Fondos/gradiente_magico2.png);
+ /* background-repeat: round;*/
+   background-size: cover;
+   /* background-position: center;*/
+}
+#navbarContainer{
+    margin-bottom: 8rem;
 }
 #registro{
-    background-color: #b596efc9;
+    background-color: rgba(0, 0, 0, 0.356);
 }
 .card-title{
-    background-color: black;
     text-align: center;
-    font-family: 'Tsukimi Rounded', sans-serif;
-    font-size: medium;
+    font-family: var(--fuente-1);
+    font-weight: bold;
+    font-size: 3rem;
 }
-.card-title>p{
-    color:#FAE8F5;
-}
+
 label{
-    font-family: 'Tsukimi Rounded', sans-serif;
-    font-weight:500;
+    font-family: var(--fuente-2);
+   /* color: white;*/
+    font-size: 1.5rem;
+    font-weight:bold;
 }
 input{
     font-family: 'Lustria', serif;
+}
+#footer{
+    margin-top: 4rem;
+}
+/*Botones*/
+#submit-btn{
+    padding: 15px 30px;
+    border: .1rem;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(238, 132, 238, 0.699) 0%, rgba(199, 135, 233, 0.664) 49%, rgba(76, 158, 235, 0.74) 100%);
 }

@@ -1,12 +1,10 @@
 #navbarContainer{
-    margin-bottom: 80px;
+    margin-bottom: 6rem;
 }
-body{
-    background: rgb(250, 232, 245);
-}
+
 #codeRanchers{
     height: fit-content;
-    background: #b596ef80;
+    background-image: url(/assets/imgs/Fondos/ranchers.png);
     position: sticky;
     font-family: 'Lustria', serif;
     font-size: 15px;
@@ -54,9 +52,8 @@ body{
     justify-content: space-evenly;
 }
 
-.contacto>a{
-    color: black;
-    width: 70px;
+.contactame>img{
+    width: 3rem !important;
 }
 
 .picture>img{
