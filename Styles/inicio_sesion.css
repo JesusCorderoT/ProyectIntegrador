@@ -1,5 +1,7 @@
+/*====================== Fuentes  =========================*/
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
 
+/*====================== Paleta colores  =========================*/
 :root {
     --color1: #FAE8F5;
     --color2: #E596EF;
@@ -8,62 +10,50 @@
     --color5: #000000;
 }
 
-body {
-    background-color: var(--color4);
-
+/*====================== Imagen de fondo en cuerpo =========================*/
+#cuerpo{
+    background-image: url(/assets/imgs/Fondos/marco_magico.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/*
-.TITULO {
-        position: relative;
-        margin: px;
-        font-family: 'Tsukimi Rounded', sans-serif;
-        background-color: var(--color1);
-        text-align: center;
-        border-width: 3.5px;
-        border-radius: 5%;
-        box-shadow: 0 0 5px var(--color1);
-}
-
-#logoTitulo{
-    
-}
-*/
-
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-
-
+/*====================== Imagen del Titular  =========================*/
 #ojosMaqui {
     opacity: .85;
     width: 100vw;
     max-width: 100%;
-    max-height: 240px;
+    max-height: 185px;
     object-fit: cover;
     object-position: unset;
-    margin-bottom: 20px;
-    
+}
+
+/* ================= Titulo y texto izquierda ================ */
+#enlaceRegistro {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+#tituloh1 {
+    font-family: 'Tsukimi Rounded', sans-serif;
+    color: var(--color1);
+}
+
+/*====================== Seccion email  =========================*/
+#form {
+    background-color: rgba(51, 17, 93, 0.356);
 }
 
 #inicioSesion {
+    margin-top: 20px;
     font-family: 'Lustria', serif;
-    background-color: var(--color1);
-    color: var(--color5);
+    color: var(--color1);
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--color1);
     margin-bottom: 20px;
-}
-
-#email {
-    background-color: #3e2753;
-    color: var(--color1);
-
+    background-color: rgba(0, 0, 0, 0.356);
 }
 
 #inputCorreo {
@@ -89,7 +79,6 @@ body {
 
 /* ================= Boton inicar sesion ================ */
 .botones {
-    /* border-color: var(--color1); */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -153,22 +142,15 @@ body {
         transform: rotate(360deg);
     }
 }
-/* ================= Boton inicar sesion ================ */
-
-
 
 /* ================= Boton Registrate ================ */
 #botonRegistrate {
     border-color: var(--color1);
 }
 
-/* ================= Boton Registrate ================ */
-
-#enlaceRegistro {
-    text-decoration: none;
-    color: var(--color1);
-}
-
-#tituloh1 {
-    font-family: 'Tsukimi Rounded', sans-serif;
+.warnings{
+	width: 100px;
+	margin: auto;
+	color:var(--color3);
+    padding: 10px;
 }
