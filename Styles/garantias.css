@@ -1,16 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+root{
+  --fuente-1: 'League Spartan', sans-serif;
+  --fuente-2: 'Sanchez', serif; 
+}
 body{
-    background-color:  #FAE8F5;
+    background-image: url(/assets/imgs/Fondos/gradiente_morado.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     /*font-family: 'Lustria', serif;*/
 }
 
 #navbarContainer{
-    margin-bottom: 80px;
+    margin-bottom: 8rem;
+}
+.gar{
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.356);
 }
 .garantias{
-    font-family: 'Lustria', serif;
+    font-family: var(--fuente-2);
 }
 .titulos{
-    font-family: 'Tsukimi Rounded', sans-serif;
+    font-family: var(--fuente-1);
     font-weight: bold;
 }
 #ojo{

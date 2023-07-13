@@ -28,7 +28,7 @@ function mostrarPedidos(datos){
                             </button>
                             <ul class="dropdown-menu">
                             <li><a class="dropdown-item" data-target="Confirmada" href="#">Confirmada</a></li>
-                            <li><a class="dropdown-item" data-target="Enviada" href="#">Enviada</a></li>
+                            <li><a class="dropdown-item" data-target="Enviada" onclick="cambiar(1)" href="#">Enviada</a></li>
                             <li><a class="dropdown-item" data-target="En camino" href="#">En camino</a></li>                              
                             <li><a class="dropdown-item" data-target="Entregada" href="#">Entregada</a></li>
                             </ul>
@@ -37,6 +37,11 @@ function mostrarPedidos(datos){
         listado.innerHTML+=seccion
     });
 }
+/*function cambiar(selection){
+    if(selection==1){
+
+    }
+}*/
 
 
 mostrarPedidos(pedidos);
