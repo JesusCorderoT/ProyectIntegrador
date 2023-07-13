@@ -3,16 +3,16 @@
 background-color: #FAE8F5;
 }
 
-#encabezado {
-  background-color:  rgba(229, 150, 239, 0.30);
-  margin: 10px;
-  border-radius: 20px; 
- 
-  font-family: 'Lustria', serif;  
-  text-align: justify;
+  #encabezado {
+    
+    background-image: url(/assets/imgs/Fondos/gradiente_magico2.png);
+    background-size:cover;
+    background-position: center;
+    background-repeat:space;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 #Titulo1 {
-  background-color: #e5beec;
+ 
   font-family: 'Tsukimi Rounded', sans-serif;
 }
 #titulo2 {
@@ -28,13 +28,15 @@ background-color: #FAE8F5;
 /*                    About Team
 /* ********************************************************* */
 .about-team {
-  background: #e5beec;
+  background: #FAE8F5;
+  
 }
 
 .about-team-block {
   background: #f2f3f8;
   margin: 0 0 25px;
   transition: 0.25s;
+
 }
 
 .about-team-block img {
