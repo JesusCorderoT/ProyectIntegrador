@@ -7,6 +7,7 @@ root{
   /* 'Sanchez', serif;  */
 }
 
+
 .body{
 background-color: #FAE8F5 !important;
 /* font-family: 'Lustria', serif;   */
@@ -17,26 +18,25 @@ background-repeat: no-repeat;
 background-attachment: fixed; /* Fija el fondo en su posición */
 background-position: center;
 min-height: 100%;
-display: flexbox;
+display:flexbox;
 flex-direction: column;
 }
 
 
 .contenido {
-	flex: 1;
-	margin-top: 100px;
+    /* height: auto; */
+	flex: 1!important;
+	margin-top: 100px!important;
+    align-content: end!important;
 }
 
-
-.side
-{
-
-  background-color: #e5beec;
+#footer{
+    /* position: sticky; */
+    margin-top: auto;
 }
 
-.card
-{ 
-  margin: 10%;
-  background-color: #e5beec;
-  border-color: rgb(0, 0, 0);
-}
+/* .card {
+    height: auto;
+    background-color: #e5beec!important;
+    margin-top: 10%;
+} */
