@@ -11,6 +11,8 @@ root{
   font-family: var(--fuente-2);
 }
 
+
+
 .titulo{
   font-family: var(--fuente-1);
   font-size: 8rem;
@@ -38,12 +40,55 @@ root{
   background-color: rgb(250, 232, 245);
   /* background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 20px); */
   background-image: url(/assets/imgs/background.png);
-  background-size:cover;
+  /* background-size:cover;
   background-position: center;
-  background-repeat:space;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-repeat:space; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   /* font-family: var(--fuente-2); */
 }
+
+.banner {
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  animation: desplazamiento 10s linear forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes desplazamiento {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+.titulo {
+  animation: bajada-letras 1s ease-in-out forwards;
+}
+
+@keyframes bajada-letras {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.slogan, .boton {
+  opacity: 0; /* Inicia con opacidad 0 para ocultar el slogan */
+  animation: aparecer-slogan 3s ease-in forwards;
+}
+
+@keyframes aparecer-slogan {
+  0% {
+    opacity: 0; /* Comienza con opacidad 0 */
+  }
+  100% {
+    opacity: 1; /* Llega a opacidad 1 al final de la animación */
+  }
+}
+
 
 .boton{
   margin-top: 1rem;
@@ -76,17 +121,20 @@ root{
 }
 
 /* Cuadricula Servicios */
+/* Cuadricula Servicios */
 .servicios {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/assets/imgs/serviciosImg/ejemplo-clienta.jpg);
+  background-image: url(/assets/serviciosImg/ejemplo-clienta.jpg);
   background-size:cover;
   background-repeat:space;
   /* background: rgba(102, 52, 127,0.5); */
   font-family: var(--fuente-1);
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Agregamos la sombra de caja */
+  transition: transform 0.3s; /* Agregamos una transición suave */
 }
 .servicios h2, .productos h2, .garantias h2, .nosotros h2{
   font-size: 5vw;
@@ -95,6 +143,10 @@ root{
 .servicios p, .productos p, .garantias p, .nosotros p{
   font-family: var(--fuente-2);
   font-size: 1.5vw;
+}
+
+.servicios:hover {
+  transform: scale(1.1); /* Aplicamos una escala del 110% al pasar el mouse por encima */
 }
 
 /* Cuadricula Productos */
@@ -110,6 +162,12 @@ root{
   /* background: rgba(102, 52, 127,0.5); */
   font-family: var(--fuente-1);
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Agregamos la sombra de caja */
+  transition: transform 0.3s; /* Agregamos una transición suave */
+}
+
+.productos:hover {
+  transform: scale(1.1); /* Aplicamos una escala del 110% al pasar el mouse por encima */
 }
 
 /* Cuadricula Garantías */
@@ -125,7 +183,14 @@ root{
   /* background: rgba(102, 52, 127,0.5); */
   font-family: var(--fuente-1);
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Agregamos la sombra de caja */
+  transition: transform 0.3s; /* Agregamos una transición suave */
 }
+
+.garantias:hover {
+  transform: scale(1.1); /* Aplicamos una escala del 110% al pasar el mouse por encima */
+}
+
 
 /* Cuadricula Nosotros */
 .nosotros {
@@ -140,8 +205,13 @@ root{
   /* background: rgba(102, 52, 127,0.5); */
   font-family: var(--fuente-1);
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Agregamos la sombra de caja */
+  transition: transform 0.3s; /* Agregamos una transición suave */
 }
 
+.nosotros:hover {
+  transform: scale(1.1); /* Aplicamos una escala del 110% al pasar el mouse por encima */
+}
 
 /* Efecto de sombreado para cuadricula opciones */
 /* .servicios:hover,
@@ -163,6 +233,7 @@ root{
   background-image: url(/assets/imgs/background2.png);
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 .titulo2{
   font-family: var(--fuente-1);
@@ -170,7 +241,7 @@ root{
   color:white;
   font-weight:900;
   line-height: 0.8;
-  letter-spacing: -25px;
+  letter-spacing: -10px;
 }
 
 .slogan2{
@@ -199,7 +270,7 @@ root{
 
   .titulo2 {
     font-size: 20vw;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
   .slogan2{
     font-size: 5vw;
@@ -211,10 +282,10 @@ root{
 .tendencias {
   background-color: black;
   color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-family: var(--fuente-2);
-  font-size: 1vw;
 }
+
 .tendencia{
   font-family: var(--fuente-1);
   font-size: 4vw;
@@ -222,10 +293,12 @@ root{
 
 /* Imagenes del Carrusel */
 .carousel-item img {
-  height: 30vw; /* Establece la altura deseada */
+  height: 34vw; /* Establece la altura deseada */
   width: auto; /* Ajusta automáticamente el ancho */
   object-fit:contain; /* Ajusta la imagen para cubrir el contenedor */
 }
+
+
 
 /* Footer */
 footer {
@@ -243,9 +316,9 @@ footer {
 }
 
 /* Efecto de shadow box para contenedores */
-.box-shadow {
+/* .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
+} */
 
 /* Propiedades flex */
 .flex-equal>* {
@@ -283,7 +356,7 @@ footer {
   background-image: url(/assets/imgs/background4.png);
   background-size: cover;
   background-repeat: round;
-  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
 .contactoTitle{
@@ -318,4 +391,8 @@ footer {
   border-radius: 5px;
   text-decoration: none;
   color: black;
+}
+
+.pretendencias {
+  margin-bottom: -5px;
 }
