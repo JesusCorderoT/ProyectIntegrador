@@ -42,8 +42,8 @@ function verificarSesion() {
 }
 
 // Ejemplo de uso
-// iniciarSesion("John Doe", "johndoe@example.com", "normal"); // Para un usuario normal
-iniciarSesion("Jane Doe", "janedoe@example.com", "admin"); // Para un administrador
+iniciarSesion("John Doe", "johndoe@example.com", "normal"); // Para un usuario normal
+//iniciarSesion("Jane Doe", "janedoe@example.com", "admin"); // Para un administrador
 verificarSesion();
 
 // Simular cierre de sesión

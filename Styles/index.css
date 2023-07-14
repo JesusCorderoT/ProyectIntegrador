@@ -11,8 +11,6 @@ root{
   font-family: var(--fuente-2);
 }
 
-
-
 .titulo{
   font-family: var(--fuente-1);
   font-size: 8rem;
@@ -59,7 +57,7 @@ root{
     background-position: 0% 0%;
   }
   100% {
-    background-position: 50% 0%;
+    background-position: 71% 0%;
   }
 }
 
@@ -75,9 +73,9 @@ root{
     transform: translateY(0%);
   }
 }
-.slogan, .boton {
+.slogan {
   opacity: 0; /* Inicia con opacidad 0 para ocultar el slogan */
-  animation: aparecer-slogan 3s ease-in forwards;
+  animation: aparecer-slogan 2s ease-in-out forwards;
 }
 
 @keyframes aparecer-slogan {
@@ -102,8 +100,25 @@ root{
   border-radius: 5px;
   text-decoration: none;
   color: #004AAD;
+  animation: latido 1.5s infinite;
 }
 
+.boton:hover {
+  color: white;
+  background-color: black;
+}
+
+@keyframes latido {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* Logotipo en Banner
 .product-device {
   position: absolute;
@@ -133,7 +148,7 @@ root{
   /* background: rgba(102, 52, 127,0.5); */
   font-family: var(--fuente-1);
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Agregamos la sombra de caja */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Agregamos la sombra de caja */
   transition: transform 0.3s; /* Agregamos una transición suave */
 }
 .servicios h2, .productos h2, .garantias h2, .nosotros h2{
@@ -162,7 +177,7 @@ root{
   /* background: rgba(102, 52, 127,0.5); */
   font-family: var(--fuente-1);
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Agregamos la sombra de caja */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Agregamos la sombra de caja */
   transition: transform 0.3s; /* Agregamos una transición suave */
 }
 
@@ -183,7 +198,7 @@ root{
   /* background: rgba(102, 52, 127,0.5); */
   font-family: var(--fuente-1);
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Agregamos la sombra de caja */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Agregamos la sombra de caja */
   transition: transform 0.3s; /* Agregamos una transición suave */
 }
 
@@ -205,7 +220,7 @@ root{
   /* background: rgba(102, 52, 127,0.5); */
   font-family: var(--fuente-1);
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* Agregamos la sombra de caja */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Agregamos la sombra de caja */
   transition: transform 0.3s; /* Agregamos una transición suave */
 }
 
@@ -232,7 +247,7 @@ root{
 .banner2 {
   background-image: url(/assets/imgs/background2.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: round;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 .titulo2{
@@ -280,7 +295,7 @@ root{
 
 /* Tendencias */
 .tendencias {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-family: var(--fuente-2);
@@ -334,6 +349,7 @@ footer {
     -webkit-box-flex: 1;
     flex: 1;
   }
+  
 }
 
 /* Propiedad para evitar el desborde */
@@ -396,3 +412,4 @@ footer {
 .pretendencias {
   margin-bottom: -5px;
 }
+
