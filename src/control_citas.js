@@ -43,7 +43,5 @@ function cambiar(selection,i){
     if(selection==2){
         Citas[i].estatus='Cancelada';
         valorEstatus.textContent=Citas[i].estatus;
-    }
-    
-    
+    } 
 }
