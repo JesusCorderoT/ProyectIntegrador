@@ -44,8 +44,9 @@ function eliminar(elemento) {
       text: "No podrás deshacer esta acción",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      confirmButtonColor: 'Black',
       cancelButtonColor: '#d33',
+      cancelButtonText: 'Cancelar',
       confirmButtonText: 'Sí, borrar.'
     }).then((result) => {
       if (result.isConfirmed) {
