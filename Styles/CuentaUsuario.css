@@ -20,23 +20,15 @@ min-height: 100%;
 display: flexbox;
 flex-direction: column;
 }
-
+#tarjeta{
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
 .contenido {
 	flex: 1;
 	margin-top: 100px;
 }
-
-
-.side
-{
-
-  background-color: #e5beec;
-}
-
 .card
 { 
   margin: 10%;
-  background-color: #e5beec;
-  border-color: rgb(0, 0, 0);
 }
