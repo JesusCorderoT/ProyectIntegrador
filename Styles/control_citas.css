@@ -36,3 +36,6 @@ flex-direction: column;
 #tarjeta{
   background-color: rgba(255, 255, 255, 0.5);
 }
+.contenido{
+  flex: 1;
+}
