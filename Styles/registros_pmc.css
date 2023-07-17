@@ -34,7 +34,8 @@ h2 {
 
 .card {
 	/* background-color: #e5beec!important; */
-	background-color: rgba(0, 0, 0, 0.295)!important;
+	background-color:rgba(255, 255, 255, 0.5)!important;
+	/* rgba(0, 0, 0, 0.295)!important; */
 	margin: 5%; 
 }
 
@@ -65,9 +66,11 @@ label {
 }
 
 .accordion {
+		
 	--bs-accordion-active-bg:rgba(0, 0, 0, 0.018)!important; 
 	/* --bs-accordion-active-bg:rgba(0, 0, 0, 0.343)!important;  */
-	--bs-accordion-bg: rgba(0, 0, 0, 0.018)!important;
+	/* --bs-accordion-bg: rgba(0, 0, 0, 0.018)!important; */
+	--bs-accordion-bg:rgba(255, 255, 255, 0.5)!important;
 	--bs-accordion-border-color: rgba(0, 0, 0, 0.018) !important;
 	--bs-accordion-color: black!important;
 	--accordion-button-color: black!important;

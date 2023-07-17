@@ -11,15 +11,15 @@ root{
 body{
     background-color: #FAE8F5 !important;
     font-family: var(--fuente-2)!important;
-    background-image: url('/assets/imgs/Fondos/gradiente_magico3.png');
+    /* background-image: url('/assets/imgs/Fondos/gradiente_magico3.png'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Fija el fondo en su posición */
     background-position: center;
-    font-family: 'Lustria', serif;  
+    font-family: var(--fuente-2);
     height: 100%;
     display: flexbox;
-	flex-direction: column;
+	  flex-direction: column;
 }  
 
 #navbarContainer{
