@@ -11,33 +11,34 @@ function insertarDatosTabla(datos){
     let tabla = document.getElementById("celdasTabla");
     let header= document.getElementById("headerTabla");
     let emptyMessage=document.getElementById("empty");
-    emptyMessage.textContent="";
     header.innerHTML=
         `
-        <th scope="col">Producto</th> 
+        <th scope="col">Artículo</th> 
         <th scope="col">Precio</th>
-        <th scope="col">Cantidad</th>
+        <th scope="col">Total</th>
         `;
     for(let i=0; i<datos.length; i++){
         let fila =  `<tr>
-                        <td scope="row">${datos[i].producto}<br><img class="featurette-image img-fluid mx-auto" data-src="" alt="200x250" style="width: 200px; height: 250px;" src="/assets/serviciosImg/shampoo.png" data-holder-rendered="true">
+                        <td scope="row">${datos[i].producto}<br><img class="featurette-image img-fluid mx-auto" style="" src="/assets/serviciosImg/shampoo.png" data-holder-rendered="true">
                         </td> 
                         
                         <td scope="row">$${datos[i].precio}</td>
 
-                        <td scope="row"><input type="number" value="1"></td>
+                        <td scope="row">${datos[i].cantidad}</td>
                     </tr>`;
         tabla.innerHTML+=fila;
-        tabla.innerHTML+=`<tr>
-        <td scope="row"></td> 
+        // tabla.innerHTML+=`<tr>
+        // <td scope="row"></td> 
         
-        <td scope="row"></td>
+        //  <td scope="row"></td>
 
-        <td scope="row">Total: $${datos[i].precio}</td>
-    </tr>`
+        //  <td scope="row">Mto: $${datos[i].precio}</td>
+        //  </tr>`;
     contadorProductos+=1;
     }
-
+    emptyMessage.innerHTML= `<p">Monto del pedido: $${datos[0].precio} </p>
+    <p><a  href="/Pages/carrito.html" class="btn btn-secondary"  id="irCheckout" role="button">Finalizar compra</a></p>`;
+    // tabla.innerHTML+=`Monto:`;
 }
 
 //función flecha para agregar fila a la tabla cada que se presione el botón:

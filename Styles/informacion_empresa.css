@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" );
 root{
-    --fuente-1: 'League Spartan', sans-serif;
-    --fuente-2: 'Lustria', serif; 
+	--fuente-1: 'League Spartan', sans-serif;
+	--fuente-2: 'Sanchez', serif; 
   /* 'Sanchez', serif;  */
-}
+} 
 
 body{
     background-color: #FAE8F5 !important;
@@ -36,7 +36,6 @@ body{
     /* font-family: 'Lustria', serif;   */
     text-align: justify;    
     color: black
-   
     /* color: #FAE8F5; */
 }
 #logo{
@@ -57,7 +56,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Tsukimi Rounded', sans-serif;
+    font-family: var(--fuente-1)
 }
 
 .imgClass{
@@ -68,7 +67,7 @@ h1{
     --bs-border-color: rgba(0, 0, 0, 0.074) !important;
 }
 
+
 .contenido {
 	flex: 1;
-	margin-top: 100px;
 }

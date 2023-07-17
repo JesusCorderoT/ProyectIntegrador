@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="/styles/navbar3.css " rel="stylesheet">
+    <title>Ojos de Gato</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl navigation fixed-top">
+        <div class="container-fluid navigator">
+            <a class="navbar-brand" href="../index.html">
+                <img class="logo img-fluid" src="/assets/imgs/logos/OjoBlanco.png">
+                <h1 class="nombre">OJOS DE GATO</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <div class="navbar-nav ms-auto align-items-center">
+                    <div class="iconos-vertical">
+                        <div class="dropdown">
+                        <!-- carrito -->
+
+                            <button class="btn" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">    
+                                <img class="carrito" role="button" src="/assets/imgs/Iconos/shoppingcartwhite.png">
+                            </button>
+                        
+                            <div class="container col-md-7 dropdown-menu table-responsive"aria-labelledby="dropdownMenuClickableInside" style="max-height: 600px; width: 200px; overflow-y: auto;">
+                                <!--Tabla-->
+                                <table class="table text-center table-sm" id="historialTabla">
+                                    <!--table header-->
+                                        <tr class="table-dark " id="headerTabla"> 
+                                        </tr>
+                                    <!--table content-->
+                                        <tbody id="celdasTabla">
+                                        </tbody>               
+                                </table> 
+                                    <!-- Fin de la tabla -->
+                        
+                                <p id="empty" style="text-align: center;">El carrito está vacío.</p>
+                        </div>
+                        <!-- bolsa -->
+                        <a class="nav-item bolsa" href="/pages/productos.html">
+                            <img class="bolsa" src="/assets/imgs/Iconos/iconoBolsa.png">
+                        </a>
+                        <!-- inicio de sesión -->
+                        <a class="nav-item persona" href="/pages/inicio_sesion.html">
+                            <img class="persona icono" src="/assets/imgs/Iconos/iconoPersona.png">
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+    <script src="/src/carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

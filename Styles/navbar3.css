@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+
+root {
+    --fuente-1: 'League Spartan', sans-serif;
+}
+
+
+.logo {
+    height: 3.5rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nombre {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    font-family: var(--fuente-1);
+}
+
+.navigation {
+background-image: url(/assets/imgs/estrellado.jpg);
+    top: 0;
+    z-index: 9999;
+}
+
+.icono {
+    height: 3.5rem;
+}
+.carrito {
+    height: 3rem;
+}
+.bolsa {
+    height: 3rem;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav.ms-auto.align-items-center {
+        flex-direction: row !important;
+        justify-content: flex-end !important;
+    }
+    .navbar-nav.ms-auto.align-items-center .nav-item {
+        margin-left: 10px;
+    }
+}
