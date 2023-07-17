@@ -1,78 +1,160 @@
+/*====================== Fuentes  =========================*/
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
 
+/*====================== Paleta colores  =========================*/
 :root {
     --color1: #FAE8F5;
     --color2: #E596EF;
     --color3: #B596EF;
     --color4: #66347F;
     --color5: #000000;
+    --fuente-1: 'League Spartan', sans-serif;
+    --fuente-2: 'Sanchez', serif; 
 }
 
-body{
-    background-color: var(--color4);
+/*====================== Imagen de fondo en cuerpo =========================*/
+#cuerpo{
+    background-image: url(/assets/imgs/Fondos/marco_magico.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.TITULO {
-        position: relative;
-        margin: px;
-        font-family: 'Tsukimi Rounded', sans-serif;
-        background-color: var(--color1);
-        text-align: center;
-        border-width: 3.5px;
-        border-radius: 5%;
-        box-shadow: 0 0 5px var(--color1);
+/*====================== Imagen del Titular  =========================*/
+#ojosMaqui {
+    opacity: .85;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 185px;
+    object-fit: cover;
+    object-position: unset;
 }
 
-#logoTitulo{
-    
+/* ================= Titulo y texto izquierda ================ */
+#enlaceRegistro {
+    text-decoration: none;
+    color: var(--color1);
 }
 
+#tituloh1 {
+    font-family: var(--fuente-1);
+    color: var(--color1);
+}
 
-#inicioSesion{
-    font-family: 'Lustria', serif;
-    background-color: var(--color1);
-    color: var(--color5);
-    border:none;
+/*====================== Seccion email  =========================*/
+#form {
+    background-color: rgba(51, 17, 93, 0.356);
+}
+
+#inicioSesion {
+    margin-top: 20px;
+    font-family: var(--fuente-2);
+    color: var(--color1);
+    border: none;
     border-radius: 10px;
+    box-shadow: 0 0 10px var(--color1);
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+#inputCorreo {
+    color: var(--color5);
+}
+
+#inputContrasena {
+    color: var(--color5);
+}
+
+#terminos {
+    color: var(--color1);
+}
+
+.small {
+    color: var(--color1);
+}
+
+#enlaceGarantias {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+/* ================= Boton inicar sesion ================ */
+.botones {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    color: var(--color1);
+    z-index: 0;
     box-shadow: 0 0 5px var(--color1);
 }
 
-#email{
-    background-color: #3e2753;
-    color: var(--color1);
-
+.botones:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
 }
 
-#inputCorreo{
-    color: var(--color5);
+.botones:active {
+    transform: scale(0.97);
 }
 
-#inputContrasena{
-    color: var(--color5);
+.hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
-#terminos{
-    color: var(--color1);
+.hoverEffect div {
+    background: rgb(222, 0, 75);
+    background: linear-gradient(90deg, rgba(222, 0, 75, 1) 0%, rgba(191, 70, 255, 1) 49%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.4;
 }
 
-.small{
-    color: var(--color1);
+.botones:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
 }
 
-#enlaceGarantias{
-    text-decoration: none;
-    color: var(--color1);
+/* ================= EFECTO BOTON ================ 
+definir una animación personalizada en la que se especifica que cambia gradualmente durante un período de tiempo determinado.*/
+@keyframes effect {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-#botonInicio{
+/* ================= Boton Registrate ================ */
+#botonRegistrate {
     border-color: var(--color1);
 }
 
-#botonRegistrate{
-    border-color: var(--color1);
-}
-
-#enlaceRegistro{
-    text-decoration: none;
-    color: var(--color1);
+.warnings{
+	width: auto;
+	margin: auto;
+	color:var(--color3);
+    padding: 10px;
 }

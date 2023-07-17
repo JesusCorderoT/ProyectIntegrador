@@ -1,3 +1,26 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" );
+root{
+	--fuente-1: 'League Spartan', sans-serif;
+	--fuente-2: 'Sanchez', serif; 
+  /* 'Sanchez', serif;  */
+} 
+
+
+body{
+    background-color: #FAE8F5;
+    font-family: 'Lustria', serif;  
+    background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fija el fondo en su posición */
+    background-position: center;
+    min-height: 100%;
+	display: flexbox;
+	flex-direction: column;
+}  
+
 .container {
 	max-width: 500px;
 	/* margin-top: 50px; */
@@ -9,11 +32,16 @@ h2 {
 	margin-bottom: 30px;
 }
 
+.card {
+	/* background-color: #e5beec!important; */
+	background-color: rgba(0, 0, 0, 0.42)!important;
+}
+
 form {
 	/* background-color: #e5beec; */
 	padding: 20px;
 	border-radius: 15px;
-	box-shadow: 0px 0px 5px 0px rgba(176, 17, 123, 0.5);
+	/* box-shadow: 0px 0px 5px 0px rgb(176, 17, 17); */
     
 }
 
@@ -23,4 +51,30 @@ label {
 
 .btn-primary {
 	margin-top: 20px;
+}
+
+.contenido {
+	flex: 1;
+	margin-top: 100px;
+}
+
+#footer{
+	position: sticky;
+
+}
+
+.accordion {
+	--bs-accordion-active-bg:rgba(0, 0, 0, 0.018)!important; 
+	/* --bs-accordion-active-bg:rgba(0, 0, 0, 0.343)!important;  */
+	--bs-accordion-bg: rgba(0, 0, 0, 0.018)!important;
+	--bs-accordion-border-color: rgba(0, 0, 0, 0.018) !important;
+	--bs-accordion-color: black!important;
+	--accordion-button-color: black!important;
+	/* --bs-accordion-color: white!important; */
+}
+.card-header{
+	color: black!important;
+}
+.accordion-button {
+	color: rgb(0, 0, 0)!important;
 }

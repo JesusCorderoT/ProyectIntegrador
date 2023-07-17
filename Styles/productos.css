@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
+
+
+/*Productos */
+body {
+
+ /* background-image: url("/assets/imgs/Fondos/gradiente_magico2.png");*/
+ background-color: #FAE8F5;
+  /*background-repeat: no-repeat;
+  background-size: cover;
+   background-attachment: fixed; Fija el fondo en su posición 
+  background-position: center; */
+}
+
+#encabezado {
+  background-color: rgb(250, 232, 245);
+  background-image: url(/assets/imgs/Fondos/marco_magico.png);
+  background-size:cover;
+  background-position: center;
+  background-repeat:space;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+ 
+    
+  }
+  #Titulo1 {
+    
+    font-family:  'League Spartan', sans-serif;
+  }
+  #titulo2 {
+    font-family: 'Sanchez', serif; 
+      margin-top: 1px;
+      margin-bottom: 1px;
+  
+  }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta {
+  
+    width: calc(33.33% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: #FAE8F5(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+  }
+  
+  
+
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+.tarjeta p {
+  margin-bottom: 0;
+}
+
+.tarjeta .estrellitas {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tarjeta .estrellitas input[type="radio"] {
+  display: none;
+}
+
+.tarjeta .estrellitas label {
+  font-size: 25px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.tarjeta .estrellitas label:before {
+  content: '\2605';
+}
+
+.tarjeta .estrellitas input[type="radio"]:checked ~ label {
+  color: #ffcc00;
+}
+
+
+@media (max-width: 768px) {
+  /* Ajustar tamaño de tarjetas para dispositivos móviles */
+  .tarjeta {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ajustar tamaño de tarjetas para dispositivos pequeños */
+  .tarjeta {
+    width: 100%;
+  }
+}
+
+  
+

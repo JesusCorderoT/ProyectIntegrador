@@ -24,45 +24,46 @@
         <div id="navbarContainer"></div>
 
     <!--Contenido-->
-    <h1>Historial De Ventas</h1>
-    <!--Filtros-->
-    <div class="container-fluid"> 
-    <!-- Por consulta -->
-        <div class = "col-1">
-            Buscar:
-            <input type="search" placeholder="">
+    <div class="contenido">
+        <h1>Historial De Ventas</h1>
+        <!--Filtros-->
+        <div class="container-fluid"> 
+        <!-- Por consulta -->
+            <div class = "col-1">
+                <input class="busqueda" type="search" placeholder="Buscar">
+            </div>
+        <!-- Por fecha
+            <div class = "col-1">
+                Desde:
+                <input type="date" placeholder="dd/mm/aaaa">
+            </div>
+    
+            <div class = "col-1">
+                Hasta:
+                <input type="date" placeholder="dd/mm/aaaa">
+            </div> -->
         </div>
-    <!-- Por fecha -->
-        <div class = "col-1">
-            Desde:
-            <input type="date" placeholder="dd/mm/aaaa">
-        </div>
-
-        <div class = "col-1">
-            Hasta:
-            <input type="date" placeholder="dd/mm/aaaa">
-        </div>
+    
+    <br>
+        <!-- Contendor de la tabla -->
+    
+    
+        <!--Tabla-->
+        <table class="table text-center" id="historialTabla">
+            <!--table header-->
+                <tr class="table-dark " id="headerTabla"> 
+                    <th scope="col">Fecha</th> 
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Productos</th>
+                    <th scope="col">Total</th>
+                </tr>
+            <!--table content-->
+                <tbody id="celdasTabla">
+                </tbody>
+        </table> 
+            <!-- Fin de la tabla -->
+    
     </div>
-
-<br>
-    <!-- Contendor de la tabla -->
-
-
-    <!--Tabla-->
-    <table class="table table-bordered text-center" id="historialTabla">
-        <!--table header-->
-            <tr class="table-dark " id="headerTabla"> 
-                <th scope="col">Fecha</th> 
-                <th scope="col">Cliente</th>
-                <th scope="col">Productos</th>
-                <th scope="col">Total</th>
-            </tr>
-        <!--table content-->
-            <tbody id="celdasTabla">
-            </tbody>
-    </table> 
-        <!-- Fin de la tabla -->
-
 
     <!-- Footer -->
     <footer id="footer" class="footer container-fluid">

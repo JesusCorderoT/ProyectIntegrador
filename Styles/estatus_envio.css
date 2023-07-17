@@ -4,23 +4,36 @@
     --color3: #B596EF;
     --color4: #66347F;
     --color5: #000000;
+    --fuente-1: 'League Spartan', sans-serif;
+    --fuente-2: 'Sanchez', serif; 
 }
 
-
+body{
+    background-image: url(../assets/imgs/Fondos/baby_ranchers.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
 
 .TITULO {
-    margin: 6%;
-    font-family: 'Tsukimi Rounded', sans-serif;
-    background-color: #FAE8F5;
+    margin-top: 80px;
+    font-family: var(--fuente-1);
+    background-color: #fae8f57b;
     text-align: center;
 }
 
+.li{
+    background-color: #66347F;
+}
+
 #subtitulo{
-    font-family: 'Lustria', serif;
+    font-family: var(--fuente-2);
 }
 
 .card3{
-    background-color: white;
+    background-color: var(--color1);
     margin: 10px;
     color: #000000;
     border-radius: 10px;
@@ -29,15 +42,18 @@
     padding: 20px;
     }
 
+#seccion{
+    margin-bottom: 20px;
+}
+
 /* Estilos para la sección de estatus de envío de productos */
 section.container {
-    background-color: var(--color1);
+    background-color: #fae8f57b;
     padding: 20px;
     border-radius: 10px;
     border-color: #000000;
-    border: solid;
-    border-width: 2px;
-    font-family: 'Lustria', serif;
+    border-width: 1px;
+    font-family: var(--fuente-2);
 }
 
 

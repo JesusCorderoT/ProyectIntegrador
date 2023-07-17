@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" href="/assets/imgs/logoOjo.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../assets/imgs/logos/logoOjo.png" sizes="32x32" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     
     <!--Tipografia-->
@@ -19,32 +19,29 @@
 <body>
     
     <!--======================= TITULO =========================-->
-    <div class="TITULO head p-4 p-md-5 mb-4 rounded text-body-emphasis container-fluid">
-        <div class="col-lg-12 px-0">
-            <h1 id="tituloFondo" class="display-4 fst-italic">Tu estilo, tu libertad, nuestra pasión.</h1>
-            <p id="subtitulo" class="lead my-3">Descubre un mundo de belleza sin límites, donde puedes expresar tu estilo y disfrutar de ser tú mismo.</p>
-        <!--    <img id="logoTitulo" src="../assets/imgs/logos/logoOjo.png" class="rounded float-end" alt="logoOjo">  -->
-        </div>
-    </div>
+    
+    <img id="ojosMaqui" src="../assets/imgs/ojos4.1.jpg" class="img-fluid" alt="imagen ojos" > 
+    
     <!--======================= TITULO =========================-->
 
 
 
     <!--======================= INICIO SESION =========================-->
+<section id="cuerpo">
     <div id="inicioSesion" class="container col-xl-10 col-xxl-8 px-5 py-5">
-        <div class="row align-items-center g-lg-5 py-5">
+        <div id="inicioSesion2" class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Por favor, introduce tu correo electrónico y tu contraseña.</h1>
+                <h1 id="tituloh1" class="display-4 fw-bold lh-1  mb-3">Tu estilo, tu libertad, nuestra pasión.</h1>
                 <p class="col-lg-10 fs-4">Al momento de ingresar con tu cuenta, tendrás acceso a todos los beneficios que conlleva, así como el poder realizar citas, hacer compras, consultar el estatus de tus pedidos y poder revisar más apartados.</p>
             </div>
             <div  class="col-md-10 mx-auto col-lg-5">
-                <form id="email" class="p-5 p-md-5 border rounded-3 ">
+                <form id="form" class="p-5 p-md-5 border rounded-3 ">
                     <div id="inputCorreo" class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input id="correo" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Correo electrónico</label>
                     </div>
                     <div id="inputContrasena" class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input id="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Contraseña</label>
                     </div>
                     <div class="checkbox mb-3">
@@ -53,17 +50,25 @@
                         </label>
                     </div>
                     <div class="text-center">
-                        <button id="botonInicio" class="w-100 btn btn-lg btn-dark mb-3" type="button">Iniciar sesión </button>
+                        <button id="botonInicio" class="botones btn btn-lg btn-lg mb-3" type="button">Iniciar sesión <div class="hoverEffect">
+                            <div>
+                            </div>
+                            </div> </button>
                         <br>
-                    <button id="botonRegistrate" class="w-40 btn btn-lg btn-dark" type="button">Registrate</button>
+                    <button id="botonRegistrate" class="botones btn btn-lg btn-dark" type="button">Regístrate <div class="hoverEffect">
+                        <div>
+                        </div>
+                        </div>  </button>
                     </div>
                     <hr class="my-4">
                     <br>
                     <a id="enlaceGarantias" href="../Pages/garantias.html">Al hacer clic en Registrarse, acepta los términos de uso.</a>
+                    <p class="warnings" id="warnings"></p>
                 </form>
             </div>
         </div>
     </div>
+</section>
     <!--======================= FIN SESION ==========================-->
 
 
@@ -80,7 +85,6 @@
 
     <!--======================= SCRIPTS =======================-->
     <script src="../src/inicio_sesion.js"></script>
-    <script src="../src/Navbar.js"></script>
     <script src="../src/Footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <!--======================= SCRIPTS =======================-->

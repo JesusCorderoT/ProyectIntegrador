@@ -1,9 +1,30 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" );
+root{
+	--fuente-1: 'League Spartan', sans-serif;
+	--fuente-2: 'Sanchez', serif; 
+  /* 'Sanchez', serif;  */
+} 
+
  /*color del fondo general */
 body{
+    background-color: #FAE8F5;
+    font-family: 'Lustria', serif;  
+    background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fija el fondo en su posición */
+    background-position: center;
+    min-height: 100%;
+	display: flexbox;
+	flex-direction: column;
+}  
+/* body{
     background-color: #FAE8F5 !important;
     font-family: 'Lustria', serif;  
     height: 100%;
-}  
+}   */
 
 #navbarContainer{
     margin-bottom: 100px;
@@ -13,7 +34,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Tsukimi Rounded', sans-serif;
+    font-family: var(--fuente-1);
 }
 
 .imageCard,.descriptionCard{
@@ -36,6 +57,18 @@ h1{
  /*color de fondo de la tabla */
 
 #historialTabla tbody td {
-    background-color: #b596efc9;
-
-  }  
+    /* background-color: #b596efc9; */
+    background-color: rgba(0, 0, 0, 0.42);
+    color: black;
+    border: none;
+}  
+.busqueda {
+    background-color: rgba(0, 0, 0, 0.42);
+    border: none;
+}
+.busqueda::placeholder{
+    color: #000000;
+}
+.contenido{
+    flex: 1;
+}

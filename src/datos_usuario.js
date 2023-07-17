@@ -1,7 +1,7 @@
  //Boton editar de pagina datos_usuario.html
   document.getElementById('editar-btn').addEventListener('click', function() {
   Swal.fire({
-    title: 'Quieres habilitar la edicion?',
+    title: '¿Quieres guardar los cambios?',
     showDenyButton: true,
     showCancelButton: true,
     confirmButtonText: 'Si',
@@ -9,9 +9,9 @@
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
-      Swal.fire('Saved!', '', 'success')
+      Swal.fire('¡Guardado!', '', 'success')
     } else if (result.isDenied) {
-      Swal.fire('Changes are not saved', '', 'info')
+      Swal.fire('No se han guardado los cambios', '', 'info')
     }
   })
 });
