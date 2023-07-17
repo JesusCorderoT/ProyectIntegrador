@@ -7,9 +7,11 @@ root {
     --fuente-2: 'Lustria', serif;
     /* 'Sanchez', serif;  */
 }
-
+#navbarContainer{
+    margin-bottom: 2rem;
+}
 .body {
-    background-color: #FAE8F5 !important;
+   /* background-color: #FAE8F5 !important;*/
     /* font-family: 'Lustria', serif;   */
     font-family: var(--fuente-2);
     background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
@@ -23,20 +25,9 @@ root {
     flex-direction: column;
 }
 
-
-.contenido {
-    flex: 1;
-    margin-top: 100px;
-}
-
-
-.side {
-
-    background-color: #e5beec;
-}
-
 .card {
-    margin: 10%;
-    background-color: #e5beec;
-    border-color: rgb(0, 0, 0);
+    margin: 10%; 
+}
+#tarjeta{
+    background-color: rgba(255, 255, 255, 0.63);
 }
