@@ -22,7 +22,7 @@ body{
 }  
 
 .container {
-	max-width: 500px;
+	/*max-width: 500px;*/
 	/* margin-top: 50px; */
     
 }
@@ -34,7 +34,8 @@ h2 {
 
 .card {
 	/* background-color: #e5beec!important; */
-	background-color: rgba(0, 0, 0, 0.42)!important;
+	background-color: rgba(0, 0, 0, 0.295)!important;
+	margin: 5%; 
 }
 
 form {

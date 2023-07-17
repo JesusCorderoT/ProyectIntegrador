@@ -1,57 +1,49 @@
-const daysTag = document.querySelector(".days"),
-currentDate = document.querySelector(".current-date"),
-prevNextIcon = document.querySelectorAll(".icons span");
-
-// getting new date, current year and month
-let date = new Date(),
-currYear = date.getFullYear(),
-currMonth = date.getMonth();
-
-// storing full name of all months in array
-const months = ["Enero", "Febrero", "Marzo", "April", "Mayo", "Junio", "Julio",
-              "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-
-const renderCalendar = () => {
-    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
-    lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
-    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
-    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
-    let liTag = "";
-
-    for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
-        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
-    }
-
-    for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
-        // adding active class to li if the current day, month, and year matched
-        let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
-                     && currYear === new Date().getFullYear() ? "active" : "";
-        liTag += `<li class="${isToday}">${i}</li>`;
-    }
-
-    
-
-    for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
-        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
-    }
-    currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
-    daysTag.innerHTML = liTag;
-}
-renderCalendar();
-
-prevNextIcon.forEach(icon => { // getting prev and next icons
-    icon.addEventListener("click", () => { // adding click event on both icons
-        // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
-        currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
-
-        if(currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
-            // creating a new date of current year & month and pass it as date value
-            date = new Date(currYear, currMonth, new Date().getDate());
-            currYear = date.getFullYear(); // updating current year with new date year
-            currMonth = date.getMonth(); // updating current month with new date month
-        } else {
-            date = new Date(); // pass the current date as date value
-        }
-        renderCalendar(); // calling renderCalendar function
+const Citas=[
+    {'id':1, 'nombre':'Rebeca','fecha':'01/08/2023', 'horario':'9:00-12:00', 'estatus':'Pendiente'},
+    {'id':2, 'nombre':'Laura','fecha':'12/08/2023', 'horario':'16:00-19:00', 'estatus':'Pendiente'},
+    {'id':3, 'nombre':'Saul','fecha':'21/08/2023', 'horario':'19:00-22:00', 'estatus':'Pendiente'}
+]
+function mostrarCitas(datos){
+    const lista=document.getElementById('lista');
+    let i=0;
+    datos.forEach(element => {
+        const cita=`<li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">No. cita: ${element.id}</div>
+                                <div class="container text-center">
+                                    <div class="row row-cols-auto">
+                                    <div class="col"> Cliente: ${element.nombre} </div>
+                                    <div class="col"> Fecha agendada: ${element.fecha} </div>
+                                    <div class="col"> Horario agendado: ${element.horario} </div>
+                                    <span>Estatus: <span id="${i}"> ${element.estatus} </span> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" onclick="cambiar(1, ${i})" href="#">Finalizar</a></li>
+                                <li><a class="dropdown-item" onclick="cambiar(2, ${i})" href="#">Cancelar</a></li>
+                            </ul>
+                        </div>
+                    </li>`
+        lista.innerHTML+=cita;
+        i++;
     });
-});
+}
+mostrarCitas(Citas);
+function cambiar(selection,i){
+    const valorEstatus= document.getElementById(`${i}`);
+    if(selection==1){
+        Citas[i].estatus='Finalizada';
+        valorEstatus.textContent=Citas[i].estatus;
+    }
+    if(selection==2){
+        Citas[i].estatus='Cancelada';
+        valorEstatus.textContent=Citas[i].estatus;
+    }
+    
+    
+}
