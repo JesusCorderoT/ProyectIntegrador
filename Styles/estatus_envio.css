@@ -4,6 +4,8 @@
     --color3: #B596EF;
     --color4: #66347F;
     --color5: #000000;
+    --fuente-1: 'League Spartan', sans-serif;
+    --fuente-2: 'Sanchez', serif; 
 }
 
 body{
@@ -17,7 +19,7 @@ body{
 
 .TITULO {
     margin-top: 80px;
-    font-family: 'Tsukimi Rounded', sans-serif;
+    font-family: var(--fuente-1);
     background-color: #fae8f57b;
     text-align: center;
 }
@@ -27,7 +29,7 @@ body{
 }
 
 #subtitulo{
-    font-family: 'Lustria', serif;
+    font-family: var(--fuente-2);
 }
 
 .card3{
@@ -51,7 +53,7 @@ section.container {
     border-radius: 10px;
     border-color: #000000;
     border-width: 1px;
-    font-family: 'Lustria', serif;
+    font-family: var(--fuente-2);
 }
 
 

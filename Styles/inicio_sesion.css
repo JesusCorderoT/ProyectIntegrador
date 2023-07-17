@@ -8,6 +8,8 @@
     --color3: #B596EF;
     --color4: #66347F;
     --color5: #000000;
+    --fuente-1: 'League Spartan', sans-serif;
+    --fuente-2: 'Sanchez', serif; 
 }
 
 /*====================== Imagen de fondo en cuerpo =========================*/
@@ -36,7 +38,7 @@
 }
 
 #tituloh1 {
-    font-family: 'Tsukimi Rounded', sans-serif;
+    font-family: var(--fuente-1);
     color: var(--color1);
 }
 
@@ -47,7 +49,7 @@
 
 #inicioSesion {
     margin-top: 20px;
-    font-family: 'Lustria', serif;
+    font-family: var(--fuente-2);
     color: var(--color1);
     border: none;
     border-radius: 10px;
@@ -132,6 +134,8 @@
     height: 8rem;
 }
 
+/* ================= EFECTO BOTON ================ 
+definir una animación personalizada en la que se especifica que cambia gradualmente durante un período de tiempo determinado.*/
 @keyframes effect {
 
     0% {
@@ -149,7 +153,7 @@
 }
 
 .warnings{
-	width: 100px;
+	width: auto;
 	margin: auto;
 	color:var(--color3);
     padding: 10px;
