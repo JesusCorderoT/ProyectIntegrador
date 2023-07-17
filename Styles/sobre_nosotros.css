@@ -1,13 +1,30 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
+
+root {
+    --fuente-1: 'League Spartan', sans-serif;
+    --fuente-2: 'Sanchez', serif;
+}
+
 #navbarContainer{
     margin-bottom: 6rem;
 }
-
+body{
+    background-image: url(/assets/imgs/Fondos/ranchers2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Fija el fondo en su posición */
+    background-position: center;
+    
+}
 #codeRanchers{
+    background-color: rgba(119, 80, 141, 0.452);
     height: fit-content;
-    background-image: url(/assets/imgs/Fondos/ranchers.png);
     position: sticky;
-    font-family: 'Lustria', serif;
-    font-size: 15px;
+    font-family: --fuente-2;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,12 +32,12 @@
 }
 .integrantes{
     height: fit-content;
-    background-color: #e596efb0;
+    background-color: #ffffff28;
     margin: 10px;
     display: flex;
     align-items: center;
-    font-family: 'Lustria', serif;
-    font-size: 14px;
+    font-family: --fuente-2;
+    font-size: 1rem!important;
     
 }
 
@@ -31,11 +48,13 @@
 .descripcion>p{
     margin-top: 1px;
     margin-bottom: 1px;
-    font-family: 'Lustria', serif;
+    font-family: var(--fuente-2);
+    font-size: 1.5rem;
 }
 .nombres{
-    font-family: 'Tsukimi Rounded', sans-serif;
+    font-family: --fuente-1;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .resume{
@@ -53,7 +72,7 @@
 }
 
 .contactame>img{
-    width: 3rem !important;
+    width: 2rem !important;
 }
 
 .picture>img{
