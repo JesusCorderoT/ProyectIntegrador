@@ -21,7 +21,10 @@ min-height: 100%;
 display: flexbox;
 flex-direction: column;
 }
-
+.mod{
+    background-color:rgba(0, 0, 0, 0.233);
+    --bs-body-font-family: 'League Spartan', sans-serif!important; 
+}
 
 .contenido {
 	flex: 1;
