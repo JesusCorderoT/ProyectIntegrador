@@ -23,7 +23,9 @@ background-color: white;
 }
 
 #servicios-card {
-  background: #FAE8F5;
+  background: white;
+  border: 5px solid #FAE8F5;
+  
 }
 
 /* **********************************************************
@@ -35,9 +37,11 @@ background-color: white;
 }
 
 .about-team-block {
-  background: #FAE8F5;
+  background: white;
   margin: 0 0 25px;
   transition: 0.25s;
+  border: 5px solid #FAE8F5;
+  
 
 }
 
@@ -47,8 +51,9 @@ background-color: white;
 
 .about-team-block:hover {
   transform: translateY(-8px);
-  color:#e5beec
-  -webkit-box-shadow 0px 21px 42px -22px #919394;
+  background: #FAE8F5;
+  color: black;
+  -webkit-box-shadow: 0px 21px 42px -22px #919394;
   -moz-box-shadow: 0px 21px 42px -22px #919394;
   box-shadow: 0px 21px 42px -22px #919394;
   cursor: pointer;
@@ -56,8 +61,11 @@ background-color: white;
 
 .about-team-title {
   padding: 20px 20px;
-  min-height: 94px;
-  overflow: hidden;
+  height: 100%; /* Ocupa el 100% de la altura de la tarjeta */
+  display: flex; /* Activa el modo de visualización flex */
+  flex-direction: column; /* Apila el contenido verticalmente */
+  justify-content: center; /* Centra verticalmente el contenido */
+  min-height: 300px; /* Establece una altura mínima para las tarjetas */
 }
 
 .about-team-title h5 {
@@ -69,3 +77,11 @@ background-color: white;
   margin: 0;
 }
 
+
+.card-img-top {
+  border: 3px solid #FAE8F5;
+  object-fit: cover;
+  height: 225px;
+  width: calc(100% - 20px); /* Resta 20 píxeles para el espacio a los lados */
+  margin: 0 auto; /* Centra horizontalmente la imagen */
+}
