@@ -1,3 +1,7 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" );
+
 :root {
     --color1: #FAE8F5;
     --color2: #E596EF;
@@ -18,23 +22,21 @@ body{
     
 }
 
+/*
 .TITULO {
     margin-top: 80px;
     font-family: var(--fuente-1);
     background-color: #fae8f59f;
     text-align: center;
 }
+*/
 
 #h2Titulo{
+    font-family: var(--fuente-2);
     color: var(--color5);
-}
-
-
-
-.li{
     
-    background-color: #66347F;
 }
+
 
 #subtitulo{
     
@@ -52,9 +54,21 @@ body{
     padding: 20px;
     }
 
+#contenedorGeneral{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 0px;
+    background-color: #ffffff7e !important;
+    
+    
+}
+
 #seccion{
     
-    margin-bottom: 20px;
+    padding: 50px;
+    border-radius: 10px;
+    font-family: var(--fuente-2);
+
 }
 
 /* Estilos para la sección de estatus de envío de productos */
