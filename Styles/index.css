@@ -142,9 +142,10 @@ root{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/assets/serviciosImg/ejemplo-clienta.jpg);
+  background-image: url(/assets/serviciosImg/manLashes.jpg);
   background-size:cover;
   background-repeat:space;
+  background-position:left;
   /* background: rgba(102, 52, 127,0.5); */
   font-family: var(--fuente-1);
   text-align: center;
