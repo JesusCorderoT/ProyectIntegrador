@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="icon" href="../assets/imgs/logos/logoOjo.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="../Styles/checkout.css">
+    <meta charset="UTF  -8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+<!--Contenedor de la Navbar----------------------------------------------------------------------------->
+<div id="navbarContainer"></div>
+<!-- contenido -->
+    <div class="contenido">
+    
+        <h1 class="text-center">Pedido</h1>
+    
+        <div class="container-fluid row contenido justify-content-center p-0 m-0">
+
+        <!-- Parte izquierda -->
+        <div class="container-fluid col-md-5 text-center p-0 m-0 border border-dark">
+
+            <h3 class="text-center">Detalles de los productos</h3> 
+            
+            <div class="productos">
+                <p>
+                    Aquí van las tarjetas de cada producto, se hacen en js.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Parte derecha -->
+        <div class="container-fluid col-md-5 text-center p-0 m-0 border border-dark">
+            <div class="">
+                <h3 class="datosCliente">Datos del cliente</h3> 
+                <p>
+                    Aquí va la tarjeta de datos del cliente, se hace en js.
+                </p>
+            </div>
+            <div>
+                <h3 class="direcciónEnvío">Dirección de envío</h3> 
+                <p>
+                    Aquí va la tarjeta de dirección de envío, se hace en js.
+                </p>
+            </div>
+            <div>
+                <h3 class="métodoPago">Método de pago</h3>
+                <p>
+                    Aquí va la tarjeta método de pago, se hace en js.
+                </p>
+            </div>
+            <div>
+                <h3 class="resumenPedido">Resumen del pedido</h3> 
+                <p>
+                    Aquí va la tarjeta del resumen del pedido, se hace en js.
+                </p>
+            </div>
+            <div class="botonConfirmación">
+                <a href="/Pages/checkout.html" class="btn btn-dark " id="irCheckout" role="button">Confirmar compra</a>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+<!--Footer---------------------------------------------------------------------------------------------->
+<footer id="footer" class="footer">
+    <div id="footerContainer"></div>
+</footer>
+<!--Scripts-->
+    <script src="/src/Navbar.js"></script>
+    <script src="/src/checkout.js"></script>
+    <script src="/src/carrito.js"></script>
+    <script src="/src/Footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</body>
+</html>
