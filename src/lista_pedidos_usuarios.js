@@ -3,6 +3,9 @@ const pedidosUsuario=[
     {'Orden':'003','Monto':'$500','Productos':["Shapoo", " Removedor en gel ", "LashBrush"],'Fecha':'20/06/2023','Estatus':'Por confirmar'},
     {'Orden':'008','Monto':'$500','Productos':["Shapoo"], 'Fecha':'20/06/2023','Estatus':'Por confirmar'},
 ]
+
+
+
 function mostrarPedidosUsuario(datos){
     let i=0;
     const listado=document.getElementById('lista');
@@ -20,10 +23,29 @@ function mostrarPedidosUsuario(datos){
                                 </div>
                             </div>
                             <div>
-                                <button class="btn btn-dark" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Comentario
-                                </button>                
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#comentario" data-bs-whatever="@mdo">Comenta</button>
+                            <div class="modal fade" id="comentario" tabindex="-1" aria-labelledby="comantariosLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <p class="modal-title" id="exampleModalLabel">¡Nos interesa tu opinión!</p>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form>
+                                    <div class="mb-3">
+                                      <label for="message-text" class="col-form-label">Escribe tu reseña:</label>
+                                      <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-dark">Send message</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                             </div>
                         </li>`
         listado.innerHTML+=seccion
@@ -31,3 +53,10 @@ function mostrarPedidosUsuario(datos){
     });
 }
 mostrarPedidosUsuario(pedidosUsuario);
+
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})

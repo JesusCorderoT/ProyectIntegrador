@@ -3,13 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" );
 root{
     --fuente-1: 'League Spartan', sans-serif;
-    --fuente-2: 'Lustria', serif; 
+    --fuente-2: 'Sanchez', serif;; 
   /* 'Sanchez', serif;  */
 }
 
 .body{
-background-color: #FAE8F5 !important;
-/* font-family: 'Lustria', serif;   */
 font-family: var(--fuente-2);
 background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
 background-size: cover;
@@ -22,13 +20,17 @@ flex-direction: column;
 }
 #tarjeta{
   background-color: rgba(255, 255, 255, 0.5);
-}
-
-.contenido {
-	flex: 1;
-	margin-top: 100px;
+  margin-top: 8rem;
 }
 .card
 { 
   margin: 10%;
+}
+.subtitulo{
+  font-family: var(--fuente-1)!important;
+  font-size: 1.2rem;
+}
+#usuario{
+  font-family:var(--fuente-2)!important;
+  font-size: 1.5rem;
 }
