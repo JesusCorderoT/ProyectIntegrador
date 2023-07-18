@@ -1,11 +1,11 @@
 // Función para iniciar sesión
-function iniciarSesion(nombre, email, tipo) {
-    // Almacenar la información de sesión en sessionStorage
-    sessionStorage.setItem("nombre", nombre);
-    sessionStorage.setItem("email", email);
-    sessionStorage.setItem("loggedIn", "true");
-    sessionStorage.setItem("tipo", tipo);
-}
+// function iniciarSesion(nombre, email, tipo) {
+//     // Almacenar la información de sesión en sessionStorage
+//     sessionStorage.setItem("nombre", nombre);
+//     sessionStorage.setItem("email", email);
+//     sessionStorage.setItem("loggedIn", "true");
+//     sessionStorage.setItem("tipo", tipo);
+// }
 
 // Función para cerrar sesión
 function cerrarSesion() {
@@ -26,26 +26,51 @@ function verificarSesion() {
     if (loggedIn === "true") {
         // Verificar el tipo de usuario
         if (tipo === "normal") {
-            // Mostrar contenido para usuarios loggeados normales
+            // Se agrega navbar para usuario normal
+            fetch('../Pages/navbar2.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarContainer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error al cargar la barra de navegación:', error);
+            });
+
             console.log("Usuario loggeado (normal):", sessionStorage.getItem("nombre"));
-            // Aquí puedes agregar el código para mostrar el contenido especial para usuarios loggeados normales en tu página
+            
         } else if (tipo === "admin") {
-            // Mostrar contenido para administradores loggeados
+            // Se agrega navbar para usuario admin
+            fetch('../Pages/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarContainer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error al cargar la barra de navegación:', error);
+            });
+
             console.log("Usuario loggeado (admin):", sessionStorage.getItem("nombre"));
-            // Aquí puedes agregar el código para mostrar el contenido especial para administradores loggeados en tu página
+
         }
     } else {
-        // Mostrar contenido para usuarios no loggeados
+        // Se agrega navbar para usuario no loggeado
+        fetch('../Pages/navbar3.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarContainer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error al cargar la barra de navegación:', error);
+            });
         console.log("Usuario no loggeado");
-        // Aquí puedes agregar el código para mostrar el contenido especial para usuarios no loggeados en tu página
     }
 }
 
 // Ejemplo de uso
-iniciarSesion("John Doe", "johndoe@example.com", "normal"); // Para un usuario normal
+//iniciarSesion("John Doe", "johndoe@example.com", "normal"); // Para un usuario normal
 //iniciarSesion("Jane Doe", "janedoe@example.com", "admin"); // Para un administrador
 verificarSesion();
 
 // Simular cierre de sesión
-cerrarSesion();
-verificarSesion();
+//cerrarSesion();
+

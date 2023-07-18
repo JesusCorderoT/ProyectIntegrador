@@ -38,3 +38,10 @@ document.getElementById('botonRegistrate').addEventListener('click', function() 
 });
 
 
+function iniciarSesion(nombre, email, tipo) {
+    // Almacenar la información de sesión en sessionStorage
+    sessionStorage.setItem("nombre", nombre);
+    sessionStorage.setItem("email", email);
+    sessionStorage.setItem("loggedIn", "true");
+    sessionStorage.setItem("tipo", tipo);
+}
