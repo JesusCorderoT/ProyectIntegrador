@@ -31,8 +31,8 @@ function usuariosFrecuentes(lista){
     lista.forEach(element => {
         console.log(typeof element.frecuente);
         if(element.frecuente==true){
-            const clientes=`<div class="media text-muted pt-3 col-4 ">
-                                <img class="rounded-circle" src="/assets/serviciosImg/usuario.jpg" alt="image-usuario" width="140" height="140">
+            const clientes=`<div class="card-cliente">
+                                <img class="rounded-circle" src="/assets/serviciosImg/usuario2.png" alt="image-usuario" width="140" height="140">
                                 <h3 class=resaltar>
                                 <strong class="d-block">${element.username}</strong>
                                 </h3>

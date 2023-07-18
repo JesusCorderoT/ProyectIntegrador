@@ -13,7 +13,7 @@ function mostrarTarjetas(datos){
                       <span>${element.Tipo}</span>
                       <span>Vence el: ${element.Vencimiento}</span>
                     </div>
-                    <button class="btn bg-danger" onclick="eliminar(${i})">Eliminar</button>
+                    <button type="button" class="btn btn-danger" onclick="eliminar(${i})">Eliminar</button>
                   </li>`
       lista.innerHTML+=pago;
       i++;
@@ -30,7 +30,7 @@ function eliminar(elemento) {
     icon: 'warning',
     showCancelButton: true, 
     confirmButtonColor: 'black',
-    cancelButtonColor: '#d33',
+    cancelButtonColor: '#d53032',
     confirmButtonText: 'Eliminar',
     cancelButtonText: 'Cancelar'
     }).then((result) => {
