@@ -1,5 +1,5 @@
 const pedidosUsuario=[
-    {'Orden':'001','Monto':'$500','Productos':["Shapoo", " LashBrush"],'Fecha':'20/06/2023','Estatus':'Por confirmar'},
+    {'Orden':'001','Monto':'$500','Productos':["Shapoo", " LashBrush"],'Fecha':'20/06/2023','Estatus':'Por confirmar', },
     {'Orden':'003','Monto':'$500','Productos':["Shapoo", " Removedor en gel ", "LashBrush"],'Fecha':'20/06/2023','Estatus':'Por confirmar'},
     {'Orden':'008','Monto':'$500','Productos':["Shapoo"], 'Fecha':'20/06/2023','Estatus':'Por confirmar'},
 ]
@@ -23,12 +23,12 @@ function mostrarPedidosUsuario(datos){
                                 </div>
                             </div>
                             <div>
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#comentario" data-bs-whatever="@mdo">Comenta</button>
-                            <div class="modal fade" id="comentario" tabindex="-1" aria-labelledby="comantariosLabel" aria-hidden="true">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#comentario">Comenta</button>
+                            <div class="modal fade mod" id="comentario" tabindex="-1" aria-labelledby="comantariosLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header">
-                                  <p class="modal-title" id="exampleModalLabel">¡Nos interesa tu opinión!</p>
+                                  <p class="modal-title" id="tituloModal">¡Nos interesa tu opinión!</p>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">

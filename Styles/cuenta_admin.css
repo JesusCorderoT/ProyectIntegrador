@@ -4,16 +4,15 @@
 
 root {
     --fuente-1: 'League Spartan', sans-serif;
-    --fuente-2: 'Lustria', serif;
+    --fuente-2: 'Sanchez', serif;
     /* 'Sanchez', serif;  */
 }
 #navbarContainer{
     margin-bottom: 2rem;
 }
+
 .body {
-   /* background-color: #FAE8F5 !important;*/
-    /* font-family: 'Lustria', serif;   */
-    font-family: var(--fuente-2);
+    --bs-body-font-family:'Sanchez', serif!important;
     background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,4 +29,5 @@ root {
 }
 #tarjeta{
     background-color: rgba(255, 255, 255, 0.63);
+    font-family: var(--fuente-2)!important;
 }
