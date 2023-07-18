@@ -37,7 +37,7 @@ function insertarDatosTabla(datos){
     contadorProductos+=1;
     }
     emptyMessage.innerHTML= `<p">Monto del pedido: $${datos[0].precio} </p>
-    <p><a  href="/Pages/carrito.html" class="btn btn-secondary"  id="irCheckout" role="button">Finalizar compra</a></p>`;
+    <p><a  href="/Pages/checkout.html" class="btn btn-dark"  id="irCheckout" role="button">Finalizar compra</a></p>`;
     // tabla.innerHTML+=`Monto:`;
 }
 

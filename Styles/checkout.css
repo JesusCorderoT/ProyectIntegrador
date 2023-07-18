@@ -4,7 +4,6 @@
 root{
 	--fuente-1: 'League Spartan', sans-serif;
 	--fuente-2: 'Sanchez', serif; 
-  /* 'Sanchez', serif;  */
 } 
 
  /*color del fondo general */
@@ -19,7 +18,7 @@ body{
     font-family: var(--fuente-2);
     height: 100%;
     display: flexbox;
-	  flex-direction: column;
+    flex-direction: column;
 }  
 
 #navbarContainer{
@@ -29,3 +28,6 @@ body{
 	flex: 1;
 }
 
+h1{
+  font-family: var(--fuente-1);  
+}
