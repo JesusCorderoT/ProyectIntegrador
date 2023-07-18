@@ -9,7 +9,8 @@
 }
 
 body{
-    background-image: url(../assets/imgs/Fondos/baby_ranchers.png);
+    
+    background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -20,25 +21,28 @@ body{
 .TITULO {
     margin-top: 80px;
     font-family: var(--fuente-1);
-    background-color: #fae8f57b;
+    background-color: #fae8f59f;
     text-align: center;
 }
 
 #h2Titulo{
-    color: var(--color1);
+    color: var(--color5);
 }
 
 
 
 .li{
+    
     background-color: #66347F;
 }
 
 #subtitulo{
+    
     font-family: var(--fuente-2);
 }
 
 .card3{
+    
     background-color: var(--color1);
     margin: 10px;
     color: #000000;
@@ -49,6 +53,7 @@ body{
     }
 
 #seccion{
+    
     margin-bottom: 20px;
 }
 
