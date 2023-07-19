@@ -33,6 +33,7 @@ function mostrarCitas(datos){
 mostrarCitas(citasUsuario);
 function cancelar(elemento){
     const valorEstatus=document.getElementById(`${elemento}`);
-    citasUsuario[elemento].estatus='Cancelada';
+    if(citasUsuario[elemento].estatus='Finalizada'){ citasUsuario[elemento].estatus='Finalizada';}
+    else{citasUsuario[elemento].estatus='Cancelada';} 
     valorEstatus.textContent=citasUsuario[elemento].estatus;
 }

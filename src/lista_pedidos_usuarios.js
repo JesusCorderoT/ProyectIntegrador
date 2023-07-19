@@ -12,7 +12,7 @@ function mostrarPedidosUsuario(datos){
     datos.forEach(elemento => {
         let seccion=`<li class="list-group-item d-flex justify-content-between align-items-start">
                             <div class="ms-2 me-auto">
-                                <div class="fw-bold">No. Orden: ${elemento.Orden}</div>
+                                <div class="titulos">No. Orden: ${elemento.Orden}</div>
                                 <div class="container text-center">
                                     <div class="row row-cols-auto">
                                         <div class="col"> Monto: ${elemento.Monto}</div>
@@ -29,7 +29,6 @@ function mostrarPedidosUsuario(datos){
                               <div class="modal-content">
                                 <div class="modal-header titulo-mod">
                                   <p class="modal-title titulos" id="tituloModal">¡Nos interesa tu opinión!</p>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body cuerpo-mod">
                                   <form>
@@ -38,8 +37,8 @@ function mostrarPedidosUsuario(datos){
                                       <textarea class="form-control" id="message-text"></textarea>
                                     </div>
                                   </form >
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button class="btn btn-dark" type="submit" name="submit" value="Submit">Save</button>
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                  <button class="btn btn-dark" type="submit" name="submit" value="Submit">Guardar</button>
                                 </div>
                               </div>
                             </div>

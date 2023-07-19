@@ -1,33 +1,40 @@
 const direccionesUsuario=[
-  {'Alias':'Casa Jaz', 'CP':45960, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5555555555},
-  {'Alias':'Casa Abue', 'CP':45987, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5566556655},
-  {'Alias':'Mamá', 'CP':39560, 'Estado':'Guerrero','Municipio':'Acapulco', 'Contacto':7444444444},
-  {'Alias':'Mono', 'CP':36987, 'Estado':'Puebla','Municipio':'Puebla', 'Contacto':2222222222}
+  {'Alias':'Casa Jaz', 'CP':45960, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5555555555, 'Predeterminado':true},
+  {'Alias':'Casa Abue', 'CP':45987, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5566556655, 'Predeterminado':false},
+  {'Alias':'Mamá', 'CP':39560, 'Estado':'Guerrero','Municipio':'Acapulco', 'Contacto':7444444444, 'Predeterminado':false},
+  {'Alias':'Mono', 'CP':36987, 'Estado':'Puebla','Municipio':'Puebla', 'Contacto':2222222222, 'Predeterminado':false}
 ]
 function mostrarDirecciones(datos){
   const lista=document.getElementById('lista');
   let i=0;
+  let atributo='';
+
   datos.forEach(element => {
+    if(element.Predeterminado){
+      atributo=''
+    }else{atributo='hidden'}
       const direccion=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
                           <div class="ms-2 me-auto">
-                            <div class="fw-bold">Alias: ${element.Alias}</div>
-                            <div class="container text-center">
-                              <div class="row row-cols-auto">
-                                <div class="col"> CP. ${element.CP}</div>
-                                <div class="col"> Entidad: ${element.Estado}</div>
-                                <div class="col"> Municipio/Alcaldía: ${element.Municipio}</div>
-                                <div class="col"> Contacto: ${element.Contacto}</div>          
-                              </div>
-                            </div>
+                                <span class="titulos">Alias: ${element.Alias}</span>
+                                <br>
+                                <span> CP. ${element.CP}</span>
+                                <span> </span>
+                                <span> Entidad: ${element.Estado}</span>
+                                <span> </span>
+                                <span> Municipio/Alcaldía: ${element.Municipio}</span>
+                                <span> </span>
+                                <span> Contacto: ${element.Contacto}</span>  
+                                <span> </span>
+                                <span ${atributo} id="${element.Alias}"> <mark style="background-color: black; color: white;"> Predeterminado </mark></span>       
                           </div>
                           <div class="dropdown">
-                              <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Opciones
+                              <button class="btn btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="bi bi-chevron-down"></i>
                               </button>
                               <ul class="dropdown-menu">
                                 <li><a class="dropdown-item"  href="#">Editar</a></li>
                                 <li id="eliminar-li" ><a class="dropdown-item" onclick="eliminar(${i})" href="#">Eliminar</a></li>
-
+                                <li><a class="dropdown-item"  onclick="cambiar( ${i})" href="#">Predeterminada</a></li>
                               </ul>
                             </div>            
                         </li>`
@@ -50,11 +57,34 @@ function eliminar(elemento) {
       confirmButtonText: 'Sí, borrar.'
     }).then((result) => {
       if (result.isConfirmed) {
+        if(direccionesUsuario[elemento].Predeterminado){
+          direccionesUsuario[elemento].Predeterminado=false;
+          direccionesUsuario[elemento+1].Predeterminado=true;
+  
+          direccionesUsuario.splice(elemento,1);
+          console.log(tarjetasUsuario);
+          const atributo=document.getElementById(`${direccionesUsuario[elemento+1].Alias}`);
+          atributo.removeAttribute('hidden');
+        }
         Swal.fire('Eliminado.');
         direccion.remove();
       }
     })
 }
-
+function cambiar(elemento){
+  let i=0;
+  direccionesUsuario.forEach(element=>{
+    let atributo=document.getElementById(`${element.Alias}`);
+    if(i==elemento){
+      element.Predeterminado=true;
+      atributo.removeAttribute('hidden');
+    }else{
+      element.Predeterminado=false;
+      atributo.setAttribute('hidden', '')
+    }
+    i++;
+  });
+  console.log(direccionesUsuario);
+}
 
   
