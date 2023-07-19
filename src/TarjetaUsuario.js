@@ -12,22 +12,68 @@ const cardCvvDisplay = document.getElementById('card-cvv-display');
 const cardPreview = document.querySelector('.card-preview');
 const cardForm = document.querySelector('form');
 
+// Funciones de validación individual para cada campo
+function validarNumeroTarjeta() {
+  const cardNumber = cardNumberInput.value;
+  if (!/^\d{16}$/.test(cardNumber)) {
+    mostrarError("El número de tarjeta debe tener 16 dígitos.");
+    return false;
+  }
+  return true;
+}
 
-// Agregar un listener al input del CVV para actualizar la vista previa
+function validarMesVencimiento() {
+  const expiryMonth = cardExpiryMonthInput.value;
+  if (!/^\d{2}$/.test(expiryMonth)) {
+    mostrarError("El mes debe tener 2 dígitos.");
+    return false;
+  }
+  return true;
+}
+
+function validarYearVencimiento() {
+  const expiryYear = cardExpiryYearInput.value;
+  if (!/^\d{2}$/.test(expiryYear)) {
+    mostrarError("El año de vencimiento debe tener 2 dígitos.");
+    return false;
+  }
+  return true;
+}
+
+function validarCVV() {
+  const cvv = cardCvvInput.value;
+  if (!/^\d{3}$/.test(cvv)) {
+    mostrarError("El CVV debe tener 3 dígitos.");
+    return false;
+  }
+  return true;
+}
+
+// Función para mostrar mensajes de error
+function mostrarError(mensaje) {
+  Swal.fire("Error", mensaje, "error");
+}
+
+// Agregar un listener al evento 'blur' de los campos que requieren validación
+cardNumberInput.addEventListener('blur', validarNumeroTarjeta);
+cardExpiryMonthInput.addEventListener('blur', validarMesVencimiento);
+cardExpiryYearInput.addEventListener('blur', validarYearVencimiento);
+cardCvvInput.addEventListener('blur', validarCVV);
+
+// Agregar un listener al evento 'input' del campo CVV para mostrar la tarjeta volteada solo cuando hay 3 dígitos.
 cardCvvInput.addEventListener('input', (event) => {
   const cvv = event.target.value;
   cardCvvDisplay.textContent = cvv;
 
-  // Si el CVV tiene 3 o más dígitos, mostrarlo y voltear la tarjeta
-  if (cvv.length >= 0) {
+  // Si el CVV tiene 3 dígitos, mostrar la tarjeta volteada
+  if (cvv.length > 0) {
     cardPreview.classList.add('flipped');
   } else {
     cardPreview.classList.remove('flipped');
   }
 });
 
-
-// Agregar un listener al input del número de tarjeta para detectar el tipo de tarjeta
+// Agregar un listener al evento 'input' del número de tarjeta para detectar el tipo de tarjeta
 cardNumberInput.addEventListener('input', (event) => {
   const cardNumber = event.target.value;
 
@@ -59,73 +105,40 @@ cardNumberInput.addEventListener('input', (event) => {
   cardNumberDisplay.textContent = formattedCardNumber;
 });
 
-// Agregar un listener al input del nombre en la tarjeta para actualizar la vista previa
+// Agregar un listener al evento 'input' del nombre en la tarjeta para actualizar la vista previa
 cardNameInput.addEventListener('input', (event) => {
   const cardName = event.target.value;
   cardNameDisplay.textContent = cardName;
 });
 
-// Agregar un listener al input del mes de vencimiento para actualizar la vista previa
+// Agregar un listener al evento 'input' del mes de vencimiento para actualizar la vista previa
 cardExpiryMonthInput.addEventListener('input', (event) => {
   const expiryMonth = event.target.value;
   const expiryYear = cardExpiryYearInput.value;
   cardExpiryDisplay.textContent = `${expiryMonth}/${expiryYear}`;
 });
 
-// Agregar un listener al input del año de vencimiento para actualizar la vista previa
+// Agregar un listener al evento 'input' del año de vencimiento para actualizar la vista previa
 cardExpiryYearInput.addEventListener('input', (event) => {
   const expiryMonth = cardExpiryMonthInput.value;
   const expiryYear = event.target.value;
   cardExpiryDisplay.textContent = `${expiryMonth}/${expiryYear}`;
 });
 
+// Función para validar todo el formulario antes de enviar los datos
+function validarFormulario() {
+  const esNumeroTarjetaValido = validarNumeroTarjeta();
+  const esMesVencimientoValida = validarMesVencimiento();
+  const esYearVencimientoValido = validarYearVencimiento();
+  const esCVVValido = validarCVV();
 
-// Agregar un listener al evento 'blur' de todos los campos de formulario, excepto el campo del CVV,
-// para quitar la clase 'flipped'
-cardNumberInput.addEventListener('click', () => {
-  cardPreview.classList.remove('flipped');
-});
+  if (esNumeroTarjetaValido && esMesVencimientoValida && esCVVValido && esYearVencimientoValido) {
+    Swal.fire("¡Éxito!", "Formulario válido, puedes enviar los datos.", "success");
+    //Seccion para BD
+  } else {
+    Swal.fire("Error", "Por favor, completa correctamente todos los campos.", "error");
+  }
+}
 
-cardNameInput.addEventListener('click', () => {
-  cardPreview.classList.remove('flipped');
-});
-
-cardExpiryMonthInput.addEventListener('click', () => {
-  cardPreview.classList.remove('flipped');
-});
-
-cardExpiryYearInput.addEventListener('click', () => {
-  cardPreview.classList.remove('flipped');
-});
-
-
-//Boton guardar de pagina agrega_direccion_usuario.html
-document.getElementById('guardar-btn').addEventListener('click', function() {
-  Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: 'Listo.',
-    showConfirmButton: false,
-    timer: 1500
-  })
-});
-
-
-
-//Boton guardar de pagina agrega_direccion_usuario.html
-// document.getElementById('guardar-btn').addEventListener('click', function() {
-//   Swal.fire({
-//       title: 'Do you want to save the changes?',
-//       showDenyButton: true,
-//       showCancelButton: true,
-//       confirmButtonText: 'Save',
-//       denyButtonText: `Don't save`,
-//     }).then((result) => {
-//       /* Read more about isConfirmed, isDenied below */
-//       if (result.isConfirmed) {
-//         Swal.fire('Saved!', '', 'success')
-//       } else if (result.isDenied) {
-//         Swal.fire('Changes are not saved', '', 'info')
-//       }
-//     })
-// });
+// Agregar un listener al botón de 'Guardar' para validar el formulario antes de enviar los datos
+document.getElementById('guardar-btn').addEventListener('click', validarFormulario);

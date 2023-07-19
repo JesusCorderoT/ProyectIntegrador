@@ -5,7 +5,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" rel="stylesheet">s
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/Styles/agrega_direccion_usuario.css">
+    <meta charset="UTF-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agrega dirección</title>
@@ -14,9 +15,7 @@
 <body class="body">
 
 <!--=======================INICIO NAVBAR=======================-->
-    <header id="header" class=" header fixed-top d-flex align-items-center container-wrap">
       <div id="navbarContainer"></div>
-  </header>
 <!--=======================FIN NAVBAR=======================-->
 
 
@@ -27,89 +26,107 @@
 
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Agrega una nueva dirección de envío</h5>
+      <p class="card-title text-center" id="titulo" >Agrega una nueva dirección de envío</p>
       <!-- <p class="card-text">Agrega.</p> -->
 
 
-      <form>
+      <form action="/cuenta_usuario.html">
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Nombres y apellidos</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="alias" class="form-label">Alias de dirección</label>
+          <input type="text" class="form-control" id="alias" placeholder="">
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Código Postal</label>
-          <input type="number" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="cp" class="form-label">Código Postal</label>
+          <input type="number" min="0" minlength="5" maxlength="5" class="form-control" id="cp" placeholder="">
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Estado</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="estado" class="form-label">Estado</label>
+          <select id="estado" class="form-control">
+            <option value="1">Aguascalientes</option>
+            <option value="2">Baja California</option>
+            <option value="3">Baja California Sur</option>
+            <option value="4">Campeche</option>
+            <option value="5">Chiapas</option>
+            <option value="6">Chihuahua</option>
+            <option value="7">Ciudad de México</option>
+            <option value="8">Coahuila </option>
+            <option value="9">Colima</option>
+            <option value="10">Durango</option>
+            <option value="11">Estado de México</option>
+            <option value="12">Guanajuato</option>
+            <option value="13">Guerrero</option>
+            <option value="14">Hidalgo</option>
+            <option value="15">Jalisco</option>
+            <option value="16">Michoacán</option>
+            <option value="17">Morelos</option>
+            <option value="18">Nayarit</option>
+            <option value="19">Nuevo León</option>
+            <option value="20">Oaxaca</option>
+            <option value="21">Puebla</option>
+            <option value="22">Querétaro</option>
+            <option value="23">Quintana Roo </option>
+            <option value="24">San Luis Potosí</option>
+            <option value="25">Sinaloa</option>
+            <option value="26">Sonora</option>
+            <option value="27">Tabasco</option>
+            <option value="28">Tamaulipas</option>
+            <option value="29">Tlaxcala</option>
+            <option value="30">Veracruz</option>
+            <option value="31">Yucatán</option>
+            <option value="31">Zacatecas</option>
+          </select>
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Municipio</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="municipio" class="form-label">Municipio</label>
+          <input type="text" class="form-control" id="municipio" placeholder="">
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Colonia</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="colonia" class="form-label">Colonia</label>
+          <input type="text" class="form-control" id="colonia" placeholder="">
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Calle</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="calle" class="form-label">Calle</label>
+          <input type="text" class="form-control" id="calle" placeholder="">
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Número interior</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="numeroInt" class="form-label">Número interior</label>
+          <input type="text" style="text-transform:uppercase" min="0" class="form-control" id="numeroInt" onkeypress="mayus(this);" placeholder="S/N">
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Número exterior</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="numeroExt" class="form-label">Número exterior</label>
+          <input type="text" style="text-transform:uppercase" min="0" class="form-control" id="numeroExt" placeholder="S/N">
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Calle 1</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="calle1" class="form-label">Calle 1</label>
+          <input type="text" class="form-control" id="calle1" placeholder="">
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Calle 2</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="calle2" class="form-label">Calle 2</label>
+          <input type="text" class="form-control" id="calle2" placeholder="">
         </div>
 
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Teléfono de contacto</label>
-          <input type="number" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="telContacto" class="form-label">Teléfono de contacto</label>
+          <input type="tel" maxlength="10" class="form-control" id="telContacto" placeholder="">
         </div>
-
-       <!-- <div class="form-group col-md-6">
-          <label for="card-number-input">Número de tarjeta:</label>
-          <input type="text" class="form-control" id="card-number-input" name="card-number-input">
-        </div>-->
 
         <div class="form-group col-md-12">
-          <label for="formGroupExampleInput" class="form-label">Indicaciones adicionales</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <label for="indicaciones" class="form-label">Indicaciones adicionales</label>
+          <input type="text" class="form-control" id="indicaciones" placeholder="">
         </div>
-
-     <!--   <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>-->
-
         
       </form>
+      <br>
       <button id="guardar-btn" type="button" class="btn btn-dark">Guardar</button>
 
       <button type="submit" class="btn btn-danger">Cancelar</button>
@@ -134,29 +151,13 @@
     <div id="footerContainer"></div>   
 </footer>
   <!--=======================FIN FOOTER=======================-->
+<script>
+  function mayus(e) {
+  var tecla=e.value;
+  var tecla2=tecla.toUpperCase();
+  }
+</script>
 
-
-
-
-<style>
-.card {
-
-background-color: #e5beec;
-font-family: 'Lustria', serif;
-font-size: 1.5vw;
-/* font-family: 'Tsukimi Rounded', sans-serif; */
-}
-.card-title{
-  text-align: center;
-}
-button{
-  margin-top: 10px;
-}
-
-</style>
-
-
-    
 
   <script src="../src/Navbar.js"></script>
   <script src="../src/Footer.js"></script>

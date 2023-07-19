@@ -33,8 +33,11 @@ function mostrarPedidos(datos){
                             <li><a class="dropdown-item" data-target="En camino" onclick="cambiar(3,${i})" href="#">En camino</a></li>                              
                             <li><a class="dropdown-item" data-target="Entregada" onclick="cambiar(4,${i})" href="#">Entregada</a></li>
                             </ul>
-                        </div> 
-                    </li>`
+                        </div>
+                    </li>
+                    
+                    <hr>
+                    `
         listado.innerHTML+=seccion
         i++;
     });

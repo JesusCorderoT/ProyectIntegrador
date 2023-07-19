@@ -5,7 +5,7 @@
 body {
 
  /* background-image: url("/assets/imgs/Fondos/gradiente_magico2.png");*/
- background-color: #FAE8F5;
+ background-color: white;
   /*background-repeat: no-repeat;
   background-size: cover;
    background-attachment: fixed; Fija el fondo en su posición 
@@ -14,7 +14,7 @@ body {
 
 #encabezado {
   background-color: rgb(250, 232, 245);
-  background-image: url(/assets/imgs/Fondos/marco_magico.png);
+  background-image: url(/assets/imgs/Fondos/gradiente_magico2.png);
   background-size:cover;
   background-position: center;
   background-repeat:space;

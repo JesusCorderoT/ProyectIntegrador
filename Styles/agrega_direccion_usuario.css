@@ -1,32 +1,35 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
-
 root {
     --fuente-1: 'League Spartan', sans-serif;
-    --fuente-2: 'Sanchez', serif;
+    --fuente-2: 'Sanchez', serif;;
+    /* 'Sanchez', serif;  */
 }
 
-body {
-
-    font-family: var(--fuente-2);
-    background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
+body{
+    background-image: url(/assets/imgs/Fondos/gradiente_magico.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     /* Fija el fondo en su posición */
     background-position: center;
     min-height: 100%;
-    display: flexbox;
-    flex-direction: column;
 }
-
-.contenido {
-    flex: 1!important;
-    /* margin-top: 100px; */
+#navbarContainer{
+    margin-bottom: 2rem;
 }
-
 .card {
     margin: 10%;
-    background-color: #ffffff41!important;
+    background-color: #ffffff6e!important;
+}
+#titulo{
+    font-family: var(--fuente-1);
+    font-size: 2rem;
+    font-weight: bold;
+}
+label{
+    font-family:var(--fuente-2);
+    font-size: 1.3rem;
+    font-weight: 600;
 }

@@ -1,17 +1,15 @@
 /* Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;900&family=Sanchez:ital@1&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" );
 root{
     --fuente-1: 'League Spartan', sans-serif;
-    --fuente-2: 'Lustria', serif; 
+    --fuente-2: 'Sanchez', serif; 
   /* 'Sanchez', serif;  */
 }
 
 
 .body{
-background-color: #FAE8F5 !important;
-/* font-family: 'Lustria', serif;   */
-font-family: var(--fuente-2);
+--bs-body-font-family:'Sanchez', serif!important;
 background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
 background-size: cover;
 background-repeat: no-repeat;
@@ -21,11 +19,33 @@ min-height: 100%;
 display: flexbox;
 flex-direction: column;
 }
-
-
+.mod{
+    background-color: rgba(238, 184, 238, 0.295);
+}
+.titulo-mod{
+    background-color: black;
+    color: white;
+    font-family:'League Spartan', sans-serif;
+    font-size: 2rem;
+}
+.cuerpo-mod{
+    background-color: black;
+    font-family:'Sanchez', serif;
+    font-weight: lighter;
+    color: white;
+    font-size: 1.5rem;
+}
+.cuerpo-mod>label{
+    font-family:'League Spartan', sans-serif;
+    font-size: 2rem;
+}
+.pie{
+    background-color: black;
+    color: white;
+}
 .contenido {
 	flex: 1;
-	margin-top: 100px!important;
+	margin-top: 8rem!important;
 }
 
 .card {

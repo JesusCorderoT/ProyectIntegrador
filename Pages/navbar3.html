@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-xl navigation fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-dark navigation fixed-top">
         <div class="container-fluid navigator">
             <a class="navbar-brand" href="../index.html">
                 <img class="logo img-fluid" src="/assets/imgs/logos/OjoBlanco.png">
@@ -22,18 +22,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <div class="navbar-nav ms-auto align-items-center">
-                    <div class="iconos-vertical">
-                        <div class="dropdown">
-                        <!-- carrito -->
+                <div class="d-flex flex-row justify-content-end navbar-nav ms-auto align-items-center" style="max-height: 62px;">
 
+                    <div class="dropdown" style="position: relative;">
+                        <!-- carrito -->
+                    
                             <button class="btn" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">    
                                 <img class="carrito" role="button" src="/assets/imgs/Iconos/shoppingcartwhite.png">
                             </button>
                         
-                            <div class="container col-md-7 dropdown-menu table-responsive"aria-labelledby="dropdownMenuClickableInside" style="max-height: 600px; width: 200px; overflow-y: auto;">
+                            <div class="container dropdown-menu table-responsive"aria-labelledby="dropdownMenuClickableInside" style="max-height: 550px; width: 190px; overflow-y: auto; position: absolute;">
                                 <!--Tabla-->
-                                <table class="table text-center table-sm" id="historialTabla">
+                                <table class="table text-center table-sm" id="historialTabla" >
                                     <!--table header-->
                                         <tr class="table-dark " id="headerTabla"> 
                                         </tr>
@@ -42,9 +42,10 @@
                                         </tbody>               
                                 </table> 
                                     <!-- Fin de la tabla -->
-                        
-                                <p id="empty" style="text-align: center;">El carrito está vacío.</p>
-                        </div>
+                                <p id="empty" style="text-align: center; ">El carrito está vacío.</p>
+                            </div>
+                    </div>
+
                         <!-- bolsa -->
                         <a class="nav-item bolsa" href="/pages/productos.html">
                             <img class="bolsa" src="/assets/imgs/Iconos/iconoBolsa.png">
@@ -53,8 +54,7 @@
                         <a class="nav-item persona" href="/pages/inicio_sesion.html">
                             <img class="persona icono" src="/assets/imgs/Iconos/iconoPersona.png">
                         </a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -69,3 +69,4 @@
 </body>
 
 </html>
+    

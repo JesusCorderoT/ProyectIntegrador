@@ -1,19 +1,6 @@
-/* #card{
-    background-color: #b596efc9;
-}
 #navbarContainer{
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
 }
-#contenido{
-    background-color: white;
-}
-#footer{
-    margin-top: 2rem;
-}
-li{
-    margin: 5px;
-} */
-
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
@@ -25,8 +12,6 @@ root {
 }
 
 body {
-    background-color: #FAE8F5 !important;
-    /* font-family: 'Lustria', serif;   */
     font-family: var(--fuente-2);
     background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
     background-size: cover;
@@ -39,20 +24,11 @@ body {
     flex-direction: column;
 }
 
-
-.contenido {
-    flex: 1;
-    margin-top: 100px;
-}
-
-
-.side {
-
-    background-color: #e5beec;
-}
-
-.card {
+#card{
+    background-color: rgba(255, 255, 255, 0.699);
+    background-color: rgba(255, 255, 255, 0.63);
+    font-family:'Sanchez', serif!important;
     margin: 10%;
-    background-color: #e5beec;
-    border-color: rgb(0, 0, 0);
+    padding:2rem;
+    border-radius: .5rem;
 }
