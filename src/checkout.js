@@ -11,13 +11,13 @@ function mostrarProductos(datos){
     const lista=document.getElementById('listaProductos');
     let i=0;
     datos.forEach(element => {
-        const pago=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">Producto: ${element.producto}</div>
+        const pago=`<li class="list-group-item d-flex align-items-start" id="${i}">
+                    <div class="ms-2 me-auto ">
+                        <div class="fw-bold d-flex align-items-start">Artíulo: ${element.producto}</div>
                         <span>Cantidad:${element.cantidad}</span>
                         <span>Precio:$${element.precio}</span>
                     </div>
-                        <button type="button" class="btn btn-dark  btn-sm" onclick="eliminar(${i})">Eliminar</button>
+                        <button type="button" class="btn btn-dark  btn-sm" onclick="eliminar(${i})">Cambiar</button>
                     </li>`
         lista.innerHTML+=pago;
         i++;
@@ -28,26 +28,19 @@ function mostrarTarjetas(datos){
     const lista=document.getElementById('listaMétodosPago');
     let i=0;
     datos.forEach(element => {
-        const pago=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
+        const pago=`<li class="list-group-item d-flex align-items-start" id="${i}">
                     <div class="ms-2 me-auto ">
-                        <div class="fw-bold">Alias de tarjeta: ${element.Alias}</div>
+                        <div class="fw-bold d-flex align-items-start">Alias: ${element.Alias}</div>
                         <span>${element.Tipo}</span>
-                        <span>Vence el: ${element.Vencimiento}</span>
+                        <span>Vencimiento: ${element.Vencimiento}</span>
                     </div>
-                    <div class="dropdown">
-                    <button class="btn btn-dark btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Opciones
-                    </button>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item"  href="#">Editar</a></li>
-                    <li id="eliminar-li" ><a class="dropdown-item" onclick="eliminar(${i})" href="#">Eliminar</a></li>
-                    </ul>
-                </div> 
+                        <button type="button" class="btn btn-dark  btn-sm" onclick="eliminar(${i})">Cambiar</button>
                     </li>`
         lista.innerHTML+=pago;
         i++;
     });
 }
+
 mostrarTarjetas(tarjetasUsuario);
 mostrarProductos(productos);
   //Boton eliminar de pagina cuenta_usuario.html
@@ -76,31 +69,20 @@ function mostrarDirecciones(datos){
     const lista=document.getElementById('listaEnvío');
     let i=0;
     datos.forEach(element => {
-        const direccion=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Alias: ${element.Alias}</div>
-                            <div class="container text-center">
-                                <div class="row row-cols-auto">
-                                <div class="col"> CP. ${element.CP}</div>
-                                <div class="col"> Entidad: ${element.Estado}</div>
-                                <div class="col"> Municipio/Alcaldía: ${element.Municipio}</div>
-                                <div class="col"> Contacto: ${element.Contacto}</div>          
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn btn-dark btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Opciones
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"  href="#">Editar</a></li>
-                                <li id="eliminar-li" ><a class="dropdown-item" onclick="eliminar(${i})" href="#">Eliminar</a></li>
-                            </ul>
-                            </div>            
-                        </li>`
-    lista.innerHTML+=direccion;
-    i++;
-});
+        const pago=`<li class="list-group-item d-flex align-items-start" id="${i}">
+                    <div class="ms-2 me-auto ">
+                        <div class="fw-bold d-flex align-items-start">Alias: ${element.Alias}</div>
+                        <span>CP. ${element.CP}</span>
+                        <span>Entidad: ${element.Estado}</span>
+                        <span>Municipio/Alcaldía: ${element.Municipio}</span>
+                        <span>Teléfono: ${element.Contacto}</span>
+                    </div>
+                    
+                        <button type="button" class="btn btn-dark  btn-sm" onclick="eliminar(${i})">Cambiar</button>
+                    </li>`
+        lista.innerHTML+=pago;
+        i++;
+    });
 }
 mostrarDirecciones(direccionesUsuario);
 
@@ -110,7 +92,7 @@ function mostrarResumen(datos){
     datos.forEach(element => {
         const pago=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
                     <div class="ms-2 me-auto">
-                        <div class="fw-bold">Producto: ${element.producto}</div>
+                        <div class="fw-bold d-flex align-items-start">Producto: ${element.producto}</div>
                         <span>Cantidad:${element.cantidad}</span>
                         <span>Precio Total:$${element.precio}</span>
                     </div>
@@ -131,13 +113,15 @@ function mostrarDatosUsuario(datos){
     const lista=document.getElementById('listaDatosCliente');
     let i=0;
     datos.forEach(element => {
-        const pago=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
-                    <div class="ms-2 me-auto">
-                        <div class="fw-bold">Alias: ${element.Alias}</div>
-                        <span>Dirección:${element.Estado}</span>
+        const pago=`<li class="list-group-item d-flex align-items-start" id="${i}">
+                    <div class="ms-2 me-auto ">
+                        <div class="fw-bold d-flex align-items-start">Alias: ${element.Alias}</div>
+                        <span>${element.Estado}</span>
+                        <span>${element.Municipio}</span>
                         <span>Teléfono: ${element.Contacto}</span>
                     </div>
-                        <button type="button" class="btn btn-dark  btn-sm" onclick="eliminar(${i})">Eliminar</button>
+                    
+                        <button type="button" class="btn btn-dark  btn-sm" onclick="eliminar(${i})">Cambiar</button>
                     </li>`
         lista.innerHTML+=pago;
         i++;
