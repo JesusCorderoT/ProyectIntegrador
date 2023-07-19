@@ -122,3 +122,25 @@ function mostrarResumen(datos){
 }
 
 mostrarResumen(productos);
+
+const datosUsuario=[
+    {'Alias':'Casa Jaz', 'CP':45960, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5555555555},
+]
+
+function mostrarDatosUsuario(datos){
+    const lista=document.getElementById('listaDatosCliente');
+    let i=0;
+    datos.forEach(element => {
+        const pago=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Alias: ${element.Alias}</div>
+                        <span>Dirección:${element.Estado}</span>
+                        <span>Teléfono: ${element.Contacto}</span>
+                    </div>
+                        <button type="button" class="btn btn-dark  btn-sm" onclick="eliminar(${i})">Eliminar</button>
+                    </li>`
+        lista.innerHTML+=pago;
+        i++;
+    });
+}
+mostrarDatosUsuario(datosUsuario);
