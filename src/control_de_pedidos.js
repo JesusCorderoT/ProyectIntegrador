@@ -13,7 +13,7 @@ function mostrarPedidos(datos){
     datos.forEach(element => {
         let seccion=`<li class="list-group-item d-flex justify-content-between align-items-start">
                         <div class="ms-2 me-auto">
-                            <div class="fw-bold">Orden <span>${element.Orden}</span></div>
+                            <div class="titulos">Orden <span>${element.Orden}</span></div>
                             <div class="container text-center">
                                 <div class="row row-cols-auto">
                                     <div class="col"> Usuario: <span>${element.Usuario}</span></div>
@@ -34,10 +34,7 @@ function mostrarPedidos(datos){
                             <li><a class="dropdown-item" data-target="Entregada" onclick="cambiar(4,${i})" href="#">Entregada</a></li>
                             </ul>
                         </div>
-                    </li>
-                    
-                    <hr>
-                    `
+                    </li>`
         listado.innerHTML+=seccion
         i++;
     });

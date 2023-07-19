@@ -29,13 +29,13 @@
 
 
 
-  <div class="card contenido" id="tarjeta">
-    <div class="card-body cuerpo">
-      <h5 class="card-title">Datos de la cuenta</h5>
-      <p class="card-text">Realiza cambios en tus datos si es necesario</p>
+  <div class="contenido" id="tarjeta">
+    <div class="carta-body cuerpo">
+      <p class="carta-title" id="titulo">Datos de la cuenta</p>
+      <p class="carta-text">Realiza cambios en tus datos si es necesario</p>
 
 
-      <form > 
+      <form id="forrmulario"> 
 
         <div class="mb-3">
           <label for="Usuario" class="form-label">Usuario</label>
@@ -54,11 +54,11 @@
         </div>
 
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <label for="Password" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="Password">
         </div>
 
-        <button type="submit" guardar-btn" class="btn btn-dark">Guardar</button>
+        <button type="submit" id="guardar-btn" class="btn btn-dark" value="submit">Guardar</button>
       </form>
       <br>
       <button  id="editar-btn" class="btn btn-dark">Habilitar edición</button>

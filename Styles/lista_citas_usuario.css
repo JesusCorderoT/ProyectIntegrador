@@ -26,23 +26,28 @@ display:flexbox;
 flex-direction: column;
 }
 
-#contenedorPrincipal{
-    background-color: #ffffff79 !important;
-    margin: 90px;
-}
-
-#lista{
-    background-color: #66347F;
-}
-
-
 .contenido {
-    /* height: auto; */
-	flex: 1!important;
-	margin-top: 100px!important;
-    align-content: end!important;
-}
-
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.63);
+    font-family:'Sanchez', serif!important;
+    font-size: 1.1rem;
+    padding:2rem;
+    border-radius: .5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15%;
+    margin-bottom: 5%;
+  }
+  #titulo{
+    font-family:'League Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  .titulos{
+    font-family:'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
 #footer{
     /* position: sticky; */
     margin-top: auto;

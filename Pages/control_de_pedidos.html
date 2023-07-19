@@ -10,22 +10,26 @@
 </head>
 <body>
     <!-- ==============Navbar============== -->
+    <header id="header" class=" header fixed-top d-flex align-items-center container-wrap">
         <div id="navbarContainer"></div>
+    </header>
     
-        <div class="contenido" id="card">
+        <div class="contenido" id="tarjeta">
             <div class="carta-body">
-                <h3>Lista de pedidos</h3>
+                <p id="titulo">Lista de pedidos</p>
                 <p>Gestiona tus pedidos</p>
-                <ol id="lista">
+                <ol class="list-group" id="lista">
 
                 </ol>
             </div>
             <br>
         </div>  
-    
-    <footer id="footer" class="footer">
+        <br>
+     <!-- ==============Footer============== -->
+
+     <footer id="footer" class="footer">
         <div id="footerContainer"></div>
-    </footer>
+      </footer>
 
     <script src="/src/control_de_pedidos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

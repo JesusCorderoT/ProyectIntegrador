@@ -2,7 +2,7 @@
     margin-bottom: 3rem;
 }
 /* Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&family=Sanchez:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;900&family=Sanchez:ital@1&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap");
 
 root {
@@ -23,12 +23,28 @@ body {
     display: flexbox;
     flex-direction: column;
 }
-
-#card{
-    background-color: rgba(255, 255, 255, 0.699);
+.contenido{
+    flex: 1;
     background-color: rgba(255, 255, 255, 0.63);
     font-family:'Sanchez', serif!important;
-    margin: 10%;
+    font-size: 1.1rem;
     padding:2rem;
     border-radius: .5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 13%;
+    margin-bottom: 5%;
+}
+.titulos{
+    font-family:'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+#titulo{
+    font-family:'League Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+#tarjeta{
+    background-color: rgba(255, 255, 255, 0.5);
 }

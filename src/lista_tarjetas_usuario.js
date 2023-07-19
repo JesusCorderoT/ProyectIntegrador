@@ -3,8 +3,8 @@ const tarjetasUsuario=[
   {'Alias':'José Credito', 'Tipo':'Visa','Vencimiento':'11/30', 'Predeterminado':false },
   {'Alias':'Pagos Internet', 'Tipo':'Amex','Vencimiento':'12/30', 'Predeterminado':false}
 ]
+const lista=document.getElementById('lista');
 function mostrarTarjetas(datos){
-  const lista=document.getElementById('lista');
   let i=0;
   datos.forEach(element => {
     let atributo='';
@@ -13,12 +13,20 @@ function mostrarTarjetas(datos){
     }else{atributo='hidden'}
       const pago=`<li class="list-group-item d-flex justify-content-between align-items-start" id="${i}">
                     <div class="ms-2 me-auto">
-                      <div class="fw-bold">Alias de tarjeta: ${element.Alias}  </div>
+                      <div class="titulos">Alias de tarjeta: ${element.Alias}  </div>
                       <span> ${element.Tipo} </span>
                       <span> Vence el: ${element.Vencimiento} </span>
-                      <span ${atributo}>  Predeterminado  </span>
+                      <span ${atributo} id="${element.Alias}"> <mark style="background-color: black; color: white;"> Predeterminado </mark></span>
                     </div>
-                    <button type="button" class="btn btn-danger" onclick="eliminar(${i})">Eliminar</button>
+                    <div class="dropdown">
+                            <button class="btn btn-dark" type="button" data-bs-toggle="dropdown" id="estatus" aria-expanded="false">
+                            <i class="bi bi-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"  onclick="cambiar( ${i})" href="#">Predeterminada</a></li>
+                            <li><a class="dropdown-item alert alert-danger"" data-target="Enviada" onclick="eliminar(${i})" href="#">Eliminar</a></li>
+                            </ul>
+                    </div>
                   </li>`
       lista.innerHTML+=pago;
       i++;
@@ -40,9 +48,34 @@ function eliminar(elemento) {
     cancelButtonText: 'Cancelar'
     }).then((result) => {
     if (result.isConfirmed) {
+      if(tarjetasUsuario[elemento].Predeterminado){
+        tarjetasUsuario[elemento].Predeterminado=false;
+        tarjetasUsuario[elemento+1].Predeterminado=true;
+
+        tarjetasUsuario.splice(elemento,1);
+        console.log(tarjetasUsuario);
+        const atributo=document.getElementById(`${tarjetasUsuario[elemento+1].Alias}`);
+        atributo.removeAttribute('hidden');
+
+      }
       Swal.fire('Tu tarjeta ha sido removida con éxito');
       tarjeta.remove();
     }
     });
+  }
+  function cambiar(elemento){
+    let i=0;
+    tarjetasUsuario.forEach(element=>{
+      let atributo=document.getElementById(`${element.Alias}`);
+      if(i==elemento){
+        element.Predeterminado=true;
+        atributo.removeAttribute('hidden');
+      }else{
+        element.Predeterminado=false;
+        atributo.setAttribute('hidden', '')
+      }
+      i++;
+    });
+    console.log(tarjetasUsuario);
   }
 

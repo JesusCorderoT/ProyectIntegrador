@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Tsukimi+Rounded:wght@500&display=swap" );
 root{
   --fuente-1: 'League Spartan', sans-serif;
-  --fuente-2: 'Lustria', serif; 
+  --fuente-2: 'Sanchez', serif; 
   /* 'Sanchez', serif;  */
 }
 
@@ -24,21 +24,24 @@ flex-direction: column;
 
 
 .contenido {
-	flex: 1;
-	margin-top: 100px!important;
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.63);
+  font-family:'Sanchez', serif!important;
+  font-size: 1.1rem;
+  padding:2rem;
+  border-radius: .5rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 15%;
+  margin-bottom: 5%;
 }
-
-
-
-.card {
-
-    height: auto;
-    background-color: #e5beec!important ;  
-    background-image: url('/assets/imgs/Fondos/gradiente_magico2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Fija el fondo en su posición */
-    background-position: center;
-    margin-top: 10%;
-    border-color: rgba(255, 255, 255, 0)!important;
-    }    
+#titulo{
+  font-family:'League Spartan', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.titulos{
+  font-family:'League Spartan', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
