@@ -27,21 +27,19 @@ function mostrarPedidosUsuario(datos){
                             <div class="modal fade mod" id="comentario" tabindex="-1" aria-labelledby="comantariosLabel" aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
-                                <div class="modal-header">
-                                  <p class="modal-title" id="tituloModal">¡Nos interesa tu opinión!</p>
+                                <div class="modal-header titulo-mod">
+                                  <p class="modal-title titulos" id="tituloModal">¡Nos interesa tu opinión!</p>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body cuerpo-mod">
                                   <form>
                                     <div class="mb-3">
-                                      <label for="message-text" class="col-form-label">Escribe tu reseña:</label>
+                                      <label for="message-text" class="col-form-label titulos">Escribe tu reseña:</label>
                                       <textarea class="form-control" id="message-text"></textarea>
                                     </div>
-                                  </form>
-                                </div>
-                                <div class="modal-footer">
+                                  </form >
                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-dark">Send message</button>
+                                  <button class="btn btn-dark" type="submit" name="submit" value="Submit">Save</button>
                                 </div>
                               </div>
                             </div>
@@ -54,7 +52,7 @@ function mostrarPedidosUsuario(datos){
 }
 mostrarPedidosUsuario(pedidosUsuario);
 
-var myModal = document.getElementById('myModal')
+const myModal = document.getElementById('myModal')
 var myInput = document.getElementById('myInput')
 
 myModal.addEventListener('shown.bs.modal', function () {

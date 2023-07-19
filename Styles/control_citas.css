@@ -29,13 +29,15 @@ display: flexbox;
 flex-direction: column;
 }
 
-.card
-{ 
- margin: 5%;
-}
+
 #tarjeta{
   background-color: rgba(255, 255, 255, 0.5);
 }
 .contenido{
   flex: 1;
+  background-color: rgba(255, 255, 255, 0.63);
+  font-family:'Sanchez', serif!important;
+  margin: 5%;
+  padding:2rem;
+  border-radius: .5rem;
 }
