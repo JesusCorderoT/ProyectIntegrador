@@ -68,7 +68,7 @@ label {
 .accordion {
 		
 	--bs-accordion-active-bg:rgba(0, 0, 0, 0.018)!important; 
-	/* --bs-accordion-active-bg:rgba(0, 0, 0, 0.343)!important;  */
+	/* --bs-accordion-active-bg:rgba(0, 0, 0, 0.343)!important;  */|
 	/* --bs-accordion-bg: rgba(0, 0, 0, 0.018)!important; */
 	--bs-accordion-bg:rgba(255, 255, 255, 0.5)!important;
 	--bs-accordion-border-color: rgba(0, 0, 0, 0.018) !important;

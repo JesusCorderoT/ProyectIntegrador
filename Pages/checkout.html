@@ -14,54 +14,76 @@
 <!-- contenido -->
     <div class="contenido">
     
-        <h1 class="text-center">Pedido</h1>
-    
-        <div class="container-fluid row contenido justify-content-center p-0 m-0">
+        <h1 class="text-center">Detalles del pedido</h1>
+        
+
+        <div class="container-fluid row contenido justify-content-center p-0 m-0 tarjeta">
 
         <!-- Parte izquierda -->
-        <div class="container-fluid col-md-5 text-center p-0 m-0 border border-dark">
+        <div class="container-fluid col-md-5 text-center p-0 m-0 izquierda">
 
-            <h3 class="text-center">Detalles de los productos</h3> 
-            
+            <h2 class="text-center">Productos</h2> 
+            <br>
             <div class="productos">
-                <p>
-                    Aquí van las tarjetas de cada producto, se hacen en js.
-                </p>
+                
+                    <div class="container-fluid productos" id="listaProductos">
+                        <ol class="list-group list-group-numbered productos">
+                        </ol>
+                    </div>
+
             </div>
         </div>
 
 
         <!-- Parte derecha -->
-        <div class="container-fluid col-md-5 text-center p-0 m-0 border border-dark">
+        <div class="container-fluid col-md-5 text-center p-0 m-0 derecha">
             <div class="">
-                <h3 class="datosCliente">Datos del cliente</h3> 
+                <h2 class="datosCliente">Datos del cliente</h2> 
                 <p>
                     Aquí va la tarjeta de datos del cliente, se hace en js.
                 </p>
             </div>
+            <br>
+
             <div>
-                <h3 class="direcciónEnvío">Dirección de envío</h3> 
-                <p>
-                    Aquí va la tarjeta de dirección de envío, se hace en js.
-                </p>
+                <h2>Dirección de envío</h2> 
+                <div class="direcciónEnvío">
+                
+                    <div class="container-fluid " id="listaEnvío">
+                        <ol class="list-group list-group-numbered" >
+                        </ol>
+                    </div>
+                </div>
             </div>
+            <br>
+
             <div>
-                <h3 class="métodoPago">Método de pago</h3>
-                <p>
-                    Aquí va la tarjeta método de pago, se hace en js.
-                </p>
+                <h2>Método de pago</h2>
+                <div class="métodoPago">
+                    <div class="container-fluid " id="listaMétodosPago">
+                        <ol class="list-group list-group-numbered" >
+                        </ol>
+                    </div>
+                </div>
             </div>
+            <br>
+
             <div>
-                <h3 class="resumenPedido">Resumen del pedido</h3> 
-                <p>
-                    Aquí va la tarjeta del resumen del pedido, se hace en js.
-                </p>
+                <h2>Resumen de la órden</h2> 
+                <div class="resumenPedido">
+                    <div class="container-fluid " id="listaResumen">
+                        <ol class="list-group list-group-numbered" >
+                        </ol>
+                    </div>
+                </div>
             </div>
+            <br>
+
             <div class="botonConfirmación">
                 <a href="/Pages/checkout.html" class="btn btn-dark " id="irCheckout" role="button">Confirmar compra</a>
             </div>
+            <br>
         </div>
-
         </div>
 
     </div>
