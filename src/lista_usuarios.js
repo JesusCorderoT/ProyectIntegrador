@@ -12,9 +12,9 @@ function mostrarUsuarios(lista){
     lista.forEach(element => {
         const tarjetas=`<div class="my-2 p-3 ">
                             <div class="container-tablas"> 
-                            <h6 class="border-bottom  pb-2 mb-0">#U-<span>${element.id}</span></h6>
+                            <h6 id="titulo1" class="border-bottom  pb-2 mb-0">#U-<span>${element.id}</span></h6>
                             <div class="media text-muted pt-3">
-                                    <h3>${element.username}<h3> 
+                                    <h3 id="titulo2">${element.username}<h3> 
                                     <h4 id="titulo2">Nombre: <span>${element.nombre}</span> </h4>
                                     <h4 id="titulo2">Apellidos: <span>${element.apellido}</span> </h4>
                                     <h4 id="titulo2">Correo electrónico: <span> ${element.email} </span> </h4>
@@ -33,10 +33,10 @@ function usuariosFrecuentes(lista){
         if(element.frecuente==true){
             const clientes=`<div class="card-cliente">
                                 <img class="rounded-circle" src="/assets/serviciosImg/usuario2.png" alt="image-usuario" width="140" height="140">
-                                <h3 class=resaltar>
+                                <h3 id="titulo2" class=resaltar>
                                 <strong class="d-block">${element.username}</strong>
                                 </h3>
-                                <p class=resaltar>${element.nombre} <span>${element.apellido}</span></p>
+                                <p id="titulo2" class=resaltar>${element.nombre} <span>${element.apellido}</span></p>
                             </div>`
             espacioFrecuentes.innerHTML+=clientes;
             console.log(element);

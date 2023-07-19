@@ -24,9 +24,11 @@ body {
     flex-direction: column;
 }
 
-.card {
-    margin: 10%; 
-}
 #card{
     background-color: rgba(255, 255, 255, 0.699);
+    background-color: rgba(255, 255, 255, 0.63);
+    font-family:'Sanchez', serif!important;
+    margin: 10%;
+    padding:2rem;
+    border-radius: .5rem;
 }
