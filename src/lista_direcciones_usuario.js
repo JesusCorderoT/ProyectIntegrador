@@ -66,6 +66,7 @@ function eliminar(elemento) {
         });
         if(direccionesUsuario[elemento].Predeterminado){
           direccionesUsuario[elemento].Predeterminado=false;
+<<<<<<< Updated upstream
           direccionesUsuario.splice(elemento,1);
           if(elemento==direccionesUsuario.length){direccionesUsuario[0].Predeterminado=true;}
           else{direccionesUsuario[elemento].Predeterminado=true;}
@@ -74,6 +75,14 @@ function eliminar(elemento) {
         }else{direccionesUsuario.splice(elemento,1);}
         
         mostrarDirecciones(direccionesUsuario);
+=======
+          direccionesUsuario[elemento+1].Predeterminado=true;
+  
+          console.log(tarjetasUsuario);
+          const atributo=document.getElementById(`${direccionesUsuario[elemento+1].Alias}`);
+          atributo.removeAttribute('hidden');
+        }
+>>>>>>> Stashed changes
         Swal.fire('Eliminado.');
         
       }
