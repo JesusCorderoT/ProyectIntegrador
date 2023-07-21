@@ -49,7 +49,9 @@ body {
     background-color: #FAE8F5(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
   }
   
-  
+  #botonAgregar1{
+    bottom: auto;
+  }
 
 
 .tarjeta img {
@@ -69,11 +71,12 @@ body {
 
 .tarjeta .estrellitas {
   display: flex;
-  justify-content: flex-end;
+  justify-content:baseline;
 }
 
 .tarjeta .estrellitas input[type="radio"] {
-  display: none;
+  display:none;
+  
 }
 
 .tarjeta .estrellitas label {
