@@ -36,33 +36,40 @@ mostrarTarjetas(tarjetasUsuario);
 
 //Boton eliminar de pagina cuenta_usuario.html
 function eliminar(elemento) {
-  const tarjeta=document.getElementById(`${elemento}`);
-    Swal.fire({
+  
+  Swal.fire({
     title: '¿Estás seguro/a?',
     text: "No podrás deshacer esta acción",
     icon: 'warning',
-    showCancelButton: true, 
-    confirmButtonColor: 'black',
-    cancelButtonColor: '#d53032',
-    confirmButtonText: 'Eliminar',
-    cancelButtonText: 'Cancelar'
-    }).then((result) => {
+    showCancelButton: true,
+    confirmButtonColor: 'Black',
+    cancelButtonColor: '#d33',
+    cancelButtonText: 'Cancelar',
+    confirmButtonText: 'Sí, borrar.'
+  }).then((result) => {
     if (result.isConfirmed) {
+      let i=0;
+      tarjetasUsuario.forEach(t=>{
+        let datosTarjetas=document.getElementById(`${i}`);
+        datosTarjetas.remove();
+        console.log(`Eliminado el  id${i}`);
+        i++;
+      });
       if(tarjetasUsuario[elemento].Predeterminado){
         tarjetasUsuario[elemento].Predeterminado=false;
-        tarjetasUsuario[elemento+1].Predeterminado=true;
-
         tarjetasUsuario.splice(elemento,1);
+        if(elemento==tarjetasUsuario.length){tarjetasUsuario[0].Predeterminado=true;}
+        else{tarjetasUsuario[elemento].Predeterminado=true;}
+       
         console.log(tarjetasUsuario);
-        const atributo=document.getElementById(`${tarjetasUsuario[elemento+1].Alias}`);
-        atributo.removeAttribute('hidden');
-
-      }
-      Swal.fire('Tu tarjeta ha sido removida con éxito');
-      tarjeta.remove();
+      }else{tarjetasUsuario.splice(elemento,1);}
+      
+      mostrarTarjetas(tarjetasUsuario);
+      Swal.fire('Eliminado.');
+      
     }
-    });
-  }
+  })
+}
   function cambiar(elemento){
     let i=0;
     tarjetasUsuario.forEach(element=>{
