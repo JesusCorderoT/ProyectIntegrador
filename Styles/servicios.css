@@ -1,39 +1,46 @@
-.body
-{
-background-color: white;
+/* Estilos generales */
+body {
+  background-color: white;
 }
 
-  #encabezado {
-    
-    background-image: url(/assets/imgs/Fondos/gradiente_magico2.png);
-    background-size:cover;
-    background-position: center;
-    background-repeat:space;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+#encabezado {
+  background-image: url(/assets/imgs/Fondos/gradiente_magico2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: space;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 #Titulo1 {
- 
   font-family: 'League Spartan', sans-serif;
 }
-#titulo2 {
-  font-family: 'Sanchez', serif; 
-    margin-top: 1px;
-    margin-bottom: 1px;
 
+#titulo2 {
+  font-family: 'Sanchez', serif;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 #servicios-card {
   background: white;
   border: 5px solid #FAE8F5;
-  
+  height: 200px; /* Altura fija para la imagen */
+  object-fit: cover; /* Ajustar la imagen sin perder la proporción */
+  height: 300px; /* Establece una altura mínima para las tarjetas */
+}
+#Botones {
+   font-family: 'Sanchez', serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  bottom: auto;
+
 }
 
-/* **********************************************************
-/*                    About Team
-/* ********************************************************* */
+/* Estilos para las tarjetas de reseñas */
 .about-team {
   background: white;
-  
 }
 
 .about-team-block {
@@ -41,31 +48,28 @@ background-color: white;
   margin: 0 0 25px;
   transition: 0.25s;
   border: 5px solid #FAE8F5;
-  
-
 }
 
 .about-team-block img {
-  width: 85%;
+  width: 100%;
+  height: 200px; /* Altura fija para la imagen */
+  object-fit: cover; /* Ajustar la imagen sin perder la proporción */
 }
 
 .about-team-block:hover {
   transform: translateY(-8px);
   background: #FAE8F5;
   color: black;
-  -webkit-box-shadow: 0px 21px 42px -22px #919394;
-  -moz-box-shadow: 0px 21px 42px -22px #919394;
   box-shadow: 0px 21px 42px -22px #919394;
   cursor: pointer;
 }
 
 .about-team-title {
   padding: 20px 20px;
-  height: 100%; /* Ocupa el 100% de la altura de la tarjeta */
   display: flex; /* Activa el modo de visualización flex */
   flex-direction: column; /* Apila el contenido verticalmente */
   justify-content: center; /* Centra verticalmente el contenido */
-  min-height: 300px; /* Establece una altura mínima para las tarjetas */
+  height: 300px; /* Establece una altura mínima para las tarjetas */
 }
 
 .about-team-title h5 {
@@ -77,7 +81,6 @@ background-color: white;
   margin: 0;
 }
 
-
 .card-img-top {
   border: 3px solid #FAE8F5;
   object-fit: cover;
@@ -85,3 +88,4 @@ background-color: white;
   width: calc(100% - 20px); /* Resta 20 píxeles para el espacio a los lados */
   margin: 0 auto; /* Centra horizontalmente la imagen */
 }
+
