@@ -57,10 +57,15 @@ function eliminar(elemento) {
       });
       if(tarjetasUsuario[elemento].Predeterminado){
         tarjetasUsuario[elemento].Predeterminado=false;
+<<<<<<< Updated upstream
         tarjetasUsuario.splice(elemento,1);
         if(elemento==tarjetasUsuario.length){tarjetasUsuario[0].Predeterminado=true;}
         else{tarjetasUsuario[elemento].Predeterminado=true;}
        
+=======
+        tarjetasUsuario[elemento+1].Predeterminado=true;
+
+>>>>>>> Stashed changes
         console.log(tarjetasUsuario);
       }else{tarjetasUsuario.splice(elemento,1);}
       
