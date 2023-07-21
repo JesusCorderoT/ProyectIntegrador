@@ -61,7 +61,7 @@ function eliminar(elemento) {
           direccionesUsuario[elemento].Predeterminado=false;
           direccionesUsuario[elemento+1].Predeterminado=true;
   
-          direccionesUsuario.splice(elemento,1);
+          
           console.log(tarjetasUsuario);
           const atributo=document.getElementById(`${direccionesUsuario[elemento+1].Alias}`);
           atributo.removeAttribute('hidden');

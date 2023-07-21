@@ -23,8 +23,8 @@ function mostrarPedidosUsuario(datos){
                                 </div>
                             </div>
                             <div>
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#comentario">Comenta</button>
-                            <div class="modal fade mod" id="comentario" tabindex="-1" aria-labelledby="comantariosLabel" aria-hidden="true">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#${elemento.Orden}">Comenta</button>
+                            <div class="modal fade mod" id="${elemento.Orden}" tabindex="-1"  aria-hidden="true">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-header titulo-mod">
@@ -33,8 +33,8 @@ function mostrarPedidosUsuario(datos){
                                 <div class="modal-body cuerpo-mod">
                                   <form>
                                     <div class="mb-3">
-                                      <label for="message-text" class="col-form-label titulos">Escribe tu reseña:</label>
-                                      <textarea class="form-control" id="message-text"></textarea>
+                                      <label for="${i}" class="col-form-label titulos">Escribe tu reseña:</label>
+                                      <textarea class="form-control" id="${i}"></textarea>
                                     </div>
                                   </form >
                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

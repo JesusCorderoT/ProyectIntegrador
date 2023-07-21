@@ -52,7 +52,7 @@ function eliminar(elemento) {
         tarjetasUsuario[elemento].Predeterminado=false;
         tarjetasUsuario[elemento+1].Predeterminado=true;
 
-        tarjetasUsuario.splice(elemento,1);
+        
         console.log(tarjetasUsuario);
         const atributo=document.getElementById(`${tarjetasUsuario[elemento+1].Alias}`);
         atributo.removeAttribute('hidden');
