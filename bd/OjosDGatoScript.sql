@@ -15,271 +15,270 @@ CREATE SCHEMA IF NOT EXISTS `OjosDGato` DEFAULT CHARACTER SET utf8 ;
 USE `OjosDGato` ;
 
 -- -----------------------------------------------------
--- Table `OjosDGato`.`Cliente`
+-- Table `OjosDGato`.`User`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Cliente` (
-  `id_cliente` INT NOT NULL AUTO_INCREMENT,
-  `nombre_cliente` VARCHAR(100) NOT NULL,
-  `apellido_cliente` VARCHAR(100) NOT NULL,
-  `email_cliente` VARCHAR(100) NOT NULL,
-  `telefono_cliente` INT NOT NULL,
-  `usuario_cliente` VARCHAR(20) NOT NULL,
-  `contrasena_cliente` VARCHAR(18) NOT NULL,
-  `tipo_cliente` INT NOT NULL,
-  PRIMARY KEY (`id_cliente`))
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`User` (
+  `id_user` INT NOT NULL AUTO_INCREMENT,
+  `name_user` VARCHAR(100) NOT NULL,
+  `lastname_user` VARCHAR(100) NOT NULL,
+  `email_user` VARCHAR(100) NOT NULL,
+  `phone_user` INT NOT NULL,
+  `username_user` VARCHAR(20) NOT NULL,
+  `password_user` VARCHAR(18) NOT NULL,
+  `type_user` INT NOT NULL,
+  PRIMARY KEY (`id_user`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `OjosDGato`.`Servicio`
+-- Table `OjosDGato`.`Service`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Servicio` (
-  `id_servicio` INT NOT NULL AUTO_INCREMENT,
-  `nombre_servicio` VARCHAR(45) NOT NULL,
-  `precio_servicio` DECIMAL(10,2) NOT NULL,
-  `descripcion_servicio` VARCHAR(200) NOT NULL,
-  `tiempo_servicio` VARCHAR(15) NOT NULL,
-  `imagen_servicio` VARCHAR(125) NULL,
-  PRIMARY KEY (`id_servicio`))
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Service` (
+  `id_service` INT NOT NULL AUTO_INCREMENT,
+  `name_service` VARCHAR(45) NOT NULL,
+  `price_service` DECIMAL(10,2) NOT NULL,
+  `description_service` VARCHAR(200) NOT NULL,
+  `time_service` VARCHAR(15) NOT NULL,
+  `image_service` VARCHAR(125) NULL,
+  PRIMARY KEY (`id_service`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `OjosDGato`.`Marca`
+-- Table `OjosDGato`.`Brand`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Marca` (
-  `id_marca` INT NOT NULL AUTO_INCREMENT,
-  `nombre_marca` VARCHAR(45) NOT NULL,
-  `imagen_marca` VARCHAR(125) NOT NULL,
-  PRIMARY KEY (`id_marca`))
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Brand` (
+  `id_brand` INT NOT NULL AUTO_INCREMENT,
+  `name_brand` VARCHAR(45) NOT NULL,
+  `image_brand` VARCHAR(125) NOT NULL,
+  PRIMARY KEY (`id_brand`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `OjosDGato`.`Producto`
+-- Table `OjosDGato`.`Product`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Producto` (
-  `id_producto` INT NOT NULL AUTO_INCREMENT,
-  `nombre_producto` VARCHAR(45) NOT NULL,
-  `precio_producto` DECIMAL(10,2) NOT NULL,
-  `descripcion_producto` VARCHAR(200) NOT NULL,
-  `inventario_producto` INT NOT NULL,
-  `imagen_producto` VARCHAR(125) NULL,
-  PRIMARY KEY (`id_producto`))
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Product` (
+  `id_product` INT NOT NULL AUTO_INCREMENT,
+  `name_product` VARCHAR(45) NOT NULL,
+  `price_product` DECIMAL(10,2) NOT NULL,
+  `description_product` VARCHAR(200) NOT NULL,
+  `stock_producto` INT NOT NULL,
+  `image_product` VARCHAR(125) NULL,
+  PRIMARY KEY (`id_product`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `OjosDGato`.`Direccion`
+-- Table `OjosDGato`.`Address`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Direccion` (
-  `id_direccion` INT NOT NULL AUTO_INCREMENT,
-  `alias_direccion` VARCHAR(30) NOT NULL,
-  `codigoPostal_direccion` INT NOT NULL,
-  `estado_direccion` VARCHAR(25) NOT NULL,
-  `municipio_direccion` VARCHAR(45) NOT NULL,
-  `colonia_direccion` VARCHAR(45) NOT NULL,
-  `calle_direccion` VARCHAR(45) NOT NULL,
-  `numeroInt_direccion` INT NULL,
-  `numeroExt_direccion` INT NULL,
-  `calle1_direccion` VARCHAR(45) NULL,
-  `calle2_direccion` VARCHAR(45) NULL,
-  `telefono_direccion` INT NOT NULL,
-  `indicaciones_direccion` VARCHAR(200) NULL,
-  PRIMARY KEY (`id_direccion`))
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Address` (
+  `id_address` INT NOT NULL,
+  `alias_address` VARCHAR(30) NOT NULL,
+  `postcode_address` INT NOT NULL,
+  `state_address` VARCHAR(25) NOT NULL,
+  `municipality_address` VARCHAR(45) NOT NULL,
+  `city_address` VARCHAR(45) NOT NULL,
+  `street_address` VARCHAR(45) NOT NULL,
+  `exterior_number_address` VARCHAR(10) NULL,
+  `interior_number_address` VARCHAR(10) NULL,
+  `street1_address` VARCHAR(45) NULL,
+  `street2_address` VARCHAR(45) NULL,
+  `phone_address` INT NOT NULL,
+  `instructions_address` VARCHAR(200) NULL,
+  `selection_address` BIT NOT NULL,
+  PRIMARY KEY (`id_address`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `OjosDGato`.`Tarjeta`
+-- Table `OjosDGato`.`Card`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Tarjeta` (
-  `id_tarjeta` INT NOT NULL AUTO_INCREMENT,
-  `alias_tarjeta` VARCHAR(30) NOT NULL,
-  `titular_tarjeta` VARCHAR(200) NOT NULL,
-  `numero_tarjeta` INT NOT NULL,
-  `mesVencimiento_tarjeta` INT NOT NULL,
-  `yearVencimiento_tarjeta` INT NOT NULL,
-  `cvv_tarjeta` INT NOT NULL,
-  PRIMARY KEY (`id_tarjeta`))
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Card` (
+  `id_card` INT NOT NULL AUTO_INCREMENT,
+  `alias_card` VARCHAR(30) NOT NULL,
+  `holder_card` VARCHAR(200) NOT NULL,
+  `number_card` INT NOT NULL,
+  `expiration_month_card` INT NOT NULL,
+  `expiration_year_card` INT NOT NULL,
+  `cvv_card` INT NOT NULL,
+  `selection_card` BIT NOT NULL,
+  PRIMARY KEY (`id_card`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `OjosDGato`.`ProductoPedido`
+-- Table `OjosDGato`.`ProductOrder`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`ProductoPedido` (
-  `id_productoPedido` INT NOT NULL AUTO_INCREMENT,
-  `id_producto` INT NOT NULL,
-  `cantidad_productoPedido` INT NOT NULL,
-  `total_productoPedido` DECIMAL(10,2) NOT NULL,
-  PRIMARY KEY (`id_productoPedido`),
-  INDEX `id_producto_idx` (`id_producto` ASC) VISIBLE,
-  CONSTRAINT `id_producto`
-    FOREIGN KEY (`id_producto`)
-    REFERENCES `OjosDGato`.`Producto` (`id_producto`)
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `OjosDGato`.`servicioPedido`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`servicioPedido` (
-  `id_servicioPedido` INT NOT NULL AUTO_INCREMENT,
-  `id_servicio` INT NOT NULL,
-  `cantidad_servicioPedido` INT NOT NULL,
-  `total_servicioPedido` DECIMAL(10,2) NOT NULL,
-  PRIMARY KEY (`id_servicioPedido`),
-  INDEX `id_producto0_idx` (`id_servicio` ASC) VISIBLE,
-  CONSTRAINT `id_servicio`
-    FOREIGN KEY (`id_servicio`)
-    REFERENCES `OjosDGato`.`Servicio` (`id_servicio`)
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `OjosDGato`.`Producto_has_Marca`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Producto_has_Marca` (
-  `Producto_id_producto` INT NOT NULL,
-  `Marca_id_marca` INT NOT NULL,
-  PRIMARY KEY (`Producto_id_producto`, `Marca_id_marca`),
-  INDEX `fk_Producto_has_Marca_Marca1_idx` (`Marca_id_marca` ASC) VISIBLE,
-  INDEX `fk_Producto_has_Marca_Producto1_idx` (`Producto_id_producto` ASC) VISIBLE,
-  CONSTRAINT `fk_Producto_has_Marca_Producto1`
-    FOREIGN KEY (`Producto_id_producto`)
-    REFERENCES `OjosDGato`.`Producto` (`id_producto`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Producto_has_Marca_Marca1`
-    FOREIGN KEY (`Marca_id_marca`)
-    REFERENCES `OjosDGato`.`Marca` (`id_marca`)
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`ProductOrder` (
+  `id_productorder` INT NOT NULL AUTO_INCREMENT,
+  `quantity_productorder` INT NOT NULL,
+  `total_productorder` DECIMAL(10,2) NOT NULL,
+  `Product_id_product` INT NOT NULL,
+  PRIMARY KEY (`id_productorder`),
+  INDEX `fk_ProductOrder_Product1_idx` (`Product_id_product` ASC) VISIBLE,
+  CONSTRAINT `fk_ProductOrder_Product1`
+    FOREIGN KEY (`Product_id_product`)
+    REFERENCES `OjosDGato`.`Product` (`id_product`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `OjosDGato`.`Cita`
+-- Table `OjosDGato`.`ServiceOrder`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Cita` (
-  `id_cita` INT NOT NULL AUTO_INCREMENT,
-  `id_cliente` INT NOT NULL,
-  `id_servicio` INT NOT NULL,
-  `fecha_cita` DATE NOT NULL,
-  `hora_cita` TIME NOT NULL,
-  `nombre_cita` VARCHAR(100) NOT NULL,
-  `estatus_cita` INT NOT NULL,
-  PRIMARY KEY (`id_cita`),
-  INDEX `id_cliente_idx` (`id_cliente` ASC) VISIBLE,
-  INDEX `id_servicio_idx` (`id_servicio` ASC) VISIBLE,
-  CONSTRAINT `id_cliente`
-    FOREIGN KEY (`id_cliente`)
-    REFERENCES `OjosDGato`.`Cliente` (`id_cliente`)
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE,
-  CONSTRAINT `id_servicio1`
-    FOREIGN KEY (`id_servicio`)
-    REFERENCES `OjosDGato`.`Servicio` (`id_servicio`)
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `OjosDGato`.`Orden`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Orden` (
-  `id_orden` INT NOT NULL AUTO_INCREMENT,
-  `id_cliente` INT NOT NULL,
-  `id_productoPedido` INT NOT NULL,
-  `id_servicioPedido` INT NOT NULL,
-  `envio` BIT NOT NULL,
-  `total_orden` DECIMAL(10,2) NOT NULL,
-  `estatus_orden` INT NOT NULL,
-  PRIMARY KEY (`id_orden`),
-  INDEX `id_cliente_idx` (`id_cliente` ASC) VISIBLE,
-  INDEX `id_productoPedido_idx` (`id_productoPedido` ASC) VISIBLE,
-  INDEX `id_servicioPedido_idx` (`id_servicioPedido` ASC) VISIBLE,
-  CONSTRAINT `id_cliente1`
-    FOREIGN KEY (`id_cliente`)
-    REFERENCES `OjosDGato`.`Cliente` (`id_cliente`)
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE,
-  CONSTRAINT `id_productoPedido`
-    FOREIGN KEY (`id_productoPedido`)
-    REFERENCES `OjosDGato`.`ProductoPedido` (`id_productoPedido`)
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE,
-  CONSTRAINT `id_servicioPedido`
-    FOREIGN KEY (`id_servicioPedido`)
-    REFERENCES `OjosDGato`.`servicioPedido` (`id_servicioPedido`)
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `OjosDGato`.`Comentario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Comentario` (
-  `id_comentario` INT NOT NULL AUTO_INCREMENT,
-  `id_orden` INT NOT NULL,
-  `texto_comentario` VARCHAR(200) NOT NULL,
-  `valoracion` INT NOT NULL,
-  PRIMARY KEY (`id_comentario`),
-  INDEX `id_orden_idx` (`id_orden` ASC) VISIBLE,
-  CONSTRAINT `id_orden`
-    FOREIGN KEY (`id_orden`)
-    REFERENCES `OjosDGato`.`Orden` (`id_orden`)
-    ON DELETE NO ACTION
-    ON UPDATE CASCADE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `OjosDGato`.`Tarjeta_has_Cliente`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Tarjeta_has_Cliente` (
-  `Tarjeta_id_tarjeta` INT NOT NULL,
-  `Cliente_id_cliente` INT NOT NULL,
-  PRIMARY KEY (`Tarjeta_id_tarjeta`, `Cliente_id_cliente`),
-  INDEX `fk_Tarjeta_has_Cliente_Cliente1_idx` (`Cliente_id_cliente` ASC) VISIBLE,
-  INDEX `fk_Tarjeta_has_Cliente_Tarjeta1_idx` (`Tarjeta_id_tarjeta` ASC) VISIBLE,
-  CONSTRAINT `fk_Tarjeta_has_Cliente_Tarjeta1`
-    FOREIGN KEY (`Tarjeta_id_tarjeta`)
-    REFERENCES `OjosDGato`.`Tarjeta` (`id_tarjeta`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Tarjeta_has_Cliente_Cliente1`
-    FOREIGN KEY (`Cliente_id_cliente`)
-    REFERENCES `OjosDGato`.`Cliente` (`id_cliente`)
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`ServiceOrder` (
+  `id__serviceorder` INT NOT NULL AUTO_INCREMENT,
+  `quantity_serviceorder` INT NOT NULL,
+  `total_serviceorder` DECIMAL(10,2) NOT NULL,
+  `Service_id_service` INT NOT NULL,
+  PRIMARY KEY (`id__serviceorder`),
+  INDEX `fk_ServiceOrder_Service1_idx` (`Service_id_service` ASC) VISIBLE,
+  CONSTRAINT `fk_ServiceOrder_Service1`
+    FOREIGN KEY (`Service_id_service`)
+    REFERENCES `OjosDGato`.`Service` (`id_service`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `OjosDGato`.`Direccion_has_Cliente`
+-- Table `OjosDGato`.`Appointment`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `OjosDGato`.`Direccion_has_Cliente` (
-  `Direccion_id_direccion` INT NOT NULL,
-  `Cliente_id_cliente` INT NOT NULL,
-  INDEX `fk_Direccion_has_Cliente_Cliente1_idx` (`Cliente_id_cliente` ASC) VISIBLE,
-  INDEX `fk_Direccion_has_Cliente_Direccion1_idx` (`Direccion_id_direccion` ASC) VISIBLE,
-  PRIMARY KEY (`Direccion_id_direccion`, `Cliente_id_cliente`),
-  CONSTRAINT `fk_Direccion_has_Cliente_Direccion1`
-    FOREIGN KEY (`Direccion_id_direccion`)
-    REFERENCES `OjosDGato`.`Direccion` (`id_direccion`)
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Appointment` (
+  `id_appointment` INT NOT NULL AUTO_INCREMENT,
+  `date_appointment` DATE NOT NULL,
+  `hour_appointment` TIME NOT NULL,
+  `name_appointment` VARCHAR(100) NOT NULL,
+  `status_appointment` INT NOT NULL,
+  `Service_id_service` INT NOT NULL,
+  `User_id_user` INT NOT NULL,
+  PRIMARY KEY (`id_appointment`),
+  INDEX `fk_Appointment_Service1_idx` (`Service_id_service` ASC) VISIBLE,
+  INDEX `fk_Appointment_User1_idx` (`User_id_user` ASC) VISIBLE,
+  CONSTRAINT `fk_Appointment_Service1`
+    FOREIGN KEY (`Service_id_service`)
+    REFERENCES `OjosDGato`.`Service` (`id_service`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Direccion_has_Cliente_Cliente1`
-    FOREIGN KEY (`Cliente_id_cliente`)
-    REFERENCES `OjosDGato`.`Cliente` (`id_cliente`)
+  CONSTRAINT `fk_Appointment_User1`
+    FOREIGN KEY (`User_id_user`)
+    REFERENCES `OjosDGato`.`User` (`id_user`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `OjosDGato`.`Order`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Order` (
+  `id_order` INT NOT NULL AUTO_INCREMENT,
+  `shipping_order` BIT NOT NULL,
+  `total_order` DECIMAL(10,2) NOT NULL,
+  `status_order` INT NOT NULL,
+  `ServiceOrder_id__serviceorder` INT NOT NULL,
+  `ProductOrder_id_productorder` INT NOT NULL,
+  `User_id_user` INT NOT NULL,
+  PRIMARY KEY (`id_order`),
+  INDEX `fk_Order_ServiceOrder1_idx` (`ServiceOrder_id__serviceorder` ASC) VISIBLE,
+  INDEX `fk_Order_ProductOrder1_idx` (`ProductOrder_id_productorder` ASC) VISIBLE,
+  INDEX `fk_Order_User1_idx` (`User_id_user` ASC) VISIBLE,
+  CONSTRAINT `fk_Order_ServiceOrder1`
+    FOREIGN KEY (`ServiceOrder_id__serviceorder`)
+    REFERENCES `OjosDGato`.`ServiceOrder` (`id__serviceorder`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Order_ProductOrder1`
+    FOREIGN KEY (`ProductOrder_id_productorder`)
+    REFERENCES `OjosDGato`.`ProductOrder` (`id_productorder`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Order_User1`
+    FOREIGN KEY (`User_id_user`)
+    REFERENCES `OjosDGato`.`User` (`id_user`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `OjosDGato`.`Comment`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Comment` (
+  `id_comment` INT NOT NULL AUTO_INCREMENT,
+  `text_comment` VARCHAR(200) NOT NULL,
+  `rating_comment` INT NOT NULL,
+  `Order_id_order` INT NOT NULL,
+  PRIMARY KEY (`id_comment`),
+  INDEX `fk_Comment_Order1_idx` (`Order_id_order` ASC) VISIBLE,
+  CONSTRAINT `fk_Comment_Order1`
+    FOREIGN KEY (`Order_id_order`)
+    REFERENCES `OjosDGato`.`Order` (`id_order`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `OjosDGato`.`Address_has_User`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Address_has_User` (
+  `Address_id_address` INT NOT NULL,
+  `User_id_user` INT NOT NULL,
+  INDEX `fk_Address_has_User_User1_idx` (`User_id_user` ASC) VISIBLE,
+  INDEX `fk_Address_has_User_Address1_idx` (`Address_id_address` ASC) VISIBLE,
+  CONSTRAINT `fk_Address_has_User_Address1`
+    FOREIGN KEY (`Address_id_address`)
+    REFERENCES `OjosDGato`.`Address` (`id_address`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Address_has_User_User1`
+    FOREIGN KEY (`User_id_user`)
+    REFERENCES `OjosDGato`.`User` (`id_user`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `OjosDGato`.`User_has_Card`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`User_has_Card` (
+  `User_id_user` INT NOT NULL,
+  `Card_id_card` INT NOT NULL,
+  INDEX `fk_User_has_Card_Card1_idx` (`Card_id_card` ASC) VISIBLE,
+  INDEX `fk_User_has_Card_User1_idx` (`User_id_user` ASC) VISIBLE,
+  CONSTRAINT `fk_User_has_Card_User1`
+    FOREIGN KEY (`User_id_user`)
+    REFERENCES `OjosDGato`.`User` (`id_user`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_User_has_Card_Card1`
+    FOREIGN KEY (`Card_id_card`)
+    REFERENCES `OjosDGato`.`Card` (`id_card`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `OjosDGato`.`Product_has_Brand`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `OjosDGato`.`Product_has_Brand` (
+  `Product_id_product` INT NOT NULL,
+  `Brand_id_brand` INT NOT NULL,
+  INDEX `fk_Product_has_Brand_Brand1_idx` (`Brand_id_brand` ASC) VISIBLE,
+  INDEX `fk_Product_has_Brand_Product1_idx` (`Product_id_product` ASC) VISIBLE,
+  CONSTRAINT `fk_Product_has_Brand_Product1`
+    FOREIGN KEY (`Product_id_product`)
+    REFERENCES `OjosDGato`.`Product` (`id_product`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Product_has_Brand_Brand1`
+    FOREIGN KEY (`Brand_id_brand`)
+    REFERENCES `OjosDGato`.`Brand` (`id_brand`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
