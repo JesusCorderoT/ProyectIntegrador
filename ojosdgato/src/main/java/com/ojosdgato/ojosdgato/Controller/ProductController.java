@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,9 +19,10 @@ import com.ojosdgato.ojosdgato.Service.ProductService;
 @RestController
 public class ProductController {
 	
-	private final ProductService productService;
-	
 	@Autowired
+	private ProductService productService;
+	
+	
 	public ProductController(ProductService productService) {
 		this.productService = productService;
 	}
@@ -37,13 +39,13 @@ public class ProductController {
 	}
 	
 	@PostMapping
-	public Product createProduct(Product product) {
+	public Product createProduct(@RequestBody Product product) {
 		return productService.createProduct(product);
 	}
 	
 	//Put
 	@PutMapping
-	public Product updateProduct(Product product) {
+	public Product updateProduct(@RequestBody Product product) {
 		return productService.updateProduct(product);
 	}
 	

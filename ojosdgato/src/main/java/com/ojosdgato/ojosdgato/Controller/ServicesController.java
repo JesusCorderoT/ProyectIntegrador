@@ -8,42 +8,43 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ojosdgato.ojosdgato.Entity.Service;
-import com.ojosdgato.ojosdgato.Service.ServiceService;
+import com.ojosdgato.ojosdgato.Entity.Services;
+import com.ojosdgato.ojosdgato.Service.ServicesService;
 
 @RequestMapping(path="/ojosdgato/services")
 @RestController
-public class ServiceController {
-	
-	private final ServiceService serviceService;
+public class ServicesController {
 	
 	@Autowired
-	public ServiceController(ServiceService serviceService) {
+	private ServicesService serviceService;
+
+	public ServicesController(ServicesService serviceService) {
 		this.serviceService = serviceService;
 	}
 	
 	@GetMapping
-	public List<Service> getService(){
+	public List<Services> getService(){
 		return serviceService.getAllServices();
 	}
 	
 	//Get individual
 	@GetMapping("/{id}")
-	public Service getServiceById(@PathVariable Long id) {
+	public Services getServiceById(@PathVariable Long id) {
 		return serviceService.getServiceById(id);
 	}
 	
 	@PostMapping
-	public Service createService(Service service) {
+	public Services createService(@RequestBody Services service) {
 		return serviceService.createService(service);
 	}
 	
 	//Put
 	@PutMapping
-	public Service updateService(Service service) {
+	public Services updateService(@RequestBody Services service) {
 		return serviceService.updateService(service);
 	}
 	

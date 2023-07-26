@@ -26,8 +26,7 @@ public class Card {
 	private int expiration_month;
 	@Column(nullable=false)
 	private int expiration_year;
-	@Column(nullable=false)
-	private boolean selection;
+	
 	//constructor vacio
 	public Card() {
 		
@@ -74,24 +73,12 @@ public class Card {
 	public void setExpiration_year(int expiration_year) {
 		this.expiration_year = expiration_year;
 	}
-	public boolean isSelection() {
-		return selection;
-	}
-	public void setSelection(boolean selection) {
-		this.selection = selection;
-	}
 	
 	public User getUser() {
 		return user;
 	}
 	public void setUser(User user) {
 		this.user = user;
-	}
-	@Override
-	public String toString() {
-		return "Card [id_card=" + id_card + ", alias=" + alias + ", holder=" + holder + ", number=" + number
-				+ ", expiration_month=" + expiration_month + ", expiration_year=" + expiration_year + ", selection="
-				+ selection + "]";
 	}
 	
 }

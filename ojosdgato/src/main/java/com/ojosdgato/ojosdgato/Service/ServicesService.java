@@ -4,29 +4,30 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.ojosdgato.ojosdgato.Entity.Service;
+import org.springframework.stereotype.Service;
+import com.ojosdgato.ojosdgato.Entity.Services;
 import com.ojosdgato.ojosdgato.Repository.ServiceRepository;
 
-public class ServiceService {
+@Service
+public class ServicesService {
 	@Autowired
 	private ServiceRepository serviceRepository;
 	
 	//Obtener Get
-	public List<Service> getAllServices(){
+	public List<Services> getAllServices(){
 		return serviceRepository.findAll();
 	}
 	
 	//Get by ID
-	public Service getServiceById(Long id) {
+	public Services getServiceById(Long id) {
 		return serviceRepository.findById(id).orElse(null);
 	}
 	//Crear Post
-	public Service createService(Service service) {
+	public Services createService(Services service) {
 		return serviceRepository.save(service);
 	}
 	//Actualiza Put
-	public Service updateService(Service service) {
+	public Services updateService(Services service) {
 		return serviceRepository.save(service);
 	}
 	

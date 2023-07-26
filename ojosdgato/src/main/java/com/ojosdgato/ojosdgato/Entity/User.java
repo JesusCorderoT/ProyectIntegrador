@@ -1,13 +1,11 @@
 package com.ojosdgato.ojosdgato.Entity;
 
-import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -34,18 +32,6 @@ public class User {
 	
 	//Constructor vacio
 	public User() {}
-
-	@ManyToMany(mappedBy = "users")
-	private List<Appointment> appointments;
-	
-	@ManyToMany(mappedBy = "users")
-	private List<Address> addresss;
-	
-	@ManyToMany(mappedBy = "users")
-	private List<Card> cards;
-	
-	@ManyToMany(mappedBy = "users")
-	private List<Order> Orders;
 	
 	//Getters y Setters
 	public Long getId_user() {
@@ -112,46 +98,5 @@ public class User {
 		this.type = type;
 	}
 
-	public List<Appointment> getAppointments() {
-		return appointments;
-	}
-
-	public void setAppointments(List<Appointment> appointments) {
-		this.appointments = appointments;
-	}
-
-	public List<Address> getAddresss() {
-		return addresss;
-	}
-
-	public void setAddresss(List<Address> addresss) {
-		this.addresss = addresss;
-	}
-
-	public List<Card> getCards() {
-		return cards;
-	}
-
-	public void setCards(List<Card> cards) {
-		this.cards = cards;
-	}
-
-	public List<Order> getOrders() {
-		return Orders;
-	}
-
-	public void setOrders(List<Order> orders) {
-		Orders = orders;
-	}
-
-	@Override
-	public String toString() {
-		return "User [id_user=" + id_user + ", name=" + name + ", lastname=" + lastname + ", email=" + email
-				+ ", phone=" + phone + ", username=" + username + ", password=" + password + ", type=" + type
-				+ ", appointments=" + appointments + ", addresss=" + addresss + ", cards=" + cards + ", Orders="
-				+ Orders + "]";
-	}
-
-	
 	
 }

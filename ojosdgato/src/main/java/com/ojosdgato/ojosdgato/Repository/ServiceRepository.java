@@ -1,10 +1,11 @@
 package com.ojosdgato.ojosdgato.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.ojosdgato.ojosdgato.Entity.Service;
+import com.ojosdgato.ojosdgato.Entity.Services;
 
-
-public interface ServiceRepository extends JpaRepository<Service, Long> {
+@Repository
+public interface ServiceRepository extends JpaRepository<Services, Long> {
 
 }

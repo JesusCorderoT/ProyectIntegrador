@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,9 +19,10 @@ import com.ojosdgato.ojosdgato.Service.BrandService;
 @RestController
 public class BrandController {
 	
-	private final BrandService brandService;
-	
 	@Autowired
+	private BrandService brandService;
+	
+	
 	public BrandController(BrandService brandService) {
 		this.brandService = brandService;
 	}
@@ -37,13 +39,13 @@ public class BrandController {
 	}
 	
 	@PostMapping
-	public Brand createBrand(Brand brand) {
+	public Brand createBrand(@RequestBody Brand brand) {
 		return brandService.createBrand(brand);
 	}
 	
 	//Put
 	@PutMapping
-	public Brand updateBrand(Brand brand) {
+	public Brand updateBrand(@RequestBody Brand brand) {
 		return brandService.updateBrand(brand);
 	}
 	
