@@ -33,12 +33,15 @@ public class Address {
 	 private String street;
 	@Column(nullable=false)
 	 private String exterior_number;
+	@Column (nullable=true)
 	 private String interior_number;
+	@Column(nullable=true)
 	 private String street1;
+	@Column(nullable=true)
 	 private String street2;
+	@Column(nullable=true)
 	 private String instruction;
-	 @Column(nullable=false)
-	 private boolean selection;
+	 
 
 	//Constructor vacio
 	public Address() {}
@@ -126,12 +129,6 @@ public class Address {
 	public void setInstruction(String instruction) {
 		this.instruction = instruction;
 	}
-	public boolean isSelection() {
-		return selection;
-	}
-	public void setSelection(boolean selection) {
-		this.selection = selection;
-	}
 	
 	public User getUser() {
 		return user;
@@ -139,17 +136,6 @@ public class Address {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	@Override
-	public String toString() {
-		return "Address [id_address=" + id_address + ", alias=" + alias + ", postcode=" + postcode + ", state=" + state
-				+ ", municipality=" + municipality + ", city=" + city + ", settlement=" + settlement + ", street="
-				+ street + ", exterior_number=" + exterior_number + ", interior_number=" + interior_number
-				+ ", street1=" + street1 + ", street2=" + street2 + ", instruction=" + instruction + ", selection="
-				+ selection + "]";
-	}
-	
-	
-
 	
 
 }

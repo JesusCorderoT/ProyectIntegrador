@@ -31,7 +31,7 @@ public class Appointment {
 	//Definimos relaciones
 		@ManyToOne
 		@JoinColumn(name="Service_id_service", nullable=false)
-		private Service service;
+		private Services service;
 		
 		@ManyToOne
 		@JoinColumn(name="User_id_user", nullable=false)
@@ -68,10 +68,10 @@ public class Appointment {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	public Service getService() {
+	public Services getService() {
 		return service;
 	}
-	public void setService(Service service) {
+	public void setService(Services service) {
 		this.service = service;
 	}
 	public User getUser() {
@@ -80,10 +80,6 @@ public class Appointment {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	@Override
-	public String toString() {
-		return "Appointment [id_appointment=" + id_appointment + ", date=" + date + ", hour=" + hour + ", name=" + name
-				+ ", status=" + status + ", service=" + service + ", user=" + user + "]";
-	}
+	
 	
 }

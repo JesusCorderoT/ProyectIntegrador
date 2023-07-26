@@ -10,7 +10,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.JoinColumn;
 
@@ -29,7 +28,9 @@ public class Product {
 	private String description;
 	@Column(nullable=false)
 	private int stock;
+	@Column(nullable=true)
 	private int rating;
+	@Column(nullable=true)
 	private String image;
 	
 	
@@ -41,9 +42,6 @@ public class Product {
             inverseJoinColumns = @JoinColumn(name = "Brand_id_brand"))
     private List<Brand> brands;
 	
-	@OneToMany(mappedBy = "products")
-    private List<ProductOrder> productOrders;
-
 
 	public Long getId_product() {
 		return id_product;
@@ -108,23 +106,6 @@ public class Product {
 	public void setBrands(List<Brand> brands) {
 		this.brands = brands;
 	}
-
-	public List<ProductOrder> getProductOrders() {
-		return productOrders;
-	}
-
-	public void setProductOrders(List<ProductOrder> productOrders) {
-		this.productOrders = productOrders;
-	}
-
-	@Override
-	public String toString() {
-		return "Product [id_product=" + id_product + ", name=" + name + ", price=" + price + ", description="
-				+ description + ", stock=" + stock + ", rating=" + rating + ", image=" + image + ", brands=" + brands
-				+ ", productOrders=" + productOrders + "]";
-	}
-
-	
 
 	
 }

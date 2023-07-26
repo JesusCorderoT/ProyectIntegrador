@@ -1,7 +1,5 @@
 package com.ojosdgato.ojosdgato.Entity;	
 
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +7,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -28,10 +25,8 @@ public class ServiceOrder {
 
     @ManyToOne
     @JoinColumn(name = "Service_id_service", nullable = false)
-    private Service service;
+    private Services service;
 
-    @OneToOne(mappedBy = "serviceOrders")
-    private List<Order> orders;
 
     // Getters y Setters
     public Long getId_serviceorder() {
@@ -50,30 +45,14 @@ public class ServiceOrder {
         this.quantity = quantity;
     }
 
-    public Service getService() {
+    public Services getService() {
         return service;
     }
 
-    public void setService(Service service) {
+    public void setService(Services service) {
         this.service = service;
     }
 
-	public List<Order> getOrders() {
-		return orders;
-	}
-
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
-	}
-
-	@Override
-	public String toString() {
-		return "ServiceOrder [id_serviceorder=" + id_serviceorder + ", quantity=" + quantity + ", service=" + service
-				+ ", orders=" + orders + "]";
-	}
-
 	
-
-    
 }
 	

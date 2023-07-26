@@ -1,8 +1,5 @@
 package com.ojosdgato.ojosdgato.Entity;
 
-
-import java.util.List;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +7,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -30,11 +26,7 @@ public class ProductOrder {
     @JoinColumn(name = "Product_id_product", nullable = false)
     private Product product;
 
-    @OneToOne(mappedBy = "productOrders")
-    private List<Order> orders;
-	
-	
-	 
+     
 	public long getId_productorder() {
 		return id_productorder;
 	}
@@ -59,31 +51,6 @@ public class ProductOrder {
 		this.product = product;
 	}
 
-	public List<Order> getOrders() {
-		return orders;
-	}
-
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
-	}
-
-	@Override
-	public String toString() {
-		return "ProductOrder [id_productorder=" + id_productorder + ", quantity=" + quantity + ", product=" + product
-				+ ", orders=" + orders + "]";
-	}
-
-	
-
-	
-	
-
-	
-	
-	
-
-	
-	 
 	
 	
 }

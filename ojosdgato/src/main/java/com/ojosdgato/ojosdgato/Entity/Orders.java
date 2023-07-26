@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Order")
-public class Order {
+public class Orders {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_order", unique=true, nullable=false)
@@ -21,9 +21,10 @@ public class Order {
 	private int shipping;
 	@Column(nullable=false)
 	private int status;
+	@Column (nullable=true)
 	private String comment;
 	
-	public Order() {}
+	public Orders() {}
 	
 	@ManyToOne
     @JoinColumn(name = "User_id_user", nullable = false)
@@ -95,18 +96,6 @@ public class Order {
 		this.productOrder = productOrder;
 	}
 
-	@Override
-	public String toString() {
-		return "Order [id_order=" + id_order + ", shipping=" + shipping + ", status=" + status + ", comment=" + comment
-				+ ", user=" + user + ", serviceOrder=" + serviceOrder + ", productOrder=" + productOrder + "]";
-	}
 
-	
-
-	
-
-	
-	
-	
 	
 }

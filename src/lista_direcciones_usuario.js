@@ -33,7 +33,6 @@ function mostrarDirecciones(datos){
                               </button>
                               <ul class="dropdown-menu">
                                 <li id="eliminar-li" ><a class="dropdown-item" onclick="eliminar(${i})" href="#">Eliminar</a></li>
-                                <li><a class="dropdown-item"  onclick="cambiar( ${i})" href="#">Predeterminada</a></li>
                               </ul>
                             </div>            
                         </li>`
@@ -66,7 +65,7 @@ function eliminar(elemento) {
         });
         if(direccionesUsuario[elemento].Predeterminado){
           direccionesUsuario[elemento].Predeterminado=false;
-<<<<<<< Updated upstream
+
           direccionesUsuario.splice(elemento,1);
           if(elemento==direccionesUsuario.length){direccionesUsuario[0].Predeterminado=true;}
           else{direccionesUsuario[elemento].Predeterminado=true;}
@@ -75,33 +74,12 @@ function eliminar(elemento) {
         }else{direccionesUsuario.splice(elemento,1);}
         
         mostrarDirecciones(direccionesUsuario);
-=======
-          direccionesUsuario[elemento+1].Predeterminado=true;
-  
-          console.log(tarjetasUsuario);
-          const atributo=document.getElementById(`${direccionesUsuario[elemento+1].Alias}`);
-          atributo.removeAttribute('hidden');
-        }
->>>>>>> Stashed changes
+
         Swal.fire('Eliminado.');
         
       }
     })
 }
-function cambiar(elemento){
-  let i=0;
-  direccionesUsuario.forEach(element=>{
-    let atributo=document.getElementById(`${element.Alias}`);
-    if(i==elemento){
-      element.Predeterminado=true;
-      atributo.removeAttribute('hidden');
-    }else{
-      element.Predeterminado=false;
-      atributo.setAttribute('hidden', '')
-    }
-    i++;
-  });
-  console.log(direccionesUsuario);
-}
+
 
   

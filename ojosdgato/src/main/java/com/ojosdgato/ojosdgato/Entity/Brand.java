@@ -1,14 +1,10 @@
 package com.ojosdgato.ojosdgato.Entity;
 
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -26,11 +22,7 @@ public class Brand {
     public Brand() {
 
     }
-    //Relaciones
-    @ManyToMany(mappedBy = "brands", cascade = CascadeType.ALL)
-	private List<Product> products;
-    
-
+  
 	//Getters y Setters
 	public Long getId_brand() {
 		return id_brand;
@@ -56,19 +48,6 @@ public class Brand {
 		this.image = image;
 	}
 
-	public List<Product> getProducts() {
-		return products;
-	}
-
-	public void setProducts(List<Product> products) {
-		this.products = products;
-	}
-
-	@Override
-	public String toString() {
-		return "Brand [id=" + id_brand + ", name=" + name + ", image=" + image + "]";
-	}
-	
 	
 	
 }

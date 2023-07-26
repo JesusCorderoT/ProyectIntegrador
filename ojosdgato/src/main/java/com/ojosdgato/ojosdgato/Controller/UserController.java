@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,10 +18,9 @@ import com.ojosdgato.ojosdgato.Service.UserService;
 @RequestMapping(path="/ojosdgato/users")
 @RestController
 public class UserController {
-	
-	private final UserService userService;
-	
 	@Autowired
+	private UserService userService;
+	
 	public UserController(UserService userService) {
 		this.userService = userService;
 	}
@@ -37,13 +37,13 @@ public class UserController {
 	}
 	
 	@PostMapping
-	public User createUser(User user) {
+	public User createUser(@RequestBody User user) {
 		return userService.createUser(user);
 	}
 	
 	//Put
 	@PutMapping
-	public User updateUser(User user) {
+	public User updateUser(@RequestBody User user) {
 		return userService.updateUser(user);
 	}
 	
