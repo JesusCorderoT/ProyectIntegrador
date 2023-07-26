@@ -187,15 +187,15 @@ CREATE TABLE IF NOT EXISTS `ojosdgato`.`Order` (
   `shipping` BIT NOT NULL,
   `status` INT NOT NULL,
   `comment` VARCHAR(200) NULL,
-  `ServiceOrder_id__serviceorder` INT NOT NULL,
+  `ServiceOrder_id_serviceorder` INT NOT NULL,
   `ProductOrder_id_productorder` INT NOT NULL,
   `User_id_user` INT NOT NULL,
   PRIMARY KEY (`id_order`),
-  INDEX `fk_Order_ServiceOrder1_idx` (`ServiceOrder_id__serviceorder` ASC) VISIBLE,
+  INDEX `fk_Order_ServiceOrder1_idx` (`ServiceOrder_id_serviceorder` ASC) VISIBLE,
   INDEX `fk_Order_ProductOrder1_idx` (`ProductOrder_id_productorder` ASC) VISIBLE,
   INDEX `fk_Order_User1_idx` (`User_id_user` ASC) VISIBLE,
   CONSTRAINT `fk_Order_ServiceOrder1`
-    FOREIGN KEY (`ServiceOrder_id__serviceorder`)
+    FOREIGN KEY (`ServiceOrder_id_serviceorder`)
     REFERENCES `ojosdgato`.`ServiceOrder` (`id_serviceorder`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
