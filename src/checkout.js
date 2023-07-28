@@ -6,22 +6,30 @@ const productos=[
 ]
 // {'producto': 'Pluma de gel removedor', 'precio': '170', 'cantidad':'1'},
 // {'producto': 'Lash brush desechable', 'precio': '35', 'cantidad':'1'}, 
+//Se crean variables para guardar los datos de los productos y los del carrito
+let produ = JSON.parse(localStorage.getItem("products"));
+let car = JSON.parse(localStorage.getItem("cart"));
+let totalPrice=JSON.parse(localStorage.getItem("orderFinalPrice"));
 
-function mostrarProductos(datos){
+
+console.log(produ);    
+console.log(car);
+function mostrarProductos(datos,productId){
+    productId=0;
     const lista=document.getElementById('listaProductos');
-    let i=0;
-    datos.forEach(element => {
-        const pago=`<li class="list-group-item d-flex align-items-start" id="${i}">
+    for(let j=0; j<car.length; j++){
+        productId=car[j].id;
+        const pago=`<li class="list-group-item d-flex align-items-start" id="${j}">
                     <div class="ms-2 me-auto ">
-                        <div class="fw-bold d-flex align-items-start">Artíulo: ${element.producto}</div>
-                        <span>Cantidad:${element.cantidad}</span>
-                        <span>Precio:$${element.precio}</span>
+                        <div class="fw-bold d-flex align-items-start">Artíulo: ${car[(productId-1)].name}</div>
+                        <span>Cantidad:${car[(productId-1)].quantity}</span>
+                        <span>Precio:$${car[(productId-1)].price}</span>
                     </div>
-                        <button type="button" class="btn btn-dark  btn-sm" onclick="eliminar(${i})">Cambiar</button>
                     </li>`
         lista.innerHTML+=pago;
-        i++;
-    });
+    }
+    const total=document.getElementById('total');
+    total.textContent=`Total: $${totalPrice}`;
 }
 
 function mostrarTarjetas(datos){
@@ -103,7 +111,7 @@ function mostrarResumen(datos){
     });
 }
 
-mostrarResumen(productos);
+//mostrarResumen(productos);
 
 const datosUsuario=[
     {'Alias':'Casa Jaz', 'CP':45960, 'Estado':'Edo. Mex','Municipio':'Naucalpan', 'Contacto':5555555555},
