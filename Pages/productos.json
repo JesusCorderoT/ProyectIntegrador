@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Lash Shampoo",
+        "price": 100.00,
+        "description": "Presentación de 50ml. Especial para pestañas. Elimina los residuos de maquillaje y suciedad.",
+        "stock": 10,
+        "rating": 0,
+        "quantity":0,
+        "image": "/assets/serviciosImg/Shampoo1.png"
+    },
+    {
+        "id": 2,
+        "name": "Lash brush desechable",
+        "price": 35.00,
+        "description": "Paquete de 15 piezas. Ideales para el estilizado después de la limpieza.",
+        "stock": 10,
+        "rating": 0,
+        "quantity":0,
+        "image": "/assets/serviciosImg/lashbrush1.png"
+    },
+    {
+        "id": 3,
+        "name": "Cepillo de limpieza",
+        "price": 40.00,
+        "description": "Limpie las extensiones de las pestañas de forma suave e higiénica, eliminando las impurezas y el maquillaje de los ojos.",
+        "stock": 10,
+        "rating": 0,
+        "quantity":0,
+        "image": "/assets/serviciosImg/cepillo1.png"
+    },
+    {
+        "id": 4,
+        "name": "Removedor en crema",
+        "price": 200.00,
+        "description": "Presentación de 50 Gramos. Retira extensiones con seguridad.",
+        "stock": 10,
+        "rating": 0,
+        "quantity":0,
+        "image": "/assets/serviciosImg/removedorcrema1.png"
+    },
+    {
+        "id": 5,
+        "name": "Pluma de gel removedor",
+        "price": 170.00,
+        "description": "Presentación de 5 ml. Retira extensiones con seguridad.",
+        "stock": 10,
+        "rating": 0,
+        "quantity":0,
+        "image": "/assets/serviciosImg/reovedorgel1.png"
+    }
+]   

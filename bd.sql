@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema Ojosdgato
+-- Schema ojosdgato
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema Ojosdgato
+-- Schema ojosdgato
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `Ojosdgato` DEFAULT CHARACTER SET utf8 ;
-USE `Ojosdgato` ;
+CREATE SCHEMA IF NOT EXISTS `ojosdgato` DEFAULT CHARACTER SET utf8 ;
+USE `ojosdgato` ;
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`User`
+-- Table `ojosdgato`.`User`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`User` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`User` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `lastname` VARCHAR(100) NOT NULL,
@@ -31,23 +31,22 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`Service`
+-- Table `ojosdgato`.`Service`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Service` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`Service` (
   `id_service` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `price` DECIMAL(10,2) NOT NULL,
   `description` VARCHAR(200) NOT NULL,
   `time` VARCHAR(15) NOT NULL,
-  `image` VARCHAR(125) NULL,
   PRIMARY KEY (`id_service`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`Brand`
+-- Table `ojosdgato`.`Brand`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Brand` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`Brand` (
   `id_brand` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `image` VARCHAR(125) NOT NULL,
@@ -56,9 +55,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`Product`
+-- Table `ojosdgato`.`Product`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Product` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`Product` (
   `id_product` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `price` DECIMAL(10,2) NOT NULL,
@@ -71,9 +70,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`Address`
+-- Table `ojosdgato`.`Address`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Address` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`Address` (
   `id_address` INT NOT NULL,
   `alias` VARCHAR(30) NOT NULL,
   `postcode` INT NOT NULL,
@@ -87,44 +86,42 @@ CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Address` (
   `street1` VARCHAR(45) NULL,
   `street2` VARCHAR(45) NULL,
   `instruction` VARCHAR(200) NULL,
-  `selection` BIT NOT NULL,
   `User_id_user` INT NOT NULL,
   PRIMARY KEY (`id_address`),
   INDEX `fk_Address_User1_idx` (`User_id_user` ASC) VISIBLE,
   CONSTRAINT `fk_Address_User1`
     FOREIGN KEY (`User_id_user`)
-    REFERENCES `Ojosdgato`.`User` (`id_user`)
+    REFERENCES `ojosdgato`.`User` (`id_user`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`Card`
+-- Table `ojosdgato`.`Card`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Card` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`Card` (
   `id_card` INT NOT NULL AUTO_INCREMENT,
   `alias` VARCHAR(30) NOT NULL,
   `holder` VARCHAR(200) NOT NULL,
   `number` BIGINT NOT NULL,
   `expiration_month` INT NOT NULL,
   `expiration_year` INT NOT NULL,
-  `selection_card` BIT NOT NULL,
   `User_id_user` INT NOT NULL,
   PRIMARY KEY (`id_card`),
   INDEX `fk_Card_User1_idx` (`User_id_user` ASC) VISIBLE,
   CONSTRAINT `fk_Card_User1`
     FOREIGN KEY (`User_id_user`)
-    REFERENCES `Ojosdgato`.`User` (`id_user`)
+    REFERENCES `ojosdgato`.`User` (`id_user`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`ProductOrder`
+-- Table `ojosdgato`.`ProductOrder`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`ProductOrder` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`ProductOrder` (
   `id_productorder` INT NOT NULL AUTO_INCREMENT,
   `quantity` INT NOT NULL,
   `Product_id_product` INT NOT NULL,
@@ -132,16 +129,16 @@ CREATE TABLE IF NOT EXISTS `Ojosdgato`.`ProductOrder` (
   INDEX `fk_ProductOrder_Product1_idx` (`Product_id_product` ASC) VISIBLE,
   CONSTRAINT `fk_ProductOrder_Product1`
     FOREIGN KEY (`Product_id_product`)
-    REFERENCES `Ojosdgato`.`Product` (`id_product`)
+    REFERENCES `ojosdgato`.`Product` (`id_product`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`ServiceOrder`
+-- Table `ojosdgato`.`ServiceOrder`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`ServiceOrder` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`ServiceOrder` (
   `id_serviceorder` INT NOT NULL AUTO_INCREMENT,
   `quantity` INT NOT NULL,
   `Service_id_service` INT NOT NULL,
@@ -149,16 +146,16 @@ CREATE TABLE IF NOT EXISTS `Ojosdgato`.`ServiceOrder` (
   INDEX `fk_ServiceOrder_Service1_idx` (`Service_id_service` ASC) VISIBLE,
   CONSTRAINT `fk_ServiceOrder_Service1`
     FOREIGN KEY (`Service_id_service`)
-    REFERENCES `Ojosdgato`.`Service` (`id_service`)
+    REFERENCES `ojosdgato`.`Service` (`id_service`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`Appointment`
+-- Table `ojosdgato`.`Appointment`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Appointment` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`Appointment` (
   `id_appointment` INT NOT NULL AUTO_INCREMENT,
   `date` DATE NOT NULL,
   `hour` TIME NOT NULL,
@@ -171,21 +168,21 @@ CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Appointment` (
   INDEX `fk_Appointment_User1_idx` (`User_id_user` ASC) VISIBLE,
   CONSTRAINT `fk_Appointment_Service1`
     FOREIGN KEY (`Service_id_service`)
-    REFERENCES `Ojosdgato`.`Service` (`id_service`)
+    REFERENCES `ojosdgato`.`Service` (`id_service`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Appointment_User1`
     FOREIGN KEY (`User_id_user`)
-    REFERENCES `Ojosdgato`.`User` (`id_user`)
+    REFERENCES `ojosdgato`.`User` (`id_user`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`Order`
+-- Table `ojosdgato`.`Order`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Order` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`Order` (
   `id_order` INT NOT NULL AUTO_INCREMENT,
   `shipping` BIT NOT NULL,
   `status` INT NOT NULL,
@@ -199,38 +196,38 @@ CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Order` (
   INDEX `fk_Order_User1_idx` (`User_id_user` ASC) VISIBLE,
   CONSTRAINT `fk_Order_ServiceOrder1`
     FOREIGN KEY (`ServiceOrder_id__serviceorder`)
-    REFERENCES `Ojosdgato`.`ServiceOrder` (`id_serviceorder`)
+    REFERENCES `ojosdgato`.`ServiceOrder` (`id_serviceorder`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Order_ProductOrder1`
     FOREIGN KEY (`ProductOrder_id_productorder`)
-    REFERENCES `Ojosdgato`.`ProductOrder` (`id_productorder`)
+    REFERENCES `ojosdgato`.`ProductOrder` (`id_productorder`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Order_User1`
     FOREIGN KEY (`User_id_user`)
-    REFERENCES `Ojosdgato`.`User` (`id_user`)
+    REFERENCES `ojosdgato`.`User` (`id_user`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Ojosdgato`.`Product_has_Brand`
+-- Table `ojosdgato`.`Product_has_Brand`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Ojosdgato`.`Product_has_Brand` (
+CREATE TABLE IF NOT EXISTS `ojosdgato`.`Product_has_Brand` (
   `Product_id_product` INT NOT NULL,
   `Brand_id_brand` INT NOT NULL,
   INDEX `fk_Product_has_Brand_Brand1_idx` (`Brand_id_brand` ASC) VISIBLE,
   INDEX `fk_Product_has_Brand_Product1_idx` (`Product_id_product` ASC) VISIBLE,
   CONSTRAINT `fk_Product_has_Brand_Product1`
     FOREIGN KEY (`Product_id_product`)
-    REFERENCES `Ojosdgato`.`Product` (`id_product`)
+    REFERENCES `ojosdgato`.`Product` (`id_product`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Product_has_Brand_Brand1`
     FOREIGN KEY (`Brand_id_brand`)
-    REFERENCES `Ojosdgato`.`Brand` (`id_brand`)
+    REFERENCES `ojosdgato`.`Brand` (`id_brand`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
