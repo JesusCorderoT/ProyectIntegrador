@@ -1,7 +1,9 @@
 const pedidosUsuario=[
-    {'Orden':'001','Monto':'$500','Productos':["Shapoo", " LashBrush"],'Fecha':'20/06/2023','Estatus':'Por confirmar', 'Comentario':''},
-    {'Orden':'003','Monto':'$500','Productos':["Shapoo", " Removedor en gel ", "LashBrush"],'Fecha':'20/06/2023','Estatus':'En camino', 'Comentario':''},
-    {'Orden':'008','Monto':'$500','Productos':["Shapoo"], 'Fecha':'20/06/2023','Estatus':'Entregado', 'Comentario':'El shapoo es muy suave, no deja la piel deshidratada y huele muy rico'},
+    {'Orden':'001','Monto':'$40','Productos':["Mint Lashes", "Cepilllo de limpieza"],'Fecha':'28/07/2023','Estatus':'Por confirmar', 'Comentario':''},
+    {'Orden':'002','Monto':'$100','Productos':["LashWash MX", "Lash Shampoo"],'Fecha':'28/07/2023','Estatus':'Por confirmar', 'Comentario':''},
+    {'Orden':'003','Monto':'$160','Productos':["LashWash MX", "Lash Shampoo"],'Fecha':'28/07/2023','Estatus':'Por confirmar', 'Comentario':''},
+    {'Orden':'004','Monto':'$200','Productos':["Mint Lashes", "Removedor en Crema"],'Fecha':'28/07/2023','Estatus':'Por confirmar', 'Comentario':''},
+    {'Orden':'005','Monto':'$170','Productos':["Nagaraku", "Pluma de Gel Removedor 5 mililitros"],'Fecha':'28/07/2023','Estatus':'Por confirmar', 'Comentario':''}
 ]
 
 

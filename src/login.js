@@ -1,12 +1,11 @@
 // Función para iniciar sesión
-// function iniciarSesion(nombre, email, tipo) {
-//     // Almacenar la información de sesión en sessionStorage
-//     sessionStorage.setItem("nombre", nombre);
-//     sessionStorage.setItem("email", email);
-//     sessionStorage.setItem("loggedIn", "true");
-//     sessionStorage.setItem("tipo", tipo);
-// }
-
+ function iniciarSesion(nombre, email, tipo) {
+     // Almacenar la información de sesión en sessionStorage
+     sessionStorage.setItem("nombre", nombre);
+     sessionStorage.setItem("email", email);
+     sessionStorage.setItem("loggedIn", "true");
+     sessionStorage.setItem("tipo", tipo);
+}
 // Función para cerrar sesión
 function cerrarSesion() {
     // Eliminar la información de sesión de sessionStorage

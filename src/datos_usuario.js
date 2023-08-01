@@ -1,9 +1,9 @@
 // Objeto con los datos del usuario
 const usuario = {
-  Usuario: "usuarioEjemplo",
-  Telefono: 123456789,
-  Email: "usuario@example.com",
-  Password: "contrasena123",
+  Usuario: "Sol",
+  Telefono: 1111111111,
+  Email: "carmen@ejemplo.com",
+  Password: "password123",
 };
 
   // Función para validar los datos del formulario
